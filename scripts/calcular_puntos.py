@@ -27,279 +27,267 @@ RESULTS_FILE = BASE_DIR / "resultados_reales.json"
 OUTPUT_FILE  = BASE_DIR / "data.json"
 
 # ─── PUNTUACIÓN ──────────────────────────────────────────────────────────────
-PTS_EXACTO   = 3
-PTS_GANADOR  = 1
-PTS_FALLO    = 0
-
-
+PTS_EXACTO        = 3
+PTS_SIGNO         = 1
+PTS_CLASIFICADO   = 2   # acertar 1º o 2º de grupo
+PTS_ELIMINATORIA  = 3   # acertar quién pasa de ronda
+PTS_CAMPEON       = 10
+PTS_SUBCAMPEON    = 5
+PTS_TERCERO       = 2
+PTS_CUARTO        = 2
+PTS_ESPECIAL      = 5   # botas y balones
+ 
+ 
 def sign(local, visitante):
-    """Devuelve '1', 'X' o '2' según el resultado."""
-    if local > visitante:
-        return "1"
-    elif local < visitante:
-        return "2"
-    else:
-        return "X"
-
-
-def puntuar(pronostico_str, resultado_str):
-    """
-    pronostico_str: e.g. "1|2-1"   (signo|goles_local-goles_visitante)
-    resultado_str:  e.g. "2-1"     (goles_local-goles_visitante) o None si no jugado
-    """
+    if local > visitante: return "1"
+    if local < visitante: return "2"
+    return "X"
+ 
+ 
+def puntuar_partido(pronostico_str, resultado_str):
+    """Puntúa un partido de fase de grupos. Devuelve None si no jugado."""
     if not resultado_str:
-        return None  # partido no jugado todavía
-
-    # Parsear pronóstico
-    m = re.match(r"([12X])\|(\d+)-(\d+)", pronostico_str.strip())
+        return None
+    m = re.match(r"([12X])\|(\d+)-(\d+)", str(pronostico_str).strip())
     if not m:
         return None
     p_signo = m.group(1)
     p_local, p_visit = int(m.group(2)), int(m.group(3))
-
-    # Parsear resultado real
-    m2 = re.match(r"(\d+)-(\d+)", resultado_str.strip())
+ 
+    m2 = re.match(r"(\d+)-(\d+)", str(resultado_str).strip())
     if not m2:
         return None
     r_local, r_visit = int(m2.group(1)), int(m2.group(2))
-
     r_signo = sign(r_local, r_visit)
-
+ 
     if p_local == r_local and p_visit == r_visit:
         return PTS_EXACTO
     elif p_signo == r_signo:
-        return PTS_GANADOR
+        return PTS_SIGNO
     else:
-        return PTS_FALLO
-
-
-def leer_pronosticos_excel(excel_path):
-    """
-    Lee la hoja Pool del excel y devuelve un dict:
-      { "partido_key": "signo|gol_local-gol_visitante", ... }
-    
-    partido_key = "A1" para el primer partido del grupo A jornada 1, etc.
-    En realidad usamos el nombre de partido: "México-Sudáfrica"
-    """
+        return 0
+ 
+ 
+def leer_excel(excel_path):
+    """Lee hoja Pool y devuelve (pronosticos_dict, nombre)."""
     try:
-        df = pd.read_excel(excel_path, sheet_name="Pool", header=None)
-    except Exception as e:
-        print(f"  ERROR leyendo {excel_path}: {e}")
-        return {}, "DESCONOCIDO"
-
-    pronosticos = {}
-    nombre = "DESCONOCIDO"
-
-    for _, row in df.iterrows():
-        # Fila de nombre del participante: columna B tiene el nombre
-        # En la hoja Pool: col B = etiqueta partido, col C = pronóstico
-        vals = [str(v).strip() if pd.notna(v) else "" for v in row]
-
-        # Detectar nombre (fila que empieza con algo parecido a un grupo)
-        # El nombre está en la fila con "PARTICIPANTE" o al inicio
-        # Buscamos la celda que contiene el nombre escrito por el usuario
-        # En el excel de Analia: Home!B12 tiene el nombre
-        # En Pool, la celda C3 tiene el nombre
-        if vals[1] == "Nombre" and vals[2] and vals[2] != "":
-            nombre = vals[2]
-
-        # Líneas de pronóstico tienen formato: cols[1] = "A1\tMéxico-Sudáfrica", cols[2] = "1|3-1"
-        if len(vals) >= 3 and re.match(r"[A-Z]\d", vals[0]) and "|" in vals[2]:
-            # partido en col B (índice 1) o col A (índice 0)
-            partido_raw = vals[1]  # ej "México-Sudáfrica"
-            pronostico  = vals[2]  # ej "1|3-1"
-            if partido_raw and pronostico:
-                pronosticos[partido_raw] = pronostico
-
-        elif len(vals) >= 3 and vals[1] and "|" in vals[2]:
-            partido_raw = vals[1]
-            pronostico  = vals[2]
-            if re.search(r'\w+-\w+', partido_raw) and "|" in pronostico:
-                pronosticos[partido_raw] = pronostico
-
-    # Si no encontramos nombre, intentar desde Home
-    if nombre == "DESCONOCIDO":
-        try:
-            df_home = pd.read_excel(excel_path, sheet_name="Home", header=None)
-            for _, row in df_home.iterrows():
-                vals = [str(v).strip() if pd.notna(v) else "" for v in row]
-                if "Escribe tu nombre" in vals:
-                    idx = vals.index("Escribe tu nombre")
-                    if idx + 1 < len(vals) and vals[idx + 1]:
-                        nombre = vals[idx + 1]
-                        break
-        except:
-            pass
-
-    # Último recurso: nombre del archivo
-    if nombre == "DESCONOCIDO":
-        nombre = Path(excel_path).stem.replace("Excel-Mundial-2026__", "").replace("_", " ")
-
-    return pronosticos, nombre
-
-
-def leer_pronosticos_excel_v2(excel_path):
-    """Versión mejorada que lee la hoja Pool correctamente."""
-    try:
-        # Leer con openpyxl para mejor acceso a celdas
-        import openpyxl
         wb = openpyxl.load_workbook(excel_path, data_only=True, read_only=True)
     except Exception as e:
-        print(f"  ERROR abriendo {excel_path}: {e}")
+        print(f"  ERROR abriendo {Path(excel_path).name}: {e}")
         return {}, Path(excel_path).stem
-
-    pronosticos = {}
+ 
+    datos = {}
     nombre = "DESCONOCIDO"
-
-    # ── Obtener nombre desde Home ──
-    if "Home" in wb.sheetnames:
-        ws_home = wb["Home"]
-        for row in ws_home.iter_rows(values_only=True):
-            row_vals = [str(v).strip() if v is not None else "" for v in row]
-            for i, v in enumerate(row_vals):
-                if v == "Analia" or (i > 0 and row_vals[i-1] in ("Escribe tu nombre", "✍️ Escribe tu nombre")):
-                    if v and v not in ("Escribe tu nombre", "✍️ Escribe tu nombre"):
-                        nombre = v
-                        break
-            if nombre != "DESCONOCIDO":
-                break
-
-    # ── Leer pronósticos desde Pool ──
+ 
+    # ── Nombre desde Pool ──
     if "Pool" in wb.sheetnames:
-        ws_pool = wb["Pool"]
-        for row in ws_pool.iter_rows(values_only=True):
-            if row is None:
+        ws = wb["Pool"]
+        for row in ws.iter_rows(values_only=True):
+            if not row:
                 continue
-            # col B (índice 1) = partido, col C (índice 2) = pronóstico
             b = str(row[1]).strip() if row[1] is not None else ""
             c = str(row[2]).strip() if row[2] is not None else ""
-
+ 
             if b == "Nombre" and c:
                 nombre = c
-
-            # Pronósticos: "México-Sudáfrica" en B, "1|3-1" en C
+ 
+            # Partidos de grupos: col B = nombre partido, col C = "1|2-1"
             if b and c and "|" in c and "-" in b:
-                # Limpiar clave
-                key = b.strip()
-                pronosticos[key] = c.strip()
-
+                datos[b] = c
+ 
+            # Posiciones de grupo: col B = "1º GRUPO A", col C = "México"
+            if b and c and "GRUPO" in b.upper() and "|" not in c:
+                datos[b] = c
+ 
+            # Clasificados eliminatorias / cuadro honor
+            # col B = etiqueta, col C = equipo
+            for label in ["Dieciseisavofinalista", "Octavofinalista", "Cuartofinalista",
+                          "Semifinalista", "Finalista", "3º y 4º puesto",
+                          "🥇Campeón", "🥈Subcampeón", "🥉3º puesto",
+                          "Bota de Oro", "Bota de Plata", "Bota de Bronce",
+                          "Balón de Oro", "Balón de Plata", "Balón de Bronce"]:
+                if label in b and c:
+                    datos[b] = c
+ 
     wb.close()
-
-    # Último recurso nombre
+ 
     if nombre == "DESCONOCIDO":
         nombre = Path(excel_path).stem.replace("Excel-Mundial-2026__", "").replace("_", " ")
-
-    return pronosticos, nombre
-
-
-def cargar_resultados_reales():
-    """Carga el JSON de resultados reales."""
+ 
+    return datos, nombre
+ 
+ 
+def cargar_resultados():
     if not RESULTS_FILE.exists():
-        print(f"AVISO: No existe {RESULTS_FILE}. Usando resultados vacíos.")
+        print(f"AVISO: No existe {RESULTS_FILE}")
         return {}
     with open(RESULTS_FILE, encoding="utf-8") as f:
         return json.load(f)
-
-
+ 
+ 
 def calcular_clasificacion():
     print("=" * 60)
     print("  PORRA MUNDIAL 2026 - Calculando clasificación")
     print("=" * 60)
-
-    # Cargar resultados reales
-    resultados_reales = cargar_resultados_reales()
-    print(f"\n  Partidos con resultado: {len(resultados_reales)}")
-
-    # Leer todos los excels
+ 
+    reales = cargar_resultados()
+ 
+    # Separar por tipo
+    partidos_grupos    = {k: v for k, v in reales.items() if isinstance(v, str) and re.match(r"\d+-\d+", v)}
+    clasificados_grupo = {k: v for k, v in reales.items() if "GRUPO" in str(k).upper() and v}
+    eliminatorias      = reales.get("eliminatorias", {})
+    posicion_final     = reales.get("posicion_final", {})
+    premios_especiales = reales.get("premios_especiales", {})
+ 
+    print(f"\n  Partidos grupos con resultado: {len(partidos_grupos)}")
+ 
     excels = sorted(glob.glob(str(EXCELS_DIR / "*.xlsx")))
-    if not excels:
-        excels = sorted(glob.glob(str(EXCELS_DIR / "*.xls")))
-
-    print(f"  Participantes encontrados: {len(excels)}\n")
-
+    print(f"  Participantes: {len(excels)}\n")
+ 
     participantes = []
-
+ 
     for excel_path in excels:
         print(f"  Procesando: {Path(excel_path).name}")
-        pronosticos, nombre = leer_pronosticos_excel_v2(excel_path)
-        print(f"    Nombre: {nombre}  |  Pronósticos: {len(pronosticos)}")
-
-        puntos_total   = 0
-        exactos        = 0
-        ganadores      = 0
-        fallos         = 0
-        partidos_eval  = 0
-        detalle        = []
-
-        for partido, resultado_real in resultados_reales.items():
-            pronostico = pronosticos.get(partido)
+        datos, nombre = leer_excel(excel_path)
+        print(f"    Nombre: {nombre}  |  Datos leídos: {len(datos)}")
+ 
+        pts_total   = 0
+        exactos     = 0
+        signos      = 0
+        fallos      = 0
+        n_partidos  = 0
+        detalle     = []
+        detalle_extra = []
+ 
+        # ── 1. Partidos de fase de grupos ──
+        for partido, resultado_real in partidos_grupos.items():
+            if not resultado_real:
+                continue
+            pronostico = datos.get(partido)
             if pronostico is None:
-                continue  # No encontrado en el excel
-
-            pts = puntuar(pronostico, resultado_real)
+                continue
+ 
+            pts = puntuar_partido(pronostico, resultado_real)
             if pts is None:
                 continue
-
-            partidos_eval += 1
-            puntos_total  += pts
-
-            if pts == PTS_EXACTO:
-                exactos += 1
-            elif pts == PTS_GANADOR:
-                ganadores += 1
-            else:
-                fallos += 1
-
+ 
+            n_partidos += 1
+            pts_total  += pts
+            if pts == PTS_EXACTO: exactos += 1
+            elif pts == PTS_SIGNO: signos += 1
+            else: fallos += 1
+ 
             detalle.append({
                 "partido": partido,
                 "pronostico": pronostico,
                 "resultado": resultado_real,
                 "puntos": pts
             })
-
+ 
+        # ── 2. Clasificados de grupo (1º y 2º) ──
+        pts_clasificados = 0
+        for pos_key, equipo_real in clasificados_grupo.items():
+            if not equipo_real:
+                continue
+            pronostico = datos.get(pos_key)
+            if pronostico and pronostico.strip() == equipo_real.strip():
+                pts_clasificados += PTS_CLASIFICADO
+                detalle_extra.append({"concepto": f"Clasificado: {pos_key}", "equipo": equipo_real, "puntos": PTS_CLASIFICADO})
+ 
+        pts_total += pts_clasificados
+ 
+        # ── 3. Eliminatorias (quién pasa de ronda) ──
+        pts_elim = 0
+        for ronda, equipos_reales in eliminatorias.items():
+            if not equipos_reales:
+                continue
+            # equipos_reales es lista de equipos que pasaron
+            pronostico_ronda = datos.get(ronda, "")
+            if pronostico_ronda and pronostico_ronda.strip() in [e.strip() for e in equipos_reales]:
+                pts_elim += PTS_ELIMINATORIA
+                detalle_extra.append({"concepto": ronda, "equipo": pronostico_ronda, "puntos": PTS_ELIMINATORIA})
+ 
+        pts_total += pts_elim
+ 
+        # ── 4. Posición final ──
+        pts_posicion = 0
+        mapeo_pos = {
+            "campeon":    ("🥇Campeón",    PTS_CAMPEON),
+            "subcampeon": ("🥈Subcampeón", PTS_SUBCAMPEON),
+            "tercero":    ("🥉3º puesto",  PTS_TERCERO),
+        }
+        for clave, (label, pts_val) in mapeo_pos.items():
+            real = posicion_final.get(clave)
+            if not real:
+                continue
+            pron = datos.get(label, "")
+            if pron and pron.strip() == real.strip():
+                pts_posicion += pts_val
+                detalle_extra.append({"concepto": label, "equipo": real, "puntos": pts_val})
+ 
+        pts_total += pts_posicion
+ 
+        # ── 5. Premios especiales ──
+        pts_premios = 0
+        mapeo_premios = {
+            "bota_oro":     "Bota de Oro",
+            "bota_plata":   "Bota de Plata",
+            "bota_bronce":  "Bota de Bronce",
+            "balon_oro":    "Balón de Oro",
+            "balon_plata":  "Balón de Plata",
+            "balon_bronce": "Balón de Bronce",
+        }
+        for clave, label in mapeo_premios.items():
+            real = premios_especiales.get(clave)
+            if not real:
+                continue
+            pron = datos.get(label, "")
+            if pron and pron.strip().lower() == real.strip().lower():
+                pts_premios += PTS_ESPECIAL
+                detalle_extra.append({"concepto": label, "jugador": real, "puntos": PTS_ESPECIAL})
+ 
+        pts_total += pts_premios
+ 
         participantes.append({
-            "nombre": nombre,
-            "puntos": puntos_total,
-            "exactos": exactos,
-            "ganadores": ganadores,
-            "fallos": fallos,
-            "partidos": partidos_eval,
-            "detalle": detalle,
-            "archivo": Path(excel_path).name
+            "nombre":       nombre,
+            "puntos":       pts_total,
+            "exactos":      exactos,
+            "ganadores":    signos,
+            "fallos":       fallos,
+            "partidos":     n_partidos,
+            "pts_clasificados": pts_clasificados,
+            "pts_elim":     pts_elim,
+            "pts_posicion": pts_posicion,
+            "pts_premios":  pts_premios,
+            "detalle":      detalle,
+            "detalle_extra": detalle_extra,
+            "archivo":      Path(excel_path).name
         })
-
-    # Ordenar por puntos (desempate: exactos)
+ 
     participantes.sort(key=lambda x: (-x["puntos"], -x["exactos"]))
-
-    # Añadir posición
     for i, p in enumerate(participantes):
         p["posicion"] = i + 1
-
-    # Estadísticas generales
-    total_partidos_jugados = len(resultados_reales)
-
+ 
     output = {
-        "actualizado": datetime.now().strftime("%d/%m/%Y %H:%M"),
-        "partidos_jugados": total_partidos_jugados,
-        "participantes": participantes
+        "actualizado":      datetime.now().strftime("%d/%m/%Y %H:%M"),
+        "partidos_jugados": len(partidos_grupos),
+        "participantes":    participantes
     }
-
-    # Guardar JSON
+ 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-
-    print(f"\n  ✓ Clasificación guardada en: {OUTPUT_FILE}")
-    print(f"\n{'─'*40}")
-    print(f"  {'POS':<5} {'NOMBRE':<20} {'PTS':<6} {'✓':<5} {'~':<5} {'✗'}")
-    print(f"{'─'*40}")
+ 
+    print(f"\n  ✓ data.json generado en: {OUTPUT_FILE}")
+    print(f"\n{'─'*50}")
+    print(f"  {'#':<4} {'NOMBRE':<20} {'PTS':<6} {'Exactos':<9} {'Signo':<7} {'Fallos'}")
+    print(f"{'─'*50}")
     for p in participantes:
-        print(f"  {p['posicion']:<5} {p['nombre']:<20} {p['puntos']:<6} {p['exactos']:<5} {p['ganadores']:<5} {p['fallos']}")
-    print(f"{'─'*40}")
-    print(f"\n  Actualizado: {output['actualizado']}\n")
-
+        print(f"  {p['posicion']:<4} {p['nombre']:<20} {p['puntos']:<6} {p['exactos']:<9} {p['ganadores']:<7} {p['fallos']}")
+    print(f"{'─'*50}\n")
+ 
     return output
-
-
+ 
+ 
 if __name__ == "__main__":
     calcular_clasificacion()

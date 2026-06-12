@@ -1,10 +1,13 @@
 {
-  "_instrucciones": "Añade aquí los resultados REALES según se vayan jugando. Formato: 'goles_local-goles_visitante'. El nombre del partido debe coincidir EXACTAMENTE con el que aparece en los excels (hoja Pool, columna B). Por ejemplo: 'México-Sudáfrica': '3-1'",
-  "_ejemplo": "Los nombres de partido vienen del excel: 'A1\\tMéxico-Sudáfrica' → clave = 'México-Sudáfrica'",
-
-  "FASE DE GRUPOS - JORNADA 1": "──────────────────────────",
+  "_instrucciones": {
+    "partidos_grupos": "Formato 'Equipo1-Equipo2': 'goles1-goles2'. null si no jugado.",
+    "clasificados_grupo": "Formato '1º GRUPO A': 'NombreEquipo'. Rellena al terminar cada grupo.",
+    "eliminatorias": "Lista de equipos que PASAN de cada ronda.",
+    "posicion_final": "Rellena al final del torneo.",
+    "premios_especiales": "Rellena al final del torneo."
+  },
   "México-Sudáfrica": "3-1",
-  "Corea del Sur-República Checa": "2-1",
+  "Corea del Sur-República Checa": "1-2",
   "Canadá-Bosnia y Herzegovina": null,
   "Catar-Suiza": null,
   "Brasil-Marruecos": null,
@@ -27,9 +30,6 @@
   "Uzbekistán-Colombia": null,
   "Inglaterra-Croacia": null,
   "Ghana-Panamá": null,
-
-  
-  "FASE DE GRUPOS - JORNADA 2": "──────────────────────────",
   "República Checa-Sudáfrica": null,
   "México-Corea del Sur": null,
   "Suiza-Bosnia y Herzegovina": null,
@@ -54,8 +54,6 @@
   "Colombia-RD Congo": null,
   "Inglaterra-Ghana": null,
   "Panamá-Croacia": null,
-
-  "FASE DE GRUPOS - JORNADA 3": "──────────────────────────",
   "República Checa-México": null,
   "Sudáfrica-Corea del Sur": null,
   "Suiza-Canadá": null,
@@ -80,27 +78,50 @@
   "RD Congo-Uzbekistán": null,
   "Panamá-Inglaterra": null,
   "Croacia-Ghana": null,
-
-  "DIECISEISAVOS": "──────────────────────────",
-  "República Checa-Canadá": null,
-  "Brasil-Japón": null,
-  "Alemania-Turquía": null,
-  "Países Bajos-Marruecos": null,
-  "Ecuador-Noruega": null,
-  "Francia-Suecia": null,
-  "México-Escocia": null,
-  "Inglaterra-Senegal": null,
-  "Bélgica-Arabia Saudita": null,
-  "Estados Unidos-Costa de Marfil": null,
-  "España-Austria": null,
-  "Colombia-Ghana": null,
-  "Suiza-Argelia": null,
-  "Paraguay-Egipto": null,
-  "Argentina-Uruguay": null,
-  "Portugal-Croacia": null,
-
-  "OCTAVOS": "──────────────────────────",
-  "CUARTOS": "──────────────────────────",
-  "SEMIFINALES": "──────────────────────────",
-  "FINAL": "──────────────────────────"
+  "clasificados_grupo": {
+    "1º GRUPO A": null,
+    "2º GRUPO A": null,
+    "1º GRUPO B": null,
+    "2º GRUPO B": null,
+    "1º GRUPO C": null,
+    "2º GRUPO C": null,
+    "1º GRUPO D": null,
+    "2º GRUPO D": null,
+    "1º GRUPO E": null,
+    "2º GRUPO E": null,
+    "1º GRUPO F": null,
+    "2º GRUPO F": null,
+    "1º GRUPO G": null,
+    "2º GRUPO G": null,
+    "1º GRUPO H": null,
+    "2º GRUPO H": null,
+    "1º GRUPO I": null,
+    "2º GRUPO I": null,
+    "1º GRUPO J": null,
+    "2º GRUPO J": null,
+    "1º GRUPO K": null,
+    "2º GRUPO K": null,
+    "1º GRUPO L": null,
+    "2º GRUPO L": null
+  },
+  "eliminatorias": {
+    "Dieciseisavos → Octavos": null,
+    "Octavos → Cuartos": null,
+    "Cuartos → Semis": null,
+    "Semis → Final": null
+  },
+  "posicion_final": {
+    "campeon": null,
+    "subcampeon": null,
+    "tercero": null,
+    "cuarto": null
+  },
+  "premios_especiales": {
+    "bota_oro": null,
+    "bota_plata": null,
+    "bota_bronce": null,
+    "balon_oro": null,
+    "balon_plata": null,
+    "balon_bronce": null
+  }
 }

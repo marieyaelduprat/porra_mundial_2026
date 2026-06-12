@@ -1,12 +1,12 @@
 {
-  "actualizado": "12/06/2026 20:31",
+  "actualizado": "12/06/2026 20:46",
   "partidos_jugados": 2,
   "participantes": [
     {
-      "nombre": "Analia",
-      "puntos": 6,
-      "exactos": 2,
-      "ganadores": 0,
+      "nombre": "Daniela",
+      "puntos": 5,
+      "exactos": 1,
+      "ganadores": 1,
       "fallos": 0,
       "partidos": 2,
       "pts_clasificados": 0,
@@ -16,23 +16,226 @@
       "detalle": [
         {
           "partido": "México-Sudáfrica",
-          "pronostico": "1|3-1",
-          "resultado": "3-1",
-          "puntos": 3
+          "pronostico": "1|2-1",
+          "resultado": "2-0",
+          "puntos": 1
         },
         {
           "partido": "Corea del Sur-República Checa",
-          "pronostico": "2|1-2",
-          "resultado": "1-2",
-          "puntos": 3
+          "pronostico": "1|2-1",
+          "resultado": "2-1",
+          "puntos": 4
         }
       ],
       "detalle_extra": [],
-      "archivo": "Analia.xlsx",
+      "archivo": "Daniela.xlsx",
       "posicion": 1
     },
     {
-      "nombre": "Miguel",
+      "nombre": "JA",
+      "puntos": 5,
+      "exactos": 1,
+      "ganadores": 1,
+      "fallos": 0,
+      "partidos": 2,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-1",
+          "resultado": "2-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|2-1",
+          "resultado": "2-1",
+          "puntos": 4
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Jose.xlsx",
+      "posicion": 2
+    },
+    {
+      "nombre": "Mayli",
+      "puntos": 5,
+      "exactos": 1,
+      "ganadores": 1,
+      "fallos": 0,
+      "partidos": 2,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|1-0",
+          "resultado": "2-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|2-1",
+          "resultado": "2-1",
+          "puntos": 4
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Mayli.xlsx",
+      "posicion": 3
+    },
+    {
+      "nombre": "Paulina",
+      "puntos": 5,
+      "exactos": 1,
+      "ganadores": 1,
+      "fallos": 0,
+      "partidos": 2,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-0",
+          "resultado": "2-0",
+          "puntos": 4
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|1-0",
+          "resultado": "2-1",
+          "puntos": 1
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Paulina.xlsx",
+      "posicion": 4
+    },
+    {
+      "nombre": "Tincho",
+      "puntos": 5,
+      "exactos": 1,
+      "ganadores": 1,
+      "fallos": 0,
+      "partidos": 2,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|1-0",
+          "resultado": "2-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|2-1",
+          "resultado": "2-1",
+          "puntos": 4
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Tincho.xlsx",
+      "posicion": 5
+    },
+    {
+      "nombre": "Joanna",
+      "puntos": 4,
+      "exactos": 1,
+      "ganadores": 0,
+      "fallos": 1,
+      "partidos": 2,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-0",
+          "resultado": "2-0",
+          "puntos": 4
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "2|0-2",
+          "resultado": "2-1",
+          "puntos": 0
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Joanna.xlsx",
+      "posicion": 6
+    },
+    {
+      "nombre": "Neyidt",
+      "puntos": 4,
+      "exactos": 1,
+      "ganadores": 0,
+      "fallos": 1,
+      "partidos": 2,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-0",
+          "resultado": "2-0",
+          "puntos": 4
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "X|1-1",
+          "resultado": "2-1",
+          "puntos": 0
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Neyidt.xlsx",
+      "posicion": 7
+    },
+    {
+      "nombre": "Tamara",
+      "puntos": 4,
+      "exactos": 1,
+      "ganadores": 0,
+      "fallos": 1,
+      "partidos": 2,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-0",
+          "resultado": "2-0",
+          "puntos": 4
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "X|1-1",
+          "resultado": "2-1",
+          "puntos": 0
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Tamara.xlsx",
+      "posicion": 8
+    },
+    {
+      "nombre": "Ina",
       "puntos": 2,
       "exactos": 0,
       "ganadores": 2,
@@ -46,222 +249,135 @@
         {
           "partido": "México-Sudáfrica",
           "pronostico": "1|2-1",
-          "resultado": "3-1",
+          "resultado": "2-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|1-0",
+          "resultado": "2-1",
+          "puntos": 1
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Ina.xlsx",
+      "posicion": 9
+    },
+    {
+      "nombre": "Miguel_Pena",
+      "puntos": 2,
+      "exactos": 0,
+      "ganadores": 2,
+      "fallos": 0,
+      "partidos": 2,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|3-1",
+          "resultado": "2-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|2-0",
+          "resultado": "2-1",
+          "puntos": 1
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Mike.xlsx",
+      "posicion": 10
+    },
+    {
+      "nombre": "Alejandra",
+      "puntos": 1,
+      "exactos": 0,
+      "ganadores": 1,
+      "fallos": 1,
+      "partidos": 2,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "2|2-4",
+          "resultado": "2-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|3-1",
+          "resultado": "2-1",
+          "puntos": 1
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Ale.xlsx",
+      "posicion": 11
+    },
+    {
+      "nombre": "Analia",
+      "puntos": 1,
+      "exactos": 0,
+      "ganadores": 1,
+      "fallos": 1,
+      "partidos": 2,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|3-1",
+          "resultado": "2-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "2|1-2",
+          "resultado": "2-1",
+          "puntos": 0
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Analia.xlsx",
+      "posicion": 12
+    },
+    {
+      "nombre": "Miguel",
+      "puntos": 1,
+      "exactos": 0,
+      "ganadores": 1,
+      "fallos": 1,
+      "partidos": 2,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-1",
+          "resultado": "2-0",
           "puntos": 1
         },
         {
           "partido": "Corea del Sur-República Checa",
           "pronostico": "2|0-2",
-          "resultado": "1-2",
-          "puntos": 1
+          "resultado": "2-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
       "archivo": "Miguel.xlsx",
-      "posicion": 2
-    },
-    {
-      "nombre": "Daniela",
-      "puntos": 1,
-      "exactos": 0,
-      "ganadores": 1,
-      "fallos": 1,
-      "partidos": 2,
-      "pts_clasificados": 0,
-      "pts_elim": 0,
-      "pts_posicion": 0,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "1|2-1",
-          "resultado": "3-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "1|2-1",
-          "resultado": "1-2",
-          "puntos": 0
-        }
-      ],
-      "detalle_extra": [],
-      "archivo": "Daniela.xlsx",
-      "posicion": 3
-    },
-    {
-      "nombre": "Ina",
-      "puntos": 1,
-      "exactos": 0,
-      "ganadores": 1,
-      "fallos": 1,
-      "partidos": 2,
-      "pts_clasificados": 0,
-      "pts_elim": 0,
-      "pts_posicion": 0,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "1|2-1",
-          "resultado": "3-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "1|1-0",
-          "resultado": "1-2",
-          "puntos": 0
-        }
-      ],
-      "detalle_extra": [],
-      "archivo": "Ina.xlsx",
-      "posicion": 4
-    },
-    {
-      "nombre": "Mayli",
-      "puntos": 1,
-      "exactos": 0,
-      "ganadores": 1,
-      "fallos": 1,
-      "partidos": 2,
-      "pts_clasificados": 0,
-      "pts_elim": 0,
-      "pts_posicion": 0,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "1|1-0",
-          "resultado": "3-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "1|2-1",
-          "resultado": "1-2",
-          "puntos": 0
-        }
-      ],
-      "detalle_extra": [],
-      "archivo": "Mayli.xlsx",
-      "posicion": 5
-    },
-    {
-      "nombre": "Neyidt",
-      "puntos": 1,
-      "exactos": 0,
-      "ganadores": 1,
-      "fallos": 1,
-      "partidos": 2,
-      "pts_clasificados": 0,
-      "pts_elim": 0,
-      "pts_posicion": 0,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "1|2-0",
-          "resultado": "3-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "X|1-1",
-          "resultado": "1-2",
-          "puntos": 0
-        }
-      ],
-      "detalle_extra": [],
-      "archivo": "Neyidt.xlsx",
-      "posicion": 6
-    },
-    {
-      "nombre": "Paulina",
-      "puntos": 1,
-      "exactos": 0,
-      "ganadores": 1,
-      "fallos": 1,
-      "partidos": 2,
-      "pts_clasificados": 0,
-      "pts_elim": 0,
-      "pts_posicion": 0,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "1|2-0",
-          "resultado": "3-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "1|1-0",
-          "resultado": "1-2",
-          "puntos": 0
-        }
-      ],
-      "detalle_extra": [],
-      "archivo": "Paulina.xlsx",
-      "posicion": 7
-    },
-    {
-      "nombre": "Tamara",
-      "puntos": 1,
-      "exactos": 0,
-      "ganadores": 1,
-      "fallos": 1,
-      "partidos": 2,
-      "pts_clasificados": 0,
-      "pts_elim": 0,
-      "pts_posicion": 0,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "1|2-0",
-          "resultado": "3-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "X|1-1",
-          "resultado": "1-2",
-          "puntos": 0
-        }
-      ],
-      "detalle_extra": [],
-      "archivo": "Tamara.xlsx",
-      "posicion": 8
-    },
-    {
-      "nombre": "Tincho",
-      "puntos": 1,
-      "exactos": 0,
-      "ganadores": 1,
-      "fallos": 1,
-      "partidos": 2,
-      "pts_clasificados": 0,
-      "pts_elim": 0,
-      "pts_posicion": 0,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "1|1-0",
-          "resultado": "3-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "1|2-1",
-          "resultado": "1-2",
-          "puntos": 0
-        }
-      ],
-      "detalle_extra": [],
-      "archivo": "Tincho.xlsx",
-      "posicion": 9
+      "posicion": 13
     },
     {
       "nombre": "Alicia",
@@ -278,19 +394,19 @@
         {
           "partido": "México-Sudáfrica",
           "pronostico": "2|1-2",
-          "resultado": "3-1",
+          "resultado": "2-0",
           "puntos": 0
         },
         {
           "partido": "Corea del Sur-República Checa",
           "pronostico": "X|0-0",
-          "resultado": "1-2",
+          "resultado": "2-1",
           "puntos": 0
         }
       ],
       "detalle_extra": [],
       "archivo": "Alicia.xlsx",
-      "posicion": 10
+      "posicion": 14
     },
     {
       "nombre": "Gabri",
@@ -306,7 +422,7 @@
       "detalle": [],
       "detalle_extra": [],
       "archivo": "Gabri.xlsx",
-      "posicion": 11
+      "posicion": 15
     }
   ]
 }

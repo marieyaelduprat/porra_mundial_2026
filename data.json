@@ -1,14 +1,49 @@
 {
-  "actualizado": "12/06/2026 21:07",
-  "partidos_jugados": 2,
+  "actualizado": "12/06/2026 23:01",
+  "partidos_jugados": 3,
   "participantes": [
+    {
+      "nombre": "Ina",
+      "puntos": 6,
+      "exactos": 1,
+      "ganadores": 2,
+      "fallos": 0,
+      "partidos": 3,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-1",
+          "resultado": "2-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|1-0",
+          "resultado": "2-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "X|1-1",
+          "resultado": "1-1",
+          "puntos": 4
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Ina.xlsx",
+      "posicion": 1
+    },
     {
       "nombre": "Daniela",
       "puntos": 5,
       "exactos": 1,
       "ganadores": 1,
-      "fallos": 0,
-      "partidos": 2,
+      "fallos": 1,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -25,19 +60,25 @@
           "pronostico": "1|2-1",
           "resultado": "2-1",
           "puntos": 4
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "1|2-0",
+          "resultado": "1-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
       "archivo": "Daniela.xlsx",
-      "posicion": 1
+      "posicion": 2
     },
     {
       "nombre": "JA",
       "puntos": 5,
       "exactos": 1,
       "ganadores": 1,
-      "fallos": 0,
-      "partidos": 2,
+      "fallos": 1,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -54,19 +95,25 @@
           "pronostico": "1|2-1",
           "resultado": "2-1",
           "puntos": 4
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "1|3-1",
+          "resultado": "1-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
       "archivo": "Jose.xlsx",
-      "posicion": 2
+      "posicion": 3
     },
     {
       "nombre": "Mayli",
       "puntos": 5,
       "exactos": 1,
       "ganadores": 1,
-      "fallos": 0,
-      "partidos": 2,
+      "fallos": 1,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -83,19 +130,25 @@
           "pronostico": "1|2-1",
           "resultado": "2-1",
           "puntos": 4
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "2|0-1",
+          "resultado": "1-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
       "archivo": "Mayli.xlsx",
-      "posicion": 3
+      "posicion": 4
     },
     {
       "nombre": "Paulina",
       "puntos": 5,
       "exactos": 1,
       "ganadores": 1,
-      "fallos": 0,
-      "partidos": 2,
+      "fallos": 1,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -112,19 +165,25 @@
           "pronostico": "1|1-0",
           "resultado": "2-1",
           "puntos": 1
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "1|2-1",
+          "resultado": "1-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
       "archivo": "Paulina.xlsx",
-      "posicion": 4
+      "posicion": 5
     },
     {
       "nombre": "Joanna",
       "puntos": 4,
       "exactos": 1,
       "ganadores": 0,
-      "fallos": 1,
-      "partidos": 2,
+      "fallos": 2,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -141,19 +200,25 @@
           "pronostico": "2|0-2",
           "resultado": "2-1",
           "puntos": 0
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "2|1-2",
+          "resultado": "1-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
       "archivo": "Joanna.xlsx",
-      "posicion": 5
+      "posicion": 6
     },
     {
       "nombre": "Neyidt",
       "puntos": 4,
       "exactos": 1,
       "ganadores": 0,
-      "fallos": 1,
-      "partidos": 2,
+      "fallos": 2,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -170,19 +235,25 @@
           "pronostico": "X|1-1",
           "resultado": "2-1",
           "puntos": 0
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "1|2-1",
+          "resultado": "1-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
       "archivo": "Neyidt.xlsx",
-      "posicion": 6
+      "posicion": 7
     },
     {
       "nombre": "Tamara",
       "puntos": 4,
       "exactos": 1,
       "ganadores": 0,
-      "fallos": 1,
-      "partidos": 2,
+      "fallos": 2,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -199,19 +270,25 @@
           "pronostico": "X|1-1",
           "resultado": "2-1",
           "puntos": 0
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "1|2-1",
+          "resultado": "1-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
       "archivo": "Tamara.xlsx",
-      "posicion": 7
+      "posicion": 8
     },
     {
       "nombre": "Tincho",
       "puntos": 4,
       "exactos": 1,
       "ganadores": 0,
-      "fallos": 1,
-      "partidos": 2,
+      "fallos": 2,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -228,39 +305,16 @@
           "pronostico": "1|2-1",
           "resultado": "2-1",
           "puntos": 4
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "1|2-1",
+          "resultado": "1-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
       "archivo": "Tincho.xlsx",
-      "posicion": 8
-    },
-    {
-      "nombre": "Ina",
-      "puntos": 2,
-      "exactos": 0,
-      "ganadores": 2,
-      "fallos": 0,
-      "partidos": 2,
-      "pts_clasificados": 0,
-      "pts_elim": 0,
-      "pts_posicion": 0,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "1|2-1",
-          "resultado": "2-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "1|1-0",
-          "resultado": "2-1",
-          "puntos": 1
-        }
-      ],
-      "detalle_extra": [],
-      "archivo": "Ina.xlsx",
       "posicion": 9
     },
     {
@@ -268,8 +322,8 @@
       "puntos": 2,
       "exactos": 0,
       "ganadores": 2,
-      "fallos": 0,
-      "partidos": 2,
+      "fallos": 1,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -286,6 +340,12 @@
           "pronostico": "1|2-0",
           "resultado": "2-1",
           "puntos": 1
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "1|1-0",
+          "resultado": "1-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
@@ -297,8 +357,8 @@
       "puntos": 1,
       "exactos": 0,
       "ganadores": 1,
-      "fallos": 1,
-      "partidos": 2,
+      "fallos": 2,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -315,6 +375,12 @@
           "pronostico": "1|3-1",
           "resultado": "2-1",
           "puntos": 1
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "1|3-1",
+          "resultado": "1-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
@@ -326,8 +392,8 @@
       "puntos": 1,
       "exactos": 0,
       "ganadores": 1,
-      "fallos": 1,
-      "partidos": 2,
+      "fallos": 2,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -344,6 +410,12 @@
           "pronostico": "2|1-2",
           "resultado": "2-1",
           "puntos": 0
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "1|2-0",
+          "resultado": "1-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
@@ -355,8 +427,8 @@
       "puntos": 1,
       "exactos": 0,
       "ganadores": 1,
-      "fallos": 1,
-      "partidos": 2,
+      "fallos": 2,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -373,6 +445,12 @@
           "pronostico": "2|0-2",
           "resultado": "2-1",
           "puntos": 0
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "2|1-2",
+          "resultado": "1-1",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
@@ -384,8 +462,8 @@
       "puntos": 0,
       "exactos": 0,
       "ganadores": 0,
-      "fallos": 2,
-      "partidos": 2,
+      "fallos": 3,
+      "partidos": 3,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -401,6 +479,12 @@
           "partido": "Corea del Sur-República Checa",
           "pronostico": "X|0-0",
           "resultado": "2-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "1|2-0",
+          "resultado": "1-1",
           "puntos": 0
         }
       ],

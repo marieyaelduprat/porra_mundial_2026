@@ -1,5 +1,5 @@
 {
-  "actualizado": "12/06/2026 21:01",
+  "actualizado": "12/06/2026 21:07",
   "partidos_jugados": 2,
   "participantes": [
     {
@@ -119,35 +119,6 @@
       "posicion": 4
     },
     {
-      "nombre": "Tincho",
-      "puntos": 5,
-      "exactos": 1,
-      "ganadores": 1,
-      "fallos": 0,
-      "partidos": 2,
-      "pts_clasificados": 0,
-      "pts_elim": 0,
-      "pts_posicion": 0,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "1|1-0",
-          "resultado": "2-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "1|2-1",
-          "resultado": "2-1",
-          "puntos": 4
-        }
-      ],
-      "detalle_extra": [],
-      "archivo": "Tincho.xlsx",
-      "posicion": 5
-    },
-    {
       "nombre": "Joanna",
       "puntos": 4,
       "exactos": 1,
@@ -174,7 +145,7 @@
       ],
       "detalle_extra": [],
       "archivo": "Joanna.xlsx",
-      "posicion": 6
+      "posicion": 5
     },
     {
       "nombre": "Neyidt",
@@ -203,7 +174,7 @@
       ],
       "detalle_extra": [],
       "archivo": "Neyidt.xlsx",
-      "posicion": 7
+      "posicion": 6
     },
     {
       "nombre": "Tamara",
@@ -232,6 +203,35 @@
       ],
       "detalle_extra": [],
       "archivo": "Tamara.xlsx",
+      "posicion": 7
+    },
+    {
+      "nombre": "Tincho",
+      "puntos": 4,
+      "exactos": 1,
+      "ganadores": 0,
+      "fallos": 1,
+      "partidos": 2,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "X|1-1",
+          "resultado": "2-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|2-1",
+          "resultado": "2-1",
+          "puntos": 4
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Tincho.xlsx",
       "posicion": 8
     },
     {

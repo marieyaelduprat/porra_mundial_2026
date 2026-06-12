@@ -22,8 +22,9 @@ import pandas as pd
 # ─── RUTAS ───────────────────────────────────────────────────────────────────
 BASE_DIR   = Path(__file__).parent.parent
 EXCELS_DIR = BASE_DIR / "excels"
+print(EXCELS_DIR)
 RESULTS_FILE = BASE_DIR / "resultados_reales.json"
-OUTPUT_FILE  = BASE_DIR / "web" / "data.json"
+OUTPUT_FILE  = BASE_DIR / "data.json"
 
 # ─── PUNTUACIÓN ──────────────────────────────────────────────────────────────
 PTS_EXACTO   = 3

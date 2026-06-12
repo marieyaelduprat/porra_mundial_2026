@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porra Mundial 2026 🏆</title>
+  <style>
+    /* ── TOKENS ─────────────────────────── */
+    :root {
+      --verde:   #00a859;
+      --rojo:    #c8102e;
+      --dorado:  #f5c518;
+      --azul:    #1a1a2e;
+      --azul2:   #16213e;
+      --azul3:   #0f3460;
+      --gris:    #8b949e;
+      --blanco:  #e6edf3;
+      --card:    rgba(255,255,255,0.04);
+      --border:  rgba(255,255,255,0.08);
+      --shadow:  0 8px 32px rgba(0,0,0,.4);
+    }
+
+    /* ── RESET & BASE ───────────────────── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--azul);
+      color: var(--blanco);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      padding-bottom: 3rem;
+    }
+
+    /* ── HERO ───────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--azul2) 0%, var(--azul3) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '⚽';
+      position: absolute;
+      font-size: 18rem;
+      opacity: 0.04;
+      top: -4rem;
+      right: -3rem;
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--verde);
+      color: white;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .3rem .8rem;
+      border-radius: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 6vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      line-height: 1.1;
+    }
+
+    .hero h1 span { color: var(--dorado); }
+
+    .hero-meta {
+      margin-top: .8rem;
+      color: var(--gris);
+      font-size: .85rem;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta strong { color: var(--blanco); }
+
+    /* ── CONTENEDOR ────────────────────── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* ── LEYENDA PUNTOS ─────────────────── */
+    .legend {
+      display: flex;
+      gap: .75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 1.5rem auto 0;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .78rem;
+      color: var(--gris);
+    }
+
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-gold   { background: var(--dorado); }
+    .dot-green  { background: var(--verde); }
+    .dot-gray   { background: #444; }
+
+    /* ── TABLA ──────────────────────────── */
+    .table-wrap {
+      margin-top: 2rem;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead th {
+      background: var(--azul3);
+      padding: .85rem 1rem;
+      text-align: left;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gris);
+      white-space: nowrap;
+    }
+
+    thead th:first-child { text-align: center; width: 3.5rem; }
+    thead th.right       { text-align: right; }
+
+    tbody tr {
+      border-top: 1px solid var(--border);
+      transition: background .15s;
+      cursor: pointer;
+    }
+
+    tbody tr:hover { background: var(--card); }
+
+    tbody tr.gold   { background: rgba(245,197,24,.07); }
+    tbody tr.silver { background: rgba(192,192,192,.05); }
+    tbody tr.bronze { background: rgba(205,127,50,.05); }
+
+    td {
+      padding: .9rem 1rem;
+      font-size: .9rem;
+      vertical-align: middle;
+    }
+
+    td.pos {
+      text-align: center;
+      font-weight: 800;
+      font-size: 1.05rem;
+      width: 3.5rem;
+    }
+
+    .medal { font-size: 1.3rem; }
+
+    .nombre {
+      font-weight: 600;
+    }
+
+    .pts-cell {
+      text-align: right;
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+
+    .pts-cell.leader { color: var(--dorado); }
+
+    .stat {
+      text-align: right;
+      font-size: .82rem;
+    }
+
+    .stat.exactos  { color: var(--dorado); }
+    .stat.ganador  { color: var(--verde); }
+    .stat.fallos   { color: #555; }
+
+    .bar-wrap {
+      width: 80px;
+      height: 6px;
+      background: rgba(255,255,255,.08);
+      border-radius: 99px;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: .4rem;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--verde), var(--dorado));
+      transition: width .6s ease;
+    }
+
+    /* ── DETALLE EXPANDIBLE ─────────────── */
+    .detail-row { display: none; }
+
+    .detail-row.open { display: table-row; }
+
+    .detail-inner {
+      padding: 1rem 1.5rem 1.5rem;
+      background: rgba(0,0,0,.25);
+    }
+
+    .detail-inner h4 {
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--gris);
+      margin-bottom: .75rem;
+    }
+
+    .match-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: .5rem;
+    }
+
+    .match-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: .4rem .7rem;
+      font-size: .78rem;
+      gap: .5rem;
+    }
+
+    .match-name { color: var(--gris); flex: 1; }
+
+    .match-scores {
+      display: flex;
+      gap: .4rem;
+      align-items: center;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .score-label {
+      font-size: .65rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--gris);
+    }
+
+    .pts-badge {
+      font-weight: 800;
+      font-size: .8rem;
+      min-width: 1.4rem;
+      text-align: center;
+      border-radius: 4px;
+      padding: .1rem .35rem;
+    }
+
+    .pts-3 { color: var(--dorado); background: rgba(245,197,24,.15); }
+    .pts-1 { color: var(--verde);  background: rgba(0,168,89,.15); }
+    .pts-0 { color: #555;          background: rgba(255,255,255,.04); }
+
+    /* ── EMPTY ──────────────────────────── */
+    .empty {
+      text-align: center;
+      padding: 4rem 1rem;
+      color: var(--gris);
+    }
+
+    .empty p { margin-top: .5rem; font-size: .85rem; }
+
+    /* ── FOOTER ─────────────────────────── */
+    .footer {
+      text-align: center;
+      margin-top: 2.5rem;
+      color: var(--gris);
+      font-size: .78rem;
+    }
+
+    /* ── SPINNER ────────────────────────── */
+    .loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      gap: 1rem;
+      color: var(--gris);
+    }
+
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--border);
+      border-top-color: var(--verde);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── RESPONSIVE ─────────────────────── */
+    @media (max-width: 600px) {
+      td, th { padding: .7rem .6rem; }
+      .stat.fallos, .bar-wrap { display: none; }
+      .detail-inner { padding: .75rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-badge">🌍 USA · MEX · CAN 2026</div>
+    <h1>Porra <span>Mundial</span> 2026</h1>
+    <div class="hero-meta" id="hero-meta">
+      <span>Cargando...</span>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="dot dot-gold"></div> Resultado exacto (3 pts)</div>
+      <div class="legend-item"><div class="dot dot-green"></div> Ganador correcto (1 pt)</div>
+      <div class="legend-item"><div class="dot dot-gray"></div> Fallo (0 pts)</div>
+    </div>
+  </div>
+</div>
+
+<!-- TABLA -->
+<div class="container">
+  <div id="app"></div>
+  <div class="footer" id="footer"></div>
+</div>
+
+<script>
+// ── Utilidades ────────────────────────────────────────────────
+function medal(pos) {
+  if (pos === 1) return '<span class="medal">🥇</span>';
+  if (pos === 2) return '<span class="medal">🥈</span>';
+  if (pos === 3) return '<span class="medal">🥉</span>';
+  return pos;
+}
+
+function rowClass(pos) {
+  if (pos === 1) return 'gold';
+  if (pos === 2) return 'silver';
+  if (pos === 3) return 'bronze';
+  return '';
+}
+
+function ptsClass(pts) {
+  if (pts === 3) return 'pts-3';
+  if (pts === 1) return 'pts-1';
+  return 'pts-0';
+}
+
+function parsePron(str) {
+  const m = str.match(/([12X])\|(\d+)-(\d+)/);
+  if (!m) return str;
+  const signo = { '1': 'Local', 'X': 'Empate', '2': 'Visitante' }[m[1]] || m[1];
+  return `${m[2]}-${m[3]}`;
+}
+
+// ── Render ────────────────────────────────────────────────────
+function render(data) {
+  const app = document.getElementById('app');
+  const meta = document.getElementById('hero-meta');
+  const footer = document.getElementById('footer');
+
+  const maxPts = data.participantes.length > 0 ? data.participantes[0].puntos : 1;
+
+  meta.innerHTML = `
+    <span>⚽ <strong>${data.partidos_jugados}</strong> partidos jugados</span>
+    <span>👥 <strong>${data.participantes.length}</strong> participantes</span>
+    <span>🕐 Actualizado <strong>${data.actualizado}</strong></span>
+  `;
+
+  if (data.participantes.length === 0) {
+    app.innerHTML = `<div class="empty">
+      <div style="font-size:3rem">⏳</div>
+      <strong>Todavía no hay datos</strong>
+      <p>Los resultados se cargarán en cuanto el administrador actualice el sistema.</p>
+    </div>`;
+    return;
+  }
+
+  let html = `<div class="table-wrap"><table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Participante</th>
+        <th class="right">Pts</th>
+        <th class="right">✓✓</th>
+        <th class="right">✓</th>
+        <th class="right">✗</th>
+        <th class="right">Progreso</th>
+      </tr>
+    </thead>
+    <tbody>`;
+
+  data.participantes.forEach((p, i) => {
+    const pct = maxPts > 0 ? Math.round((p.puntos / maxPts) * 100) : 0;
+    const detailId = `d-${i}`;
+    const rowId = `r-${i}`;
+
+    html += `
+      <tr class="${rowClass(p.posicion)}" onclick="toggleDetail('${detailId}', '${rowId}')" id="${rowId}">
+        <td class="pos">${medal(p.posicion)}</td>
+        <td class="nombre">${p.nombre}</td>
+        <td class="pts-cell ${p.posicion === 1 ? 'leader' : ''}">${p.puntos}</td>
+        <td class="stat exactos">${p.exactos}</td>
+        <td class="stat ganador">${p.ganadores}</td>
+        <td class="stat fallos">${p.fallos}</td>
+        <td class="stat">
+          <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div>
+          ${p.partidos}j
+        </td>
+      </tr>
+      <tr class="detail-row" id="${detailId}">
+        <td colspan="7">
+          <div class="detail-inner">
+            ${renderDetalle(p)}
+          </div>
+        </td>
+      </tr>`;
+  });
+
+  html += `</tbody></table></div>`;
+  app.innerHTML = html;
+
+  footer.innerHTML = `Haz clic en cualquier participante para ver sus pronósticos • Porra Mundial 2026`;
+}
+
+function renderDetalle(p) {
+  if (!p.detalle || p.detalle.length === 0) {
+    return '<div class="detail-inner"><em style="color:var(--gris)">Sin partidos evaluados aún.</em></div>';
+  }
+
+  let html = `<h4>Pronósticos de ${p.nombre} (${p.partidos} evaluados)</h4><div class="match-grid">`;
+
+  p.detalle.forEach(d => {
+    const pronStr = parsePron(d.pronostico);
+    html += `
+      <div class="match-item">
+        <div class="match-name">${d.partido}</div>
+        <div class="match-scores">
+          <span class="score-label">Pron.</span>
+          <span>${pronStr}</span>
+          <span class="score-label">Real</span>
+          <span>${d.resultado}</span>
+        </div>
+        <span class="pts-badge ${ptsClass(d.puntos)}">${d.puntos}p</span>
+      </div>`;
+  });
+
+  html += '</div>';
+  return html;
+}
+
+// ── Toggle detalle ────────────────────────────────────────────
+function toggleDetail(detailId, rowId) {
+  const detail = document.getElementById(detailId);
+  if (!detail) return;
+  const isOpen = detail.classList.contains('open');
+  // Cerrar todos
+  document.querySelectorAll('.detail-row').forEach(r => r.classList.remove('open'));
+  if (!isOpen) detail.classList.add('open');
+}
+
+// ── Carga datos ───────────────────────────────────────────────
+async function loadData() {
+  const app = document.getElementById('app');
+  app.innerHTML = `<div class="loading"><div class="spinner"></div><span>Cargando clasificación...</span></div>`;
+
+  try {
+    // Cachebuster para que no quede la versión antigua
+    const res = await fetch('data.json?t=' + Date.now());
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    render(data);
+  } catch (e) {
+    app.innerHTML = `<div class="empty">
+      <div style="font-size:3rem">⚠️</div>
+      <strong>No se pudo cargar la clasificación</strong>
+      <p>Asegúrate de que el archivo <code>data.json</code> existe en la misma carpeta que este HTML.</p>
+      <p style="margin-top:.5rem;font-size:.75rem;color:#555">${e.message}</p>
+    </div>`;
+  }
+}
+
+loadData();
+</script>
+</body>
+</html>

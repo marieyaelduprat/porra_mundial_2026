@@ -1,169 +1,299 @@
 {
-  "actualizado": "12/06/2026 20:23",
+  "actualizado": "12/06/2026 20:31",
   "partidos_jugados": 2,
   "participantes": [
     {
-      "nombre": "Excel-Mundial-2026  Analia",
-      "puntos": 0,
-      "exactos": 0,
+      "nombre": "Analia",
+      "puntos": 6,
+      "exactos": 2,
       "ganadores": 0,
       "fallos": 0,
-      "partidos": 0,
+      "partidos": 2,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
-      "detalle": [],
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|3-1",
+          "resultado": "3-1",
+          "puntos": 3
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "2|1-2",
+          "resultado": "1-2",
+          "puntos": 3
+        }
+      ],
       "detalle_extra": [],
-      "archivo": "Excel-Mundial-2026  Analia.xlsx",
+      "archivo": "Analia.xlsx",
       "posicion": 1
     },
     {
-      "nombre": "Excel-Mundial-2026 Alicia",
-      "puntos": 0,
+      "nombre": "Miguel",
+      "puntos": 2,
       "exactos": 0,
-      "ganadores": 0,
+      "ganadores": 2,
       "fallos": 0,
-      "partidos": 0,
+      "partidos": 2,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
-      "detalle": [],
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-1",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "2|0-2",
+          "resultado": "1-2",
+          "puntos": 1
+        }
+      ],
       "detalle_extra": [],
-      "archivo": "Excel-Mundial-2026 Alicia.xlsx",
+      "archivo": "Miguel.xlsx",
       "posicion": 2
     },
     {
-      "nombre": "Excel-Mundial-2026 Gabriel",
-      "puntos": 0,
+      "nombre": "Daniela",
+      "puntos": 1,
       "exactos": 0,
-      "ganadores": 0,
-      "fallos": 0,
-      "partidos": 0,
+      "ganadores": 1,
+      "fallos": 1,
+      "partidos": 2,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
-      "detalle": [],
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-1",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|2-1",
+          "resultado": "1-2",
+          "puntos": 0
+        }
+      ],
       "detalle_extra": [],
-      "archivo": "Excel-Mundial-2026 Gabriel.xlsx",
+      "archivo": "Daniela.xlsx",
       "posicion": 3
     },
     {
-      "nombre": "Excel-Mundial-2026 Martin",
-      "puntos": 0,
+      "nombre": "Ina",
+      "puntos": 1,
       "exactos": 0,
-      "ganadores": 0,
-      "fallos": 0,
-      "partidos": 0,
+      "ganadores": 1,
+      "fallos": 1,
+      "partidos": 2,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
-      "detalle": [],
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-1",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|1-0",
+          "resultado": "1-2",
+          "puntos": 0
+        }
+      ],
       "detalle_extra": [],
-      "archivo": "Excel-Mundial-2026 Martin.xlsx",
+      "archivo": "Ina.xlsx",
       "posicion": 4
     },
     {
-      "nombre": "Excel-Mundial-2026 Mayli",
-      "puntos": 0,
+      "nombre": "Mayli",
+      "puntos": 1,
       "exactos": 0,
-      "ganadores": 0,
-      "fallos": 0,
-      "partidos": 0,
+      "ganadores": 1,
+      "fallos": 1,
+      "partidos": 2,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
-      "detalle": [],
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|1-0",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|2-1",
+          "resultado": "1-2",
+          "puntos": 0
+        }
+      ],
       "detalle_extra": [],
-      "archivo": "Excel-Mundial-2026 Mayli.xlsx",
+      "archivo": "Mayli.xlsx",
       "posicion": 5
     },
     {
-      "nombre": "Excel-Mundial-2026 Miguel",
-      "puntos": 0,
+      "nombre": "Neyidt",
+      "puntos": 1,
       "exactos": 0,
-      "ganadores": 0,
-      "fallos": 0,
-      "partidos": 0,
+      "ganadores": 1,
+      "fallos": 1,
+      "partidos": 2,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
-      "detalle": [],
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-0",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "X|1-1",
+          "resultado": "1-2",
+          "puntos": 0
+        }
+      ],
       "detalle_extra": [],
-      "archivo": "Excel-Mundial-2026 Miguel.xlsx",
+      "archivo": "Neyidt.xlsx",
       "posicion": 6
     },
     {
-      "nombre": "Excel-Mundial-2026 NEYIDT",
-      "puntos": 0,
+      "nombre": "Paulina",
+      "puntos": 1,
       "exactos": 0,
-      "ganadores": 0,
-      "fallos": 0,
-      "partidos": 0,
+      "ganadores": 1,
+      "fallos": 1,
+      "partidos": 2,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
-      "detalle": [],
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-0",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|1-0",
+          "resultado": "1-2",
+          "puntos": 0
+        }
+      ],
       "detalle_extra": [],
-      "archivo": "Excel-Mundial-2026 NEYIDT.xlsx",
+      "archivo": "Paulina.xlsx",
       "posicion": 7
     },
     {
-      "nombre": "Excel-Mundial-2026.xlsx - porraa TAMARA",
-      "puntos": 0,
+      "nombre": "Tamara",
+      "puntos": 1,
       "exactos": 0,
-      "ganadores": 0,
-      "fallos": 0,
-      "partidos": 0,
+      "ganadores": 1,
+      "fallos": 1,
+      "partidos": 2,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
-      "detalle": [],
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-0",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "X|1-1",
+          "resultado": "1-2",
+          "puntos": 0
+        }
+      ],
       "detalle_extra": [],
-      "archivo": "Excel-Mundial-2026.xlsx - porraa TAMARA.xlsx",
+      "archivo": "Tamara.xlsx",
       "posicion": 8
     },
     {
-      "nombre": "PORRADANIM",
-      "puntos": 0,
+      "nombre": "Tincho",
+      "puntos": 1,
       "exactos": 0,
-      "ganadores": 0,
-      "fallos": 0,
-      "partidos": 0,
+      "ganadores": 1,
+      "fallos": 1,
+      "partidos": 2,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
-      "detalle": [],
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|1-0",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|2-1",
+          "resultado": "1-2",
+          "puntos": 0
+        }
+      ],
       "detalle_extra": [],
-      "archivo": "PORRADANIM.xlsx",
+      "archivo": "Tincho.xlsx",
       "posicion": 9
     },
     {
-      "nombre": "excel mund PORRA evalua final INA",
+      "nombre": "Alicia",
       "puntos": 0,
       "exactos": 0,
       "ganadores": 0,
-      "fallos": 0,
-      "partidos": 0,
+      "fallos": 2,
+      "partidos": 2,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
-      "detalle": [],
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "2|1-2",
+          "resultado": "3-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "X|0-0",
+          "resultado": "1-2",
+          "puntos": 0
+        }
+      ],
       "detalle_extra": [],
-      "archivo": "excel mund PORRA evalua final INA.xlsx",
+      "archivo": "Alicia.xlsx",
       "posicion": 10
     },
     {
-      "nombre": "porra paulina evalua",
+      "nombre": "Gabri",
       "puntos": 0,
       "exactos": 0,
       "ganadores": 0,
@@ -175,7 +305,7 @@
       "pts_premios": 0,
       "detalle": [],
       "detalle_extra": [],
-      "archivo": "porra paulina evalua.xlsx",
+      "archivo": "Gabri.xlsx",
       "posicion": 11
     }
   ]

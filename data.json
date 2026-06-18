@@ -1,14 +1,14 @@
 {
-  "actualizado": "17/06/2026 09:10",
-  "partidos_jugados": 20,
+  "actualizado": "18/06/2026 09:19",
+  "partidos_jugados": 24,
   "participantes": [
     {
       "nombre": "Gabri",
-      "puntos": 23,
-      "exactos": 4,
-      "ganadores": 7,
-      "fallos": 9,
-      "partidos": 20,
+      "puntos": 29,
+      "exactos": 5,
+      "ganadores": 9,
+      "fallos": 10,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -133,6 +133,30 @@
           "pronostico": "1|2-0",
           "resultado": "3-1",
           "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|3-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-2",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|2-1",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|1-0",
+          "resultado": "1-0",
+          "puntos": 4
         }
       ],
       "detalle_extra": [],
@@ -141,11 +165,11 @@
     },
     {
       "nombre": "Ina",
-      "puntos": 23,
+      "puntos": 26,
       "exactos": 3,
-      "ganadores": 11,
-      "fallos": 6,
-      "partidos": 20,
+      "ganadores": 14,
+      "fallos": 7,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -270,6 +294,30 @@
           "pronostico": "1|2-0",
           "resultado": "3-1",
           "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|3-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-2",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|2-0",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|2-0",
+          "resultado": "1-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -277,12 +325,495 @@
       "posicion": 2
     },
     {
-      "nombre": "Mayli",
-      "puntos": 19,
-      "exactos": 2,
+      "nombre": "Tincho",
+      "puntos": 25,
+      "exactos": 4,
+      "ganadores": 9,
+      "fallos": 11,
+      "partidos": 24,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "X|1-1",
+          "resultado": "2-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|2-1",
+          "resultado": "2-1",
+          "puntos": 4
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "1|2-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Catar-Suiza",
+          "pronostico": "2|0-2",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Brasil-Marruecos",
+          "pronostico": "X|2-2",
+          "resultado": "1-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Haití-Escocia",
+          "pronostico": "2|0-2",
+          "resultado": "0-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Estados Unidos-Paraguay",
+          "pronostico": "X|2-2",
+          "resultado": "4-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Australia-Turquía",
+          "pronostico": "2|1-2",
+          "resultado": "0-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Alemania-Curazao",
+          "pronostico": "1|4-0",
+          "resultado": "7-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Costa de Marfil-Ecuador",
+          "pronostico": "X|2-2",
+          "resultado": "1-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Países Bajos-Japón",
+          "pronostico": "1|3-2",
+          "resultado": "2-2",
+          "puntos": 0
+        },
+        {
+          "partido": "Suecia-Túnez",
+          "pronostico": "1|1-0",
+          "resultado": "5-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Bélgica-Egipto",
+          "pronostico": "1|2-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Irán-Nueva Zelanda",
+          "pronostico": "1|1-0",
+          "resultado": "2-2",
+          "puntos": 0
+        },
+        {
+          "partido": "España-Cabo Verde",
+          "pronostico": "1|3-1",
+          "resultado": "0-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Arabia Saudita-Uruguay",
+          "pronostico": "X|1-1",
+          "resultado": "1-1",
+          "puntos": 4
+        },
+        {
+          "partido": "Francia-Senegal",
+          "pronostico": "1|2-1",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Irak-Noruega",
+          "pronostico": "2|1-2",
+          "resultado": "1-4",
+          "puntos": 1
+        },
+        {
+          "partido": "Argentina-Argelia",
+          "pronostico": "1|3-1",
+          "resultado": "3-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Austria-Jordania",
+          "pronostico": "X|1-1",
+          "resultado": "3-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|4-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|1-3",
+          "resultado": "1-3",
+          "puntos": 4
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|2-1",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|1-0",
+          "resultado": "1-0",
+          "puntos": 4
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Tincho.xlsx",
+      "posicion": 3
+    },
+    {
+      "nombre": "Daniela",
+      "puntos": 23,
+      "exactos": 3,
       "ganadores": 11,
-      "fallos": 7,
-      "partidos": 20,
+      "fallos": 10,
+      "partidos": 24,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-1",
+          "resultado": "2-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|2-1",
+          "resultado": "2-1",
+          "puntos": 4
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "1|2-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Catar-Suiza",
+          "pronostico": "2|0-2",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Brasil-Marruecos",
+          "pronostico": "1|2-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Haití-Escocia",
+          "pronostico": "2|0-2",
+          "resultado": "0-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Estados Unidos-Paraguay",
+          "pronostico": "1|2-1",
+          "resultado": "4-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Australia-Turquía",
+          "pronostico": "2|0-3",
+          "resultado": "0-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Alemania-Curazao",
+          "pronostico": "1|4-0",
+          "resultado": "7-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Costa de Marfil-Ecuador",
+          "pronostico": "2|1-2",
+          "resultado": "1-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Países Bajos-Japón",
+          "pronostico": "1|3-2",
+          "resultado": "2-2",
+          "puntos": 0
+        },
+        {
+          "partido": "Suecia-Túnez",
+          "pronostico": "1|2-1",
+          "resultado": "5-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Bélgica-Egipto",
+          "pronostico": "1|1-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Irán-Nueva Zelanda",
+          "pronostico": "1|1-0",
+          "resultado": "2-2",
+          "puntos": 0
+        },
+        {
+          "partido": "España-Cabo Verde",
+          "pronostico": "1|3-0",
+          "resultado": "0-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Arabia Saudita-Uruguay",
+          "pronostico": "2|1-2",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Francia-Senegal",
+          "pronostico": "1|3-1",
+          "resultado": "3-1",
+          "puntos": 4
+        },
+        {
+          "partido": "Irak-Noruega",
+          "pronostico": "2|0-2",
+          "resultado": "1-4",
+          "puntos": 1
+        },
+        {
+          "partido": "Argentina-Argelia",
+          "pronostico": "1|2-0",
+          "resultado": "3-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Austria-Jordania",
+          "pronostico": "1|2-0",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|3-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-2",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|4-1",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|1-0",
+          "resultado": "1-0",
+          "puntos": 4
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Daniela.xlsx",
+      "posicion": 4
+    },
+    {
+      "nombre": "Miguel",
+      "puntos": 22,
+      "exactos": 3,
+      "ganadores": 10,
+      "fallos": 11,
+      "partidos": 24,
+      "pts_clasificados": 0,
+      "pts_elim": 0,
+      "pts_posicion": 0,
+      "pts_premios": 0,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "1|2-1",
+          "resultado": "2-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "2|0-2",
+          "resultado": "2-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "2|1-2",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Catar-Suiza",
+          "pronostico": "2|0-2",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Brasil-Marruecos",
+          "pronostico": "1|3-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Haití-Escocia",
+          "pronostico": "2|0-3",
+          "resultado": "0-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Estados Unidos-Paraguay",
+          "pronostico": "2|0-2",
+          "resultado": "4-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Australia-Turquía",
+          "pronostico": "2|0-1",
+          "resultado": "0-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Alemania-Curazao",
+          "pronostico": "1|4-0",
+          "resultado": "7-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Costa de Marfil-Ecuador",
+          "pronostico": "2|0-2",
+          "resultado": "1-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Países Bajos-Japón",
+          "pronostico": "1|2-1",
+          "resultado": "2-2",
+          "puntos": 0
+        },
+        {
+          "partido": "Suecia-Túnez",
+          "pronostico": "1|2-0",
+          "resultado": "5-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Bélgica-Egipto",
+          "pronostico": "1|2-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Irán-Nueva Zelanda",
+          "pronostico": "X|1-1",
+          "resultado": "2-2",
+          "puntos": 1
+        },
+        {
+          "partido": "España-Cabo Verde",
+          "pronostico": "1|2-0",
+          "resultado": "0-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Arabia Saudita-Uruguay",
+          "pronostico": "2|1-2",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Francia-Senegal",
+          "pronostico": "1|3-1",
+          "resultado": "3-1",
+          "puntos": 4
+        },
+        {
+          "partido": "Irak-Noruega",
+          "pronostico": "2|0-1",
+          "resultado": "1-4",
+          "puntos": 1
+        },
+        {
+          "partido": "Argentina-Argelia",
+          "pronostico": "1|3-0",
+          "resultado": "3-0",
+          "puntos": 4
+        },
+        {
+          "partido": "Austria-Jordania",
+          "pronostico": "1|2-0",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|3-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-3",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|3-1",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|1-0",
+          "resultado": "1-0",
+          "puntos": 4
+        }
+      ],
+      "detalle_extra": [],
+      "archivo": "Miguel.xlsx",
+      "posicion": 5
+    },
+    {
+      "nombre": "Mayli",
+      "puntos": 22,
+      "exactos": 2,
+      "ganadores": 14,
+      "fallos": 8,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -407,156 +938,43 @@
           "pronostico": "1|2-0",
           "resultado": "3-1",
           "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|3-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-2",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|2-1",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|3-1",
+          "resultado": "1-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
       "archivo": "Mayli.xlsx",
-      "posicion": 3
-    },
-    {
-      "nombre": "Daniela",
-      "puntos": 17,
-      "exactos": 2,
-      "ganadores": 9,
-      "fallos": 9,
-      "partidos": 20,
-      "pts_clasificados": 0,
-      "pts_elim": 0,
-      "pts_posicion": 0,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "1|2-1",
-          "resultado": "2-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "1|2-1",
-          "resultado": "2-1",
-          "puntos": 4
-        },
-        {
-          "partido": "Canadá-Bosnia y Herzegovina",
-          "pronostico": "1|2-0",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Catar-Suiza",
-          "pronostico": "2|0-2",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Brasil-Marruecos",
-          "pronostico": "1|2-1",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Haití-Escocia",
-          "pronostico": "2|0-2",
-          "resultado": "0-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Estados Unidos-Paraguay",
-          "pronostico": "1|2-1",
-          "resultado": "4-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Australia-Turquía",
-          "pronostico": "2|0-3",
-          "resultado": "0-2",
-          "puntos": 1
-        },
-        {
-          "partido": "Alemania-Curazao",
-          "pronostico": "1|4-0",
-          "resultado": "7-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Costa de Marfil-Ecuador",
-          "pronostico": "2|1-2",
-          "resultado": "1-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Países Bajos-Japón",
-          "pronostico": "1|3-2",
-          "resultado": "2-2",
-          "puntos": 0
-        },
-        {
-          "partido": "Suecia-Túnez",
-          "pronostico": "1|2-1",
-          "resultado": "5-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Bélgica-Egipto",
-          "pronostico": "1|1-0",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Irán-Nueva Zelanda",
-          "pronostico": "1|1-0",
-          "resultado": "2-2",
-          "puntos": 0
-        },
-        {
-          "partido": "España-Cabo Verde",
-          "pronostico": "1|3-0",
-          "resultado": "0-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Arabia Saudita-Uruguay",
-          "pronostico": "2|1-2",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Francia-Senegal",
-          "pronostico": "1|3-1",
-          "resultado": "3-1",
-          "puntos": 4
-        },
-        {
-          "partido": "Irak-Noruega",
-          "pronostico": "2|0-2",
-          "resultado": "1-4",
-          "puntos": 1
-        },
-        {
-          "partido": "Argentina-Argelia",
-          "pronostico": "1|2-0",
-          "resultado": "3-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Austria-Jordania",
-          "pronostico": "1|2-0",
-          "resultado": "3-1",
-          "puntos": 1
-        }
-      ],
-      "detalle_extra": [],
-      "archivo": "Daniela.xlsx",
-      "posicion": 4
+      "posicion": 6
     },
     {
       "nombre": "Jastin",
-      "puntos": 17,
+      "puntos": 19,
       "exactos": 2,
-      "ganadores": 9,
-      "fallos": 9,
-      "partidos": 20,
+      "ganadores": 11,
+      "fallos": 11,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -681,293 +1099,43 @@
           "pronostico": "1|3-0",
           "resultado": "3-1",
           "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|4-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-3",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "2|1-2",
+          "resultado": "4-2",
+          "puntos": 0
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|2-0",
+          "resultado": "1-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
       "archivo": "Jastin.xlsx",
-      "posicion": 5
-    },
-    {
-      "nombre": "Miguel",
-      "puntos": 16,
-      "exactos": 2,
-      "ganadores": 8,
-      "fallos": 10,
-      "partidos": 20,
-      "pts_clasificados": 0,
-      "pts_elim": 0,
-      "pts_posicion": 0,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "1|2-1",
-          "resultado": "2-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "2|0-2",
-          "resultado": "2-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Canadá-Bosnia y Herzegovina",
-          "pronostico": "2|1-2",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Catar-Suiza",
-          "pronostico": "2|0-2",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Brasil-Marruecos",
-          "pronostico": "1|3-1",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Haití-Escocia",
-          "pronostico": "2|0-3",
-          "resultado": "0-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Estados Unidos-Paraguay",
-          "pronostico": "2|0-2",
-          "resultado": "4-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Australia-Turquía",
-          "pronostico": "2|0-1",
-          "resultado": "0-2",
-          "puntos": 1
-        },
-        {
-          "partido": "Alemania-Curazao",
-          "pronostico": "1|4-0",
-          "resultado": "7-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Costa de Marfil-Ecuador",
-          "pronostico": "2|0-2",
-          "resultado": "1-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Países Bajos-Japón",
-          "pronostico": "1|2-1",
-          "resultado": "2-2",
-          "puntos": 0
-        },
-        {
-          "partido": "Suecia-Túnez",
-          "pronostico": "1|2-0",
-          "resultado": "5-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Bélgica-Egipto",
-          "pronostico": "1|2-0",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Irán-Nueva Zelanda",
-          "pronostico": "X|1-1",
-          "resultado": "2-2",
-          "puntos": 1
-        },
-        {
-          "partido": "España-Cabo Verde",
-          "pronostico": "1|2-0",
-          "resultado": "0-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Arabia Saudita-Uruguay",
-          "pronostico": "2|1-2",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Francia-Senegal",
-          "pronostico": "1|3-1",
-          "resultado": "3-1",
-          "puntos": 4
-        },
-        {
-          "partido": "Irak-Noruega",
-          "pronostico": "2|0-1",
-          "resultado": "1-4",
-          "puntos": 1
-        },
-        {
-          "partido": "Argentina-Argelia",
-          "pronostico": "1|3-0",
-          "resultado": "3-0",
-          "puntos": 4
-        },
-        {
-          "partido": "Austria-Jordania",
-          "pronostico": "1|2-0",
-          "resultado": "3-1",
-          "puntos": 1
-        }
-      ],
-      "detalle_extra": [],
-      "archivo": "Miguel.xlsx",
-      "posicion": 6
-    },
-    {
-      "nombre": "Mike",
-      "puntos": 16,
-      "exactos": 2,
-      "ganadores": 8,
-      "fallos": 10,
-      "partidos": 20,
-      "pts_clasificados": 0,
-      "pts_elim": 0,
-      "pts_posicion": 0,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "1|3-1",
-          "resultado": "2-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "1|2-0",
-          "resultado": "2-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Canadá-Bosnia y Herzegovina",
-          "pronostico": "1|1-0",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Catar-Suiza",
-          "pronostico": "2|1-2",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Brasil-Marruecos",
-          "pronostico": "1|3-2",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Haití-Escocia",
-          "pronostico": "2|1-3",
-          "resultado": "0-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Estados Unidos-Paraguay",
-          "pronostico": "X|1-1",
-          "resultado": "4-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Australia-Turquía",
-          "pronostico": "2|0-2",
-          "resultado": "0-2",
-          "puntos": 4
-        },
-        {
-          "partido": "Alemania-Curazao",
-          "pronostico": "1|2-0",
-          "resultado": "7-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Costa de Marfil-Ecuador",
-          "pronostico": "2|1-3",
-          "resultado": "1-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Países Bajos-Japón",
-          "pronostico": "2|1-2",
-          "resultado": "2-2",
-          "puntos": 0
-        },
-        {
-          "partido": "Suecia-Túnez",
-          "pronostico": "1|2-0",
-          "resultado": "5-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Bélgica-Egipto",
-          "pronostico": "1|2-0",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Irán-Nueva Zelanda",
-          "pronostico": "1|2-1",
-          "resultado": "2-2",
-          "puntos": 0
-        },
-        {
-          "partido": "España-Cabo Verde",
-          "pronostico": "1|2-0",
-          "resultado": "0-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Arabia Saudita-Uruguay",
-          "pronostico": "2|1-2",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Francia-Senegal",
-          "pronostico": "1|3-1",
-          "resultado": "3-1",
-          "puntos": 4
-        },
-        {
-          "partido": "Irak-Noruega",
-          "pronostico": "2|0-2",
-          "resultado": "1-4",
-          "puntos": 1
-        },
-        {
-          "partido": "Argentina-Argelia",
-          "pronostico": "1|2-0",
-          "resultado": "3-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Austria-Jordania",
-          "pronostico": "1|1-0",
-          "resultado": "3-1",
-          "puntos": 1
-        }
-      ],
-      "detalle_extra": [],
-      "archivo": "Mike.xlsx",
       "posicion": 7
     },
     {
       "nombre": "Neyidt",
-      "puntos": 16,
+      "puntos": 19,
       "exactos": 2,
-      "ganadores": 8,
-      "fallos": 10,
-      "partidos": 20,
+      "ganadores": 11,
+      "fallos": 11,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -1091,6 +1259,30 @@
           "partido": "Austria-Jordania",
           "pronostico": "1|2-0",
           "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|3-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-2",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|2-1",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|2-1",
+          "resultado": "1-0",
           "puntos": 1
         }
       ],
@@ -1100,11 +1292,11 @@
     },
     {
       "nombre": "Paulina",
-      "puntos": 16,
+      "puntos": 19,
       "exactos": 2,
-      "ganadores": 8,
-      "fallos": 10,
-      "partidos": 20,
+      "ganadores": 11,
+      "fallos": 11,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -1229,6 +1421,30 @@
           "pronostico": "X|1-1",
           "resultado": "3-1",
           "puntos": 0
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|2-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-2",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|2-1",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|2-1",
+          "resultado": "1-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -1236,12 +1452,12 @@
       "posicion": 9
     },
     {
-      "nombre": "Tincho",
-      "puntos": 16,
+      "nombre": "Mike",
+      "puntos": 18,
       "exactos": 2,
-      "ganadores": 8,
-      "fallos": 10,
-      "partidos": 20,
+      "ganadores": 10,
+      "fallos": 12,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -1249,73 +1465,73 @@
       "detalle": [
         {
           "partido": "México-Sudáfrica",
-          "pronostico": "X|1-1",
+          "pronostico": "1|3-1",
           "resultado": "2-0",
-          "puntos": 0
+          "puntos": 1
         },
         {
           "partido": "Corea del Sur-República Checa",
-          "pronostico": "1|2-1",
+          "pronostico": "1|2-0",
           "resultado": "2-1",
-          "puntos": 4
+          "puntos": 1
         },
         {
           "partido": "Canadá-Bosnia y Herzegovina",
-          "pronostico": "1|2-1",
+          "pronostico": "1|1-0",
           "resultado": "1-1",
           "puntos": 0
         },
         {
           "partido": "Catar-Suiza",
-          "pronostico": "2|0-2",
+          "pronostico": "2|1-2",
           "resultado": "1-1",
           "puntos": 0
         },
         {
           "partido": "Brasil-Marruecos",
-          "pronostico": "X|2-2",
+          "pronostico": "1|3-2",
           "resultado": "1-1",
-          "puntos": 1
+          "puntos": 0
         },
         {
           "partido": "Haití-Escocia",
-          "pronostico": "2|0-2",
+          "pronostico": "2|1-3",
           "resultado": "0-1",
           "puntos": 1
         },
         {
           "partido": "Estados Unidos-Paraguay",
-          "pronostico": "X|2-2",
+          "pronostico": "X|1-1",
           "resultado": "4-1",
           "puntos": 0
         },
         {
           "partido": "Australia-Turquía",
-          "pronostico": "2|1-2",
+          "pronostico": "2|0-2",
           "resultado": "0-2",
-          "puntos": 1
+          "puntos": 4
         },
         {
           "partido": "Alemania-Curazao",
-          "pronostico": "1|4-0",
+          "pronostico": "1|2-0",
           "resultado": "7-1",
           "puntos": 1
         },
         {
           "partido": "Costa de Marfil-Ecuador",
-          "pronostico": "X|2-2",
+          "pronostico": "2|1-3",
           "resultado": "1-0",
           "puntos": 0
         },
         {
           "partido": "Países Bajos-Japón",
-          "pronostico": "1|3-2",
+          "pronostico": "2|1-2",
           "resultado": "2-2",
           "puntos": 0
         },
         {
           "partido": "Suecia-Túnez",
-          "pronostico": "1|1-0",
+          "pronostico": "1|2-0",
           "resultado": "5-1",
           "puntos": 1
         },
@@ -1327,58 +1543,82 @@
         },
         {
           "partido": "Irán-Nueva Zelanda",
-          "pronostico": "1|1-0",
+          "pronostico": "1|2-1",
           "resultado": "2-2",
           "puntos": 0
         },
         {
           "partido": "España-Cabo Verde",
-          "pronostico": "1|3-1",
+          "pronostico": "1|2-0",
           "resultado": "0-0",
           "puntos": 0
         },
         {
           "partido": "Arabia Saudita-Uruguay",
-          "pronostico": "X|1-1",
+          "pronostico": "2|1-2",
           "resultado": "1-1",
-          "puntos": 4
+          "puntos": 0
         },
         {
           "partido": "Francia-Senegal",
-          "pronostico": "1|2-1",
+          "pronostico": "1|3-1",
           "resultado": "3-1",
-          "puntos": 1
+          "puntos": 4
         },
         {
           "partido": "Irak-Noruega",
-          "pronostico": "2|1-2",
+          "pronostico": "2|0-2",
           "resultado": "1-4",
           "puntos": 1
         },
         {
           "partido": "Argentina-Argelia",
-          "pronostico": "1|3-1",
+          "pronostico": "1|2-0",
           "resultado": "3-0",
           "puntos": 1
         },
         {
           "partido": "Austria-Jordania",
-          "pronostico": "X|1-1",
+          "pronostico": "1|1-0",
           "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|2-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|1-2",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|2-1",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "X|0-0",
+          "resultado": "1-0",
           "puntos": 0
         }
       ],
       "detalle_extra": [],
-      "archivo": "Tincho.xlsx",
+      "archivo": "Mike.xlsx",
       "posicion": 10
     },
     {
       "nombre": "Analia",
-      "puntos": 14,
+      "puntos": 17,
       "exactos": 1,
-      "ganadores": 10,
-      "fallos": 9,
-      "partidos": 20,
+      "ganadores": 13,
+      "fallos": 10,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -1503,6 +1743,30 @@
           "pronostico": "1|2-0",
           "resultado": "3-1",
           "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|5-0",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-3",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|1-0",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|2-0",
+          "resultado": "1-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -1511,11 +1775,11 @@
     },
     {
       "nombre": "JA",
-      "puntos": 14,
+      "puntos": 17,
       "exactos": 1,
-      "ganadores": 10,
-      "fallos": 9,
-      "partidos": 20,
+      "ganadores": 13,
+      "fallos": 10,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -1640,6 +1904,30 @@
           "pronostico": "1|3-0",
           "resultado": "3-1",
           "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|3-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-2",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|3-1",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|3-0",
+          "resultado": "1-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -1648,11 +1936,11 @@
     },
     {
       "nombre": "Joanna",
-      "puntos": 12,
+      "puntos": 15,
       "exactos": 1,
-      "ganadores": 8,
-      "fallos": 11,
-      "partidos": 20,
+      "ganadores": 11,
+      "fallos": 12,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -1777,6 +2065,30 @@
           "pronostico": "1|1-0",
           "resultado": "3-1",
           "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|2-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-2",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|2-1",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|2-1",
+          "resultado": "1-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -1785,11 +2097,11 @@
     },
     {
       "nombre": "Alejandra",
-      "puntos": 11,
+      "puntos": 13,
       "exactos": 1,
-      "ganadores": 7,
-      "fallos": 12,
-      "partidos": 20,
+      "ganadores": 9,
+      "fallos": 14,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -1914,6 +2226,30 @@
           "pronostico": "X|0-0",
           "resultado": "3-1",
           "puntos": 0
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|3-2",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|2-3",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "X|2-2",
+          "resultado": "4-2",
+          "puntos": 0
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|3-0",
+          "resultado": "1-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -1922,11 +2258,11 @@
     },
     {
       "nombre": "Tamara",
-      "puntos": 11,
+      "puntos": 13,
       "exactos": 1,
-      "ganadores": 7,
-      "fallos": 12,
-      "partidos": 20,
+      "ganadores": 9,
+      "fallos": 14,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -2051,6 +2387,30 @@
           "pronostico": "1|2-1",
           "resultado": "3-1",
           "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|2-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-3",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|2-0",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "2|1-2",
+          "resultado": "1-0",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
@@ -2059,11 +2419,11 @@
     },
     {
       "nombre": "Alicia",
-      "puntos": 8,
+      "puntos": 12,
       "exactos": 0,
-      "ganadores": 8,
+      "ganadores": 12,
       "fallos": 12,
-      "partidos": 20,
+      "partidos": 24,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -2187,6 +2547,30 @@
           "partido": "Austria-Jordania",
           "pronostico": "1|1-0",
           "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "X|2-2",
+          "resultado": "1-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-1",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "1|2-1",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|2-1",
+          "resultado": "1-0",
           "puntos": 1
         }
       ],

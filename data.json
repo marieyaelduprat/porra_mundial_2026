@@ -1,14 +1,14 @@
 {
-  "actualizado": "21/06/2026 15:49",
-  "partidos_jugados": 36,
+  "actualizado": "21/06/2026 20:07",
+  "partidos_jugados": 37,
   "participantes": [
     {
       "nombre": "Gabri",
-      "puntos": 42,
+      "puntos": 43,
       "exactos": 7,
-      "ganadores": 14,
+      "ganadores": 15,
       "fallos": 15,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -229,6 +229,12 @@
           "pronostico": "1|3-1",
           "resultado": "0-4",
           "puntos": 0
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|3-0",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -240,8 +246,8 @@
       "puntos": 41,
       "exactos": 6,
       "ganadores": 17,
-      "fallos": 13,
-      "partidos": 36,
+      "fallos": 14,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -462,6 +468,12 @@
           "pronostico": "2|0-2",
           "resultado": "0-4",
           "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "X|1-1",
+          "resultado": "4-0",
+          "puntos": 0
         }
       ],
       "detalle_extra": [],
@@ -470,11 +482,11 @@
     },
     {
       "nombre": "Ina",
-      "puntos": 38,
+      "puntos": 39,
       "exactos": 5,
-      "ganadores": 18,
+      "ganadores": 19,
       "fallos": 13,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -695,6 +707,12 @@
           "pronostico": "2|1-3",
           "resultado": "0-4",
           "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|3-0",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -703,11 +721,11 @@
     },
     {
       "nombre": "Daniela",
-      "puntos": 37,
+      "puntos": 38,
       "exactos": 5,
-      "ganadores": 17,
+      "ganadores": 18,
       "fallos": 14,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -928,6 +946,12 @@
           "pronostico": "2|1-3",
           "resultado": "0-4",
           "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|2-1",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -936,11 +960,11 @@
     },
     {
       "nombre": "Miguel",
-      "puntos": 34,
+      "puntos": 35,
       "exactos": 4,
-      "ganadores": 18,
+      "ganadores": 19,
       "fallos": 14,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -1160,6 +1184,12 @@
           "partido": "Túnez-Japón",
           "pronostico": "2|0-2",
           "resultado": "0-4",
+          "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|2-0",
+          "resultado": "4-0",
           "puntos": 1
         }
       ],
@@ -1169,11 +1199,11 @@
     },
     {
       "nombre": "Paulina",
-      "puntos": 34,
+      "puntos": 35,
       "exactos": 4,
-      "ganadores": 18,
+      "ganadores": 19,
       "fallos": 14,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -1394,6 +1424,12 @@
           "pronostico": "2|0-1",
           "resultado": "0-4",
           "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|2-0",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -1402,11 +1438,11 @@
     },
     {
       "nombre": "Neyidt",
-      "puntos": 33,
+      "puntos": 34,
       "exactos": 4,
-      "ganadores": 17,
+      "ganadores": 18,
       "fallos": 15,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -1627,6 +1663,12 @@
           "pronostico": "2|1-2",
           "resultado": "0-4",
           "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|2-0",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -1635,11 +1677,11 @@
     },
     {
       "nombre": "Jastin",
-      "puntos": 32,
+      "puntos": 33,
       "exactos": 4,
-      "ganadores": 16,
+      "ganadores": 17,
       "fallos": 16,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -1860,6 +1902,12 @@
           "pronostico": "2|0-3",
           "resultado": "0-4",
           "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|3-1",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -1868,11 +1916,11 @@
     },
     {
       "nombre": "Tincho",
-      "puntos": 32,
+      "puntos": 33,
       "exactos": 4,
-      "ganadores": 16,
+      "ganadores": 17,
       "fallos": 16,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -2093,6 +2141,12 @@
           "pronostico": "2|1-2",
           "resultado": "0-4",
           "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|1-0",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -2101,11 +2155,11 @@
     },
     {
       "nombre": "Mayli",
-      "puntos": 31,
+      "puntos": 32,
       "exactos": 3,
-      "ganadores": 19,
+      "ganadores": 20,
       "fallos": 14,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -2326,6 +2380,12 @@
           "pronostico": "2|1-3",
           "resultado": "0-4",
           "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|3-0",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -2334,11 +2394,11 @@
     },
     {
       "nombre": "JA",
-      "puntos": 27,
+      "puntos": 28,
       "exactos": 2,
-      "ganadores": 19,
+      "ganadores": 20,
       "fallos": 15,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -2559,6 +2619,12 @@
           "pronostico": "2|0-3",
           "resultado": "0-4",
           "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|3-1",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -2567,11 +2633,11 @@
     },
     {
       "nombre": "Tamara",
-      "puntos": 26,
+      "puntos": 27,
       "exactos": 2,
-      "ganadores": 18,
+      "ganadores": 19,
       "fallos": 16,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -2792,6 +2858,12 @@
           "pronostico": "2|1-2",
           "resultado": "0-4",
           "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|3-1",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -2800,11 +2872,11 @@
     },
     {
       "nombre": "Analia",
-      "puntos": 25,
+      "puntos": 26,
       "exactos": 1,
-      "ganadores": 21,
+      "ganadores": 22,
       "fallos": 14,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -3025,6 +3097,12 @@
           "pronostico": "2|1-2",
           "resultado": "0-4",
           "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|2-1",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -3033,11 +3111,11 @@
     },
     {
       "nombre": "Joanna",
-      "puntos": 20,
+      "puntos": 21,
       "exactos": 1,
-      "ganadores": 16,
+      "ganadores": 17,
       "fallos": 19,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -3258,6 +3336,12 @@
           "pronostico": "X|1-1",
           "resultado": "0-4",
           "puntos": 0
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|3-1",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -3266,11 +3350,11 @@
     },
     {
       "nombre": "Alejandra",
-      "puntos": 19,
+      "puntos": 20,
       "exactos": 1,
-      "ganadores": 15,
+      "ganadores": 16,
       "fallos": 20,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -3491,6 +3575,12 @@
           "pronostico": "2|0-3",
           "resultado": "0-4",
           "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|2-1",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],
@@ -3499,11 +3589,11 @@
     },
     {
       "nombre": "Alicia",
-      "puntos": 16,
+      "puntos": 17,
       "exactos": 0,
-      "ganadores": 16,
+      "ganadores": 17,
       "fallos": 20,
-      "partidos": 36,
+      "partidos": 37,
       "pts_clasificados": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
@@ -3724,6 +3814,12 @@
           "pronostico": "1|2-0",
           "resultado": "0-4",
           "puntos": 0
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|2-1",
+          "resultado": "4-0",
+          "puntos": 1
         }
       ],
       "detalle_extra": [],

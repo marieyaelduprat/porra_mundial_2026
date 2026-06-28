@@ -319,6 +319,41 @@
       .stat.fallos, .bar-wrap { display: none; }
       .detail-inner { padding: .75rem 1rem; }
     }
+
+    /* ... tu CSS existente ... */
+
+    .section-toggle {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      cursor: pointer;
+      padding: .5rem .75rem;
+      border-radius: 6px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--border);
+      font-size: .8rem;
+      font-weight: 600;
+      user-select: none;
+    }
+
+    .section-toggle:hover { background: rgba(255,255,255,.09); }
+
+    .section-pts {
+      margin-left: auto;
+      color: var(--dorado);
+      font-size: .78rem;
+    }
+
+    .chevron {
+      font-size: .7rem;
+      color: var(--gris);
+      transition: transform .2s;
+    }
+
+    .section-body {
+      padding: .75rem .25rem .25rem;
+    }
+
   </style>
 </head>
 <body>
@@ -335,6 +370,7 @@
       <div class="legend-item"><div class="dot dot-gold"></div> Resultado exacto (3 pts)</div>
       <div class="legend-item"><div class="dot dot-green"></div> Signo correcto (1 pt)</div>
       <div class="legend-item"><div class="dot dot-gray"></div> Fallo (0 pts)</div>
+      <div class="legend-item"><div class="dot" style="background:#1a6fc4"></div> Clasificado 1º/2º grupo (2 pts)</div>
     </div>
   </div>
 </div>
@@ -399,16 +435,17 @@ function render(data) {
 
   let html = `<div class="table-wrap"><table>
     <thead>
-      <tr>
-        <th>#</th>
-        <th>Participante</th>
-        <th class="right">Pts</th>
-        <th class="right">✓✓</th>
-        <th class="right">✓</th>
-        <th class="right">✗</th>
-        <th class="right">Progreso</th>
-      </tr>
-    </thead>
+    <tr>
+      <th>#</th>
+      <th>Participante</th>
+      <th class="right">Pts</th>
+      <th class="right">Exactos</th>
+      <th class="right">Signo</th>
+      <th class="right">Fallos</th>
+      <th class="right">Clas.</th>
+      <th class="right">Progreso</th>
+    </tr>
+  </thead>
     <tbody>`;
 
   data.participantes.forEach((p, i) => {
@@ -421,16 +458,17 @@ function render(data) {
         <td class="pos">${medal(p.posicion)}</td>
         <td class="nombre">${p.nombre}</td>
         <td class="pts-cell ${p.posicion === 1 ? 'leader' : ''}">${p.puntos}</td>
-        <td class="stat exactos">${p.exactos}</td>
-        <td class="stat ganador">${p.ganadores}</td>
-        <td class="stat fallos">${p.fallos}</td>
+        <td class="stat exactos" title="Resultados exactos">🎯 ${p.exactos}</td>
+        <td class="stat ganador" title="Signo correcto">✓ ${p.ganadores}</td>
+        <td class="stat fallos" title="Fallos">✗ ${p.fallos}</td>
+        <td class="stat" style="text-align:right;color:#1a6fc4" title="Puntos por clasificados">🏅 ${p.pts_clasificados}</td>
         <td class="stat">
           <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div>
           ${p.partidos}j
         </td>
       </tr>
       <tr class="detail-row" id="${detailId}">
-        <td colspan="7">
+        <td colspan="8">
           <div class="detail-inner">
             ${renderDetalle(p)}
           </div>
@@ -445,51 +483,80 @@ function render(data) {
 }
 
 function renderDetalle(p) {
-  if (!p.detalle || p.detalle.length === 0) {
-    return '<div class="detail-inner"><em style="color:var(--gris)">Sin partidos evaluados aún.</em></div>';
-  }
-
-  let html = `<h4>Pronósticos de ${p.nombre} (${p.partidos} evaluados)</h4><div class="match-grid">`;
-
-  p.detalle.forEach(d => {
-    const pronStr = parsePron(d.pronostico);
-    html += `
-      <div class="match-item">
-        <div class="match-name">${d.partido}</div>
-        <div class="match-scores">
-          <span class="score-label">Pron.</span>
-          <span>${pronStr}</span>
-          <span class="score-label">Real</span>
-          <span>${d.resultado}</span>
-        </div>
-        <span class="pts-badge ${ptsClass(d.puntos)}">${d.puntos}p</span>
-      </div>`;
-  });
-
-  // Al final, antes del return, añade:
+  const detalle = p.detalle || [];
   const extras = p.detalle_extra || [];
   const clasificados = extras.filter(e => e.concepto?.startsWith('Clasificado:'));
 
-  if (clasificados.length > 0) {
-    html += `<h4 style="margin-top:1rem">Clasificados de grupo (${p.pts_clasificados} pts)</h4>
-    <div class="match-grid">`;
+  let html = '';
 
+  // ── Sección 1: Partidos de fase de grupos ──
+  html += `
+    <div class="section-toggle" onclick="toggleSection(this)">
+      <span>⚽ Pronósticos fase de grupos</span>
+      <span class="section-pts">${p.puntos - p.pts_clasificados} pts de partidos</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">`;
+
+  if (detalle.length === 0) {
+    html += `<em style="color:var(--gris)">Sin partidos evaluados aún.</em>`;
+  } else {
+    html += `<div class="match-grid">`;
+    detalle.forEach(d => {
+      const pronStr = parsePron(d.pronostico);
+      html += `
+        <div class="match-item">
+          <div class="match-name">${d.partido}</div>
+          <div class="match-scores">
+            <span class="score-label">Pron.</span>
+            <span>${pronStr}</span>
+            <span class="score-label">Real</span>
+            <span>${d.resultado}</span>
+          </div>
+          <span class="pts-badge ${ptsClass(d.puntos)}">${d.puntos}p</span>
+        </div>`;
+    });
+    html += `</div>`;
+  }
+  html += `</div>`;
+
+  // ── Sección 2: Clasificados de grupo ──
+  html += `
+    <div class="section-toggle" onclick="toggleSection(this)" style="margin-top:.75rem">
+      <span>🏅 Clasificados 1º/2º de grupo</span>
+      <span class="section-pts">${p.pts_clasificados} pts</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">`;
+
+  if (clasificados.length === 0) {
+    html += `<em style="color:var(--gris)">Sin aciertos de clasificados aún.</em>`;
+  } else {
+    html += `<div class="match-grid">`;
     clasificados.forEach(e => {
       html += `
         <div class="match-item">
           <div class="match-name">${e.concepto.replace('Clasificado: ', '')}</div>
           <div class="match-scores">
             <span class="score-label">Equipo</span>
-            <span>${e.equipo}</span>
+            <span style="font-weight:600">${e.equipo}</span>
           </div>
           <span class="pts-badge pts-sign">+${e.puntos}p</span>
         </div>`;
     });
-
     html += `</div>`;
   }
+  html += `</div>`;
 
   return html;
+}
+
+function toggleSection(header) {
+  const body = header.nextElementSibling;
+  const chevron = header.querySelector('.chevron');
+  const isOpen = body.style.display !== 'none';
+  body.style.display = isOpen ? 'none' : 'block';
+  chevron.style.transform = isOpen ? 'rotate(-90deg)' : 'rotate(0deg)';
 }
 
 // ── Toggle detalle ────────────────────────────────────────────

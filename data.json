@@ -1,5 +1,5 @@
 {
-  "actualizado": "28/06/2026 15:04",
+  "actualizado": "28/06/2026 18:33",
   "partidos_jugados": 72,
   "participantes": [
     {
@@ -10,6 +10,7 @@
       "fallos": 28,
       "partidos": 72,
       "pts_clasificados": 30,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -535,6 +536,7 @@
       "fallos": 26,
       "partidos": 72,
       "pts_clasificados": 38,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -1080,6 +1082,7 @@
       "fallos": 25,
       "partidos": 72,
       "pts_clasificados": 28,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -1600,6 +1603,7 @@
       "fallos": 26,
       "partidos": 72,
       "pts_clasificados": 30,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -2125,6 +2129,7 @@
       "fallos": 23,
       "partidos": 72,
       "pts_clasificados": 30,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -2650,6 +2655,7 @@
       "fallos": 27,
       "partidos": 72,
       "pts_clasificados": 36,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -3190,6 +3196,7 @@
       "fallos": 26,
       "partidos": 72,
       "pts_clasificados": 30,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -3715,6 +3722,7 @@
       "fallos": 28,
       "partidos": 72,
       "pts_clasificados": 30,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -4240,6 +4248,7 @@
       "fallos": 26,
       "partidos": 72,
       "pts_clasificados": 34,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -4775,6 +4784,7 @@
       "fallos": 27,
       "partidos": 72,
       "pts_clasificados": 22,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -5280,6 +5290,7 @@
       "fallos": 35,
       "partidos": 72,
       "pts_clasificados": 18,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -5768,13 +5779,14 @@
       "posicion": 11
     },
     {
-      "nombre": "JA",
-      "puntos": 76,
+      "nombre": "Jose",
+      "puntos": 79,
       "exactos": 3,
-      "ganadores": 40,
-      "fallos": 29,
+      "ganadores": 41,
+      "fallos": 28,
       "partidos": 72,
-      "pts_clasificados": 24,
+      "pts_clasificados": 26,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -6207,9 +6219,9 @@
         },
         {
           "partido": "Croacia-Ghana",
-          "pronostico": "2|1-2",
+          "pronostico": "1|2-0",
           "resultado": "2-1",
-          "puntos": 0
+          "puntos": 1
         }
       ],
       "detalle_extra": [
@@ -6272,6 +6284,11 @@
           "concepto": "Clasificado: 1º GRUPO L",
           "equipo": "Inglaterra",
           "puntos": 2
+        },
+        {
+          "concepto": "Clasificado: 2º GRUPO L",
+          "equipo": "Croacia",
+          "puntos": 2
         }
       ],
       "archivo": "Jose.xlsx",
@@ -6285,6 +6302,7 @@
       "fallos": 33,
       "partidos": 72,
       "pts_clasificados": 26,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -6800,6 +6818,7 @@
       "fallos": 37,
       "partidos": 72,
       "pts_clasificados": 22,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -7305,6 +7324,7 @@
       "fallos": 38,
       "partidos": 72,
       "pts_clasificados": 26,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -7813,13 +7833,14 @@
       "posicion": 15
     },
     {
-      "nombre": "Alejandra",
+      "nombre": "Ale",
       "puntos": 57,
       "exactos": 2,
       "ganadores": 33,
       "fallos": 37,
       "partidos": 72,
       "pts_clasificados": 16,
+      "pts_elim_partidos": 0,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,

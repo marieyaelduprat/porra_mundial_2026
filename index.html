@@ -270,9 +270,9 @@
       padding: .1rem .35rem;
     }
 
-    .pts-3 { color: var(--dorado); background: rgba(245,197,24,.15); }
-    .pts-1 { color: var(--verde);  background: rgba(0,168,89,.15); }
-    .pts-0 { color: #555;          background: rgba(255,255,255,.04); }
+    .pts-exact { color: #1a7f4b; background: rgba(0,168,89,.20); }  /* verde fuerte - exacto */
+    .pts-sign  { color: #4caf7d; background: rgba(0,168,89,.10); }  /* verde suave - signo */
+    .pts-zero  { color: #c0392b; background: rgba(200,16,46,.15); } /* rojo - fallo */
 
     /* ── EMPTY ──────────────────────────── */
     .empty {
@@ -362,9 +362,9 @@ function rowClass(pos) {
 }
 
 function ptsClass(pts) {
-  if (pts === 3) return 'pts-3';
-  if (pts === 1) return 'pts-1';
-  return 'pts-0';
+  if (pts >= 4) return 'pts-exact';  // resultado exacto
+  if (pts >= 1) return 'pts-sign';   // signo correcto
+  return 'pts-zero';                 // fallo
 }
 
 function parsePron(str) {

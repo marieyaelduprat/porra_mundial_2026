@@ -486,7 +486,7 @@ function renderDetalle(p) {
 
   // Sección 1: Partidos
   html += `
-    <div class="section-toggle" onclick="toggleSection(this)">
+    <div class="section-toggle" onclick="toggleSection(this, event)">
       <span>⚽ Pronósticos fase de grupos</span>
       <span class="section-pts">${ptsPartidos} pts</span>
       <span class="chevron">▼</span>
@@ -516,7 +516,7 @@ function renderDetalle(p) {
 
   // Sección 2: Clasificados
   html += `
-    <div class="section-toggle" onclick="toggleSection(this)" style="margin-top:.75rem">
+    <div class="section-toggle" onclick="toggleSection(this, event)" style="margin-top:.75rem">
       <span>🏅 Clasificados 1º/2º de grupo</span>
       <span class="section-pts">${p.pts_clasificados || 0} pts</span>
       <span class="chevron">▼</span>
@@ -658,7 +658,8 @@ function toggleCardDetail(detailId, card) {
   if (!isOpen) detail.classList.add('open');
 }
 
-function toggleSection(header) {
+function toggleSection(header, event) {
+  if (event) event.stopPropagation();
   const body = header.nextElementSibling;
   const chevron = header.querySelector('.chevron');
   const isOpen = body.style.display !== 'none';

@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Porra Mundial 2026 🏆</title>
   <style>
-    /* ── TOKENS ─────────────────────────── */
     :root {
       --verde:   #00a859;
       --rojo:    #c8102e;
@@ -20,7 +19,6 @@
       --shadow:  0 8px 32px rgba(0,0,0,.4);
     }
 
-    /* ── RESET & BASE ───────────────────── */
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -31,7 +29,6 @@
       padding-bottom: 3rem;
     }
 
-    /* ── HERO ───────────────────────────── */
     .hero {
       background: linear-gradient(135deg, var(--azul2) 0%, var(--azul3) 100%);
       border-bottom: 1px solid var(--border);
@@ -85,14 +82,12 @@
 
     .hero-meta strong { color: var(--blanco); }
 
-    /* ── CONTENEDOR ────────────────────── */
     .container {
       max-width: 960px;
       margin: 0 auto;
       padding: 0 1rem;
     }
 
-    /* ── LEYENDA PUNTOS ─────────────────── */
     .legend {
       display: flex;
       gap: .75rem;
@@ -115,7 +110,6 @@
     .dot-gray   { background: #444; }
     .dot-blue   { background: #1a6fc4; }
 
-    /* ── TABLA (desktop) ────────────────── */
     .table-wrap {
       margin-top: 2rem;
       border-radius: 12px;
@@ -208,7 +202,6 @@
       transition: width .6s ease;
     }
 
-    /* ── DETALLE EXPANDIBLE ─────────────── */
     .detail-row { display: none; }
     .detail-row.open { display: table-row; }
 
@@ -264,7 +257,6 @@
     .pts-sign  { color: #4caf7d; background: rgba(0,168,89,.10); }
     .pts-zero  { color: #c0392b; background: rgba(200,16,46,.15); }
 
-    /* ── SECCIONES DESPLEGABLES ─────────── */
     .section-toggle {
       display: flex;
       align-items: center;
@@ -297,7 +289,6 @@
       padding: .75rem .25rem .25rem;
     }
 
-    /* ── EMPTY ──────────────────────────── */
     .empty {
       text-align: center;
       padding: 4rem 1rem;
@@ -306,7 +297,6 @@
 
     .empty p { margin-top: .5rem; font-size: .85rem; }
 
-    /* ── FOOTER ─────────────────────────── */
     .footer {
       text-align: center;
       margin-top: 2.5rem;
@@ -314,7 +304,6 @@
       font-size: .78rem;
     }
 
-    /* ── SPINNER ────────────────────────── */
     .loading {
       display: flex;
       flex-direction: column;
@@ -336,7 +325,6 @@
 
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ── TARJETAS MÓVIL ─────────────────── */
     .cards-mobile { display: none; }
 
     @media (max-width: 700px) {
@@ -423,7 +411,6 @@
 </head>
 <body>
 
-<!-- HERO -->
 <div class="hero">
   <div class="container">
     <div class="hero-badge">🌍 USA · MEX · CAN 2026</div>
@@ -440,14 +427,12 @@
   </div>
 </div>
 
-<!-- CONTENIDO -->
 <div class="container">
   <div id="app"></div>
   <div class="footer" id="footer"></div>
 </div>
 
 <script>
-// ── Utilidades ────────────────────────────────────────────────
 function medal(pos) {
   if (pos === 1) return '<span class="medal">🥇</span>';
   if (pos === 2) return '<span class="medal">🥈</span>';
@@ -469,35 +454,37 @@ function ptsClass(pts) {
 }
 
 function parsePron(str) {
+  str = String(str);
+  if (str.includes('·')) str = str.split('·')[1];
   const m = str.match(/([12X])\|(\d+)-(\d+)/);
   if (!m) return str;
   return `${m[2]}-${m[3]}`;
 }
 
-// ── Render detalle (compartido desktop y móvil) ───────────────
 function renderDetalle(p) {
-  const detalle = p.detalle || [];
+  const detalleGrupos = (p.detalle || []).filter(d => d.fase !== 'eliminatoria');
+  const detalleElim   = (p.detalle || []).filter(d => d.fase === 'eliminatoria');
   const extras = p.detalle_extra || [];
-  const clasificados = extras.filter(e => e.concepto?.startsWith('Clasificado:'));
+  const clasificados = extras.filter(e => e.concepto && e.concepto.startsWith('Clasificado:'));
 
-  const ptsPartidos = p.puntos - (p.pts_clasificados || 0);
+  const ptsGrupos = p.puntos - (p.pts_clasificados || 0) - (p.pts_elim_partidos || 0);
 
   let html = '';
 
-  // Sección 1: Partidos
+  // Sección 1: Partidos fase de grupos
   html += `
     <div class="section-toggle" onclick="toggleSection(this, event)">
       <span>⚽ Pronósticos fase de grupos</span>
-      <span class="section-pts">${ptsPartidos} pts</span>
+      <span class="section-pts">${ptsGrupos} pts</span>
       <span class="chevron">▼</span>
     </div>
     <div class="section-body">`;
 
-  if (detalle.length === 0) {
+  if (detalleGrupos.length === 0) {
     html += `<em style="color:var(--gris);font-size:.8rem">Sin partidos evaluados aún.</em>`;
   } else {
     html += `<div class="match-grid">`;
-    detalle.forEach(d => {
+    detalleGrupos.forEach(d => {
       html += `
         <div class="match-item">
           <div class="match-name">${d.partido}</div>
@@ -514,7 +501,7 @@ function renderDetalle(p) {
   }
   html += `</div>`;
 
-  // Sección 2: Clasificados
+  // Sección 2: Clasificados 1º/2º de grupo
   html += `
     <div class="section-toggle" onclick="toggleSection(this, event)" style="margin-top:.75rem">
       <span>🏅 Clasificados 1º/2º de grupo</span>
@@ -542,10 +529,39 @@ function renderDetalle(p) {
   }
   html += `</div>`;
 
+  // Sección 3: Partidos eliminatorias
+  html += `
+    <div class="section-toggle" onclick="toggleSection(this, event)" style="margin-top:.75rem">
+      <span>⚔️ Partidos eliminatorias</span>
+      <span class="section-pts">${p.pts_elim_partidos || 0} pts</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">`;
+
+  if (detalleElim.length === 0) {
+    html += `<em style="color:var(--gris);font-size:.8rem">Sin partidos de eliminatorias evaluados aún.</em>`;
+  } else {
+    html += `<div class="match-grid">`;
+    detalleElim.forEach(d => {
+      html += `
+        <div class="match-item">
+          <div class="match-name">${d.partido}</div>
+          <div class="match-scores">
+            <span class="score-label">Pron.</span>
+            <span>${parsePron(d.pronostico)}</span>
+            <span class="score-label">Real</span>
+            <span>${d.resultado}</span>
+          </div>
+          <span class="pts-badge ${ptsClass(d.puntos)}">${d.puntos}p</span>
+        </div>`;
+    });
+    html += `</div>`;
+  }
+  html += `</div>`;
+
   return html;
 }
 
-// ── Render principal ──────────────────────────────────────────
 function render(data) {
   const app = document.getElementById('app');
   const meta = document.getElementById('hero-meta');
@@ -568,7 +584,7 @@ function render(data) {
     return;
   }
 
-  // ── TABLA DESKTOP ──
+  // TABLA DESKTOP
   let html = `<div class="table-wrap"><table>
     <thead>
       <tr>
@@ -611,7 +627,7 @@ function render(data) {
 
   html += `</tbody></table></div>`;
 
-  // ── TARJETAS MÓVIL ──
+  // TARJETAS MÓVIL
   html += `<div class="cards-mobile">`;
 
   data.participantes.forEach((p, i) => {
@@ -641,7 +657,6 @@ function render(data) {
   footer.innerHTML = `Toca un participante para ver sus pronósticos • Porra Mundial 2026`;
 }
 
-// ── Toggles ───────────────────────────────────────────────────
 function toggleDetail(detailId) {
   const detail = document.getElementById(detailId);
   if (!detail) return;
@@ -667,7 +682,6 @@ function toggleSection(header, event) {
   chevron.style.transform = isOpen ? 'rotate(-90deg)' : 'rotate(0deg)';
 }
 
-// ── Carga datos ───────────────────────────────────────────────
 async function loadData() {
   const app = document.getElementById('app');
   app.innerHTML = `<div class="loading"><div class="spinner"></div><span>Cargando clasificación...</span></div>`;

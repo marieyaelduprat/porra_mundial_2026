@@ -77,6 +77,31 @@ def puntuar_partido(pronostico_str, resultado_str):
         return PTS_SIGNO
     else:
         return 0
+    
+def puntuar_partido_elim(pronostico_str, resultado_str):
+    """Puntúa un partido de eliminatorias. El pronóstico viene como 'Equipo1-Equipo2·signo|g1-g2'"""
+    if not resultado_str or not pronostico_str:
+        return None
+    p_str = str(pronostico_str).strip()
+    if "·" in p_str:
+        p_str = p_str.split("·", 1)[1]
+    m = re.match(r"([12X])\|(\d+)-(\d+)", p_str)
+    if not m:
+        return None
+    p_signo, p_local, p_visit = m.group(1), int(m.group(2)), int(m.group(3))
+
+    m2 = re.match(r"(\d+)-(\d+)", str(resultado_str).strip())
+    if not m2:
+        return None
+    r_local, r_visit = int(m2.group(1)), int(m2.group(2))
+    r_signo = sign(r_local, r_visit)
+
+    if p_local == r_local and p_visit == r_visit:
+        return PTS_EXACTO
+    elif p_signo == r_signo:
+        return PTS_SIGNO
+    else:
+        return 0
  
  
 def leer_excel(excel_path):
@@ -109,6 +134,12 @@ def leer_excel(excel_path):
             # Posiciones de grupo: col B = "1º GRUPO A", col C = "México"
             if b and c and "GRUPO" in b.upper() and "|" not in c:
                 datos[b] = c
+
+            # Partidos eliminatorias: col C contiene "NombrePartido·signo|g1-g2"
+            if b and c and "·" in c and "|" in c:
+                # La clave es el nombre del partido (antes del ·)
+                nombre_partido = c.split("·", 1)[0].strip()
+                datos[nombre_partido] = c
  
             # Clasificados eliminatorias / cuadro honor
             # col B = etiqueta, col C = equipo
@@ -194,6 +225,34 @@ def calcular_clasificacion():
                 "resultado": resultado_real,
                 "puntos": pts
             })
+
+        # ── Partidos de eliminatorias ──
+        partidos_elim = reales.get("partidos_eliminatorias", {})
+        pts_elim_partidos = 0
+
+        for partido, resultado_real in partidos_elim.items():
+            if not resultado_real:
+                continue
+            pronostico = datos.get(partido)
+            if pronostico is None:
+                continue
+            pts = puntuar_partido_elim(pronostico, resultado_real)
+            if pts is None:
+                continue
+            n_partidos += 1
+            pts_elim_partidos += pts
+            if pts == PTS_EXACTO: exactos += 1
+            elif pts == PTS_SIGNO: signos += 1
+            else: fallos += 1
+            detalle.append({
+                "partido": partido,
+                "pronostico": pronostico,
+                "resultado": resultado_real,
+                "puntos": pts,
+                "fase": "eliminatoria"
+            })
+
+        pts_total += pts_elim_partidos
  
         # ── 2. Clasificados de grupo (1º y 2º) ──
         pts_clasificados = 0
@@ -267,6 +326,7 @@ def calcular_clasificacion():
             "fallos":       fallos,
             "partidos":     n_partidos,
             "pts_clasificados": pts_clasificados,
+            "pts_elim_partidos": pts_elim_partidos,
             "pts_elim":     pts_elim,
             "pts_posicion": pts_posicion,
             "pts_premios":  pts_premios,
@@ -298,7 +358,6 @@ def calcular_clasificacion():
     print(f"{'─'*50}\n")
  
     return output
- 
  
 if __name__ == "__main__":
     calcular_clasificacion()

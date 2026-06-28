@@ -104,6 +104,24 @@
     "1º GRUPO L": "Inglaterra",
     "2º GRUPO L": "Croacia"
   },
+  "partidos_eliminatorias": {
+    "Sudáfrica-Canadá": null,
+    "Brasil-Japón": null,
+    "Alemania-Paraguay": null,
+    "Países Bajos-Marruecos": null,
+    "Costa de Marfil-Noruega": null,
+    "Francia-Suecia": null,
+    "México-Ecuador": null,
+    "Inglaterra-RD Congo": null,
+    "Bélgica-Senegal": null,
+    "Estados Unidos-Bosnia y Herzegovina": null,
+    "España-Austria": null,
+    "Portugal-Croacia": null,
+    "Suiza-Argelia": null,
+    "Australia-Egipto": null,
+    "Argentina-Cabo Verde": null,
+    "Colombia-Ghana": null
+},
   "eliminatorias": {
     "Dieciseisavos → Octavos": null,
     "Octavos → Cuartos": null,

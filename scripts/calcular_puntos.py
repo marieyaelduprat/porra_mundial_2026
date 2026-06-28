@@ -145,7 +145,7 @@ def calcular_clasificacion():
  
     # Separar por tipo
     partidos_grupos    = {k: v for k, v in reales.items() if isinstance(v, str) and re.match(r"\d+-\d+", v)}
-    clasificados_grupo = {k: v for k, v in reales.items() if "GRUPO" in str(k).upper() and v}
+    clasificados_grupo = reales.get("clasificados_grupo", {})
     eliminatorias      = reales.get("eliminatorias", {})
     posicion_final     = reales.get("posicion_final", {})
     premios_especiales = reales.get("premios_especiales", {})

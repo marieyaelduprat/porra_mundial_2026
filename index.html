@@ -466,7 +466,29 @@ function renderDetalle(p) {
       </div>`;
   });
 
-  html += '</div>';
+  // Al final, antes del return, añade:
+  const extras = p.detalle_extra || [];
+  const clasificados = extras.filter(e => e.concepto?.startsWith('Clasificado:'));
+
+  if (clasificados.length > 0) {
+    html += `<h4 style="margin-top:1rem">Clasificados de grupo (${p.pts_clasificados} pts)</h4>
+    <div class="match-grid">`;
+
+    clasificados.forEach(e => {
+      html += `
+        <div class="match-item">
+          <div class="match-name">${e.concepto.replace('Clasificado: ', '')}</div>
+          <div class="match-scores">
+            <span class="score-label">Equipo</span>
+            <span>${e.equipo}</span>
+          </div>
+          <span class="pts-badge pts-sign">+${e.puntos}p</span>
+        </div>`;
+    });
+
+    html += `</div>`;
+  }
+
   return html;
 }
 

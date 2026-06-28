@@ -127,19 +127,18 @@ def leer_excel(excel_path):
             if b == "Nombre" and c:
                 nombre = c
  
-            # Partidos de grupos: col B = nombre partido, col C = "1|2-1"
-            if b and c and "|" in c and "-" in b:
+            # Partidos de grupos: solo si NO es eliminatoria
+            if b and c and "|" in c and "-" in b and "·" not in c:
                 datos[b] = c
+
+            # Partidos eliminatorias
+            if b and c and "·" in c and "|" in c:
+                nombre_partido = c.split("·", 1)[0].strip()
+                datos[nombre_partido] = c
  
             # Posiciones de grupo: col B = "1º GRUPO A", col C = "México"
             if b and c and "GRUPO" in b.upper() and "|" not in c:
                 datos[b] = c
-
-            # Partidos eliminatorias: col C contiene "NombrePartido·signo|g1-g2"
-            if b and c and "·" in c and "|" in c:
-                # La clave es el nombre del partido (antes del ·)
-                nombre_partido = c.split("·", 1)[0].strip()
-                datos[nombre_partido] = c
  
             # Clasificados eliminatorias / cuadro honor
             # col B = etiqueta, col C = equipo

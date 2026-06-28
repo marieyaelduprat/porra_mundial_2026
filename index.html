@@ -87,7 +87,7 @@
 
     /* ── CONTENEDOR ────────────────────── */
     .container {
-      max-width: 860px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 0 1rem;
     }
@@ -113,8 +113,9 @@
     .dot-gold   { background: var(--dorado); }
     .dot-green  { background: var(--verde); }
     .dot-gray   { background: #444; }
+    .dot-blue   { background: #1a6fc4; }
 
-    /* ── TABLA ──────────────────────────── */
+    /* ── TABLA (desktop) ────────────────── */
     .table-wrap {
       margin-top: 2rem;
       border-radius: 12px;
@@ -169,10 +170,7 @@
     }
 
     .medal { font-size: 1.3rem; }
-
-    .nombre {
-      font-weight: 600;
-    }
+    .nombre { font-weight: 600; }
 
     .pts-cell {
       text-align: right;
@@ -187,12 +185,13 @@
       font-size: .82rem;
     }
 
-    .stat.exactos  { color: var(--dorado); }
-    .stat.ganador  { color: var(--verde); }
-    .stat.fallos   { color: #555; }
+    .stat.exactos { color: var(--dorado); }
+    .stat.ganador { color: var(--verde); }
+    .stat.fallos  { color: #666; }
+    .stat.clas    { color: #1a6fc4; }
 
     .bar-wrap {
-      width: 80px;
+      width: 60px;
       height: 6px;
       background: rgba(255,255,255,.08);
       border-radius: 99px;
@@ -211,20 +210,11 @@
 
     /* ── DETALLE EXPANDIBLE ─────────────── */
     .detail-row { display: none; }
-
     .detail-row.open { display: table-row; }
 
     .detail-inner {
       padding: 1rem 1.5rem 1.5rem;
       background: rgba(0,0,0,.25);
-    }
-
-    .detail-inner h4 {
-      font-size: .75rem;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: var(--gris);
-      margin-bottom: .75rem;
     }
 
     .match-grid {
@@ -270,9 +260,42 @@
       padding: .1rem .35rem;
     }
 
-    .pts-exact { color: #1a7f4b; background: rgba(0,168,89,.20); }  /* verde fuerte - exacto */
-    .pts-sign  { color: #4caf7d; background: rgba(0,168,89,.10); }  /* verde suave - signo */
-    .pts-zero  { color: #c0392b; background: rgba(200,16,46,.15); } /* rojo - fallo */
+    .pts-exact { color: #1a7f4b; background: rgba(0,168,89,.20); }
+    .pts-sign  { color: #4caf7d; background: rgba(0,168,89,.10); }
+    .pts-zero  { color: #c0392b; background: rgba(200,16,46,.15); }
+
+    /* ── SECCIONES DESPLEGABLES ─────────── */
+    .section-toggle {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      cursor: pointer;
+      padding: .5rem .75rem;
+      border-radius: 6px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--border);
+      font-size: .8rem;
+      font-weight: 600;
+      user-select: none;
+    }
+
+    .section-toggle:hover { background: rgba(255,255,255,.09); }
+
+    .section-pts {
+      margin-left: auto;
+      color: var(--dorado);
+      font-size: .78rem;
+    }
+
+    .chevron {
+      font-size: .7rem;
+      color: var(--gris);
+      transition: transform .2s;
+    }
+
+    .section-body {
+      padding: .75rem .25rem .25rem;
+    }
 
     /* ── EMPTY ──────────────────────────── */
     .empty {
@@ -313,47 +336,89 @@
 
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ── RESPONSIVE ─────────────────────── */
-    @media (max-width: 600px) {
-      td, th { padding: .7rem .6rem; }
-      .stat.fallos, .bar-wrap { display: none; }
-      .detail-inner { padding: .75rem 1rem; }
+    /* ── TARJETAS MÓVIL ─────────────────── */
+    .cards-mobile { display: none; }
+
+    @media (max-width: 700px) {
+      .table-wrap { display: none; }
+
+      .cards-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        margin-top: 1.5rem;
+      }
+
+      .card-mobile {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: .9rem 1rem;
+        cursor: pointer;
+      }
+
+      .card-mobile.gold   { background: rgba(245,197,24,.07); }
+      .card-mobile.silver { background: rgba(192,192,192,.05); }
+      .card-mobile.bronze { background: rgba(205,127,50,.05); }
+
+      .card-top {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+      }
+
+      .card-pos {
+        font-size: 1.2rem;
+        font-weight: 800;
+        min-width: 2rem;
+        text-align: center;
+      }
+
+      .card-nombre {
+        font-weight: 600;
+        font-size: .95rem;
+        flex: 1;
+      }
+
+      .card-pts {
+        font-size: 1.3rem;
+        font-weight: 800;
+      }
+
+      .card-pts.leader { color: var(--dorado); }
+
+      .card-stats {
+        display: flex;
+        gap: .5rem;
+        margin-top: .65rem;
+        flex-wrap: wrap;
+      }
+
+      .card-stat {
+        font-size: .75rem;
+        padding: .2rem .5rem;
+        border-radius: 4px;
+        background: rgba(255,255,255,.06);
+      }
+
+      .card-detail {
+        display: none;
+        margin-top: .75rem;
+        border-top: 1px solid var(--border);
+        padding-top: .75rem;
+      }
+
+      .card-detail.open { display: block; }
+
+      .detail-inner {
+        padding: 0;
+        background: transparent;
+      }
+
+      .match-grid {
+        grid-template-columns: 1fr;
+      }
     }
-
-    /* ... tu CSS existente ... */
-
-    .section-toggle {
-      display: flex;
-      align-items: center;
-      gap: .6rem;
-      cursor: pointer;
-      padding: .5rem .75rem;
-      border-radius: 6px;
-      background: rgba(255,255,255,.05);
-      border: 1px solid var(--border);
-      font-size: .8rem;
-      font-weight: 600;
-      user-select: none;
-    }
-
-    .section-toggle:hover { background: rgba(255,255,255,.09); }
-
-    .section-pts {
-      margin-left: auto;
-      color: var(--dorado);
-      font-size: .78rem;
-    }
-
-    .chevron {
-      font-size: .7rem;
-      color: var(--gris);
-      transition: transform .2s;
-    }
-
-    .section-body {
-      padding: .75rem .25rem .25rem;
-    }
-
   </style>
 </head>
 <body>
@@ -370,12 +435,12 @@
       <div class="legend-item"><div class="dot dot-gold"></div> Resultado exacto (4 pts)</div>
       <div class="legend-item"><div class="dot dot-green"></div> Signo correcto (1 pt)</div>
       <div class="legend-item"><div class="dot dot-gray"></div> Fallo (0 pts)</div>
-      <div class="legend-item"><div class="dot" style="background:#1a6fc4"></div> Clasificado 1º/2º grupo (2 pts)</div>
+      <div class="legend-item"><div class="dot dot-blue"></div> Clasificado 1º/2º grupo (2 pts)</div>
     </div>
   </div>
 </div>
 
-<!-- TABLA -->
+<!-- CONTENIDO -->
 <div class="container">
   <div id="app"></div>
   <div class="footer" id="footer"></div>
@@ -398,19 +463,89 @@ function rowClass(pos) {
 }
 
 function ptsClass(pts) {
-  if (pts >= 4) return 'pts-exact';  // resultado exacto
-  if (pts >= 1) return 'pts-sign';   // signo correcto
-  return 'pts-zero';                 // fallo
+  if (pts >= 4) return 'pts-exact';
+  if (pts >= 1) return 'pts-sign';
+  return 'pts-zero';
 }
 
 function parsePron(str) {
   const m = str.match(/([12X])\|(\d+)-(\d+)/);
   if (!m) return str;
-  const signo = { '1': 'Local', 'X': 'Empate', '2': 'Visitante' }[m[1]] || m[1];
   return `${m[2]}-${m[3]}`;
 }
 
-// ── Render ────────────────────────────────────────────────────
+// ── Render detalle (compartido desktop y móvil) ───────────────
+function renderDetalle(p) {
+  const detalle = p.detalle || [];
+  const extras = p.detalle_extra || [];
+  const clasificados = extras.filter(e => e.concepto?.startsWith('Clasificado:'));
+
+  const ptsPartidos = p.puntos - (p.pts_clasificados || 0);
+
+  let html = '';
+
+  // Sección 1: Partidos
+  html += `
+    <div class="section-toggle" onclick="toggleSection(this)">
+      <span>⚽ Pronósticos fase de grupos</span>
+      <span class="section-pts">${ptsPartidos} pts</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">`;
+
+  if (detalle.length === 0) {
+    html += `<em style="color:var(--gris);font-size:.8rem">Sin partidos evaluados aún.</em>`;
+  } else {
+    html += `<div class="match-grid">`;
+    detalle.forEach(d => {
+      html += `
+        <div class="match-item">
+          <div class="match-name">${d.partido}</div>
+          <div class="match-scores">
+            <span class="score-label">Pron.</span>
+            <span>${parsePron(d.pronostico)}</span>
+            <span class="score-label">Real</span>
+            <span>${d.resultado}</span>
+          </div>
+          <span class="pts-badge ${ptsClass(d.puntos)}">${d.puntos}p</span>
+        </div>`;
+    });
+    html += `</div>`;
+  }
+  html += `</div>`;
+
+  // Sección 2: Clasificados
+  html += `
+    <div class="section-toggle" onclick="toggleSection(this)" style="margin-top:.75rem">
+      <span>🏅 Clasificados 1º/2º de grupo</span>
+      <span class="section-pts">${p.pts_clasificados || 0} pts</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">`;
+
+  if (clasificados.length === 0) {
+    html += `<em style="color:var(--gris);font-size:.8rem">Sin aciertos de clasificados aún.</em>`;
+  } else {
+    html += `<div class="match-grid">`;
+    clasificados.forEach(e => {
+      html += `
+        <div class="match-item">
+          <div class="match-name">${e.concepto.replace('Clasificado: ', '')}</div>
+          <div class="match-scores">
+            <span class="score-label">Equipo</span>
+            <span style="font-weight:600">${e.equipo}</span>
+          </div>
+          <span class="pts-badge pts-sign">+${e.puntos}p</span>
+        </div>`;
+    });
+    html += `</div>`;
+  }
+  html += `</div>`;
+
+  return html;
+}
+
+// ── Render principal ──────────────────────────────────────────
 function render(data) {
   const app = document.getElementById('app');
   const meta = document.getElementById('hero-meta');
@@ -433,35 +568,35 @@ function render(data) {
     return;
   }
 
+  // ── TABLA DESKTOP ──
   let html = `<div class="table-wrap"><table>
     <thead>
-    <tr>
-      <th>#</th>
-      <th>Participante</th>
-      <th class="right">Pts</th>
-      <th class="right">Exactos</th>
-      <th class="right">Signo</th>
-      <th class="right">Fallos</th>
-      <th class="right">Clas.</th>
-      <th class="right">Progreso</th>
-    </tr>
-  </thead>
+      <tr>
+        <th>#</th>
+        <th>Participante</th>
+        <th class="right">Pts</th>
+        <th class="right">🎯 Exactos</th>
+        <th class="right">✓ Signo</th>
+        <th class="right">✗ Fallos</th>
+        <th class="right">🏅 Clas.</th>
+        <th class="right">Progreso</th>
+      </tr>
+    </thead>
     <tbody>`;
 
   data.participantes.forEach((p, i) => {
     const pct = maxPts > 0 ? Math.round((p.puntos / maxPts) * 100) : 0;
     const detailId = `d-${i}`;
-    const rowId = `r-${i}`;
 
     html += `
-      <tr class="${rowClass(p.posicion)}" onclick="toggleDetail('${detailId}', '${rowId}')" id="${rowId}">
+      <tr class="${rowClass(p.posicion)}" onclick="toggleDetail('${detailId}')">
         <td class="pos">${medal(p.posicion)}</td>
         <td class="nombre">${p.nombre}</td>
         <td class="pts-cell ${p.posicion === 1 ? 'leader' : ''}">${p.puntos}</td>
-        <td class="stat exactos" title="Resultados exactos">🎯 ${p.exactos}</td>
-        <td class="stat ganador" title="Signo correcto">✓ ${p.ganadores}</td>
-        <td class="stat fallos" title="Fallos">✗ ${p.fallos}</td>
-        <td class="stat" style="text-align:right;color:#1a6fc4" title="Puntos por clasificados">🏅 ${p.pts_clasificados}</td>
+        <td class="stat exactos">${p.exactos}</td>
+        <td class="stat ganador">${p.ganadores}</td>
+        <td class="stat fallos">${p.fallos}</td>
+        <td class="stat clas">${p.pts_clasificados || 0}</td>
         <td class="stat">
           <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div>
           ${p.partidos}j
@@ -469,86 +604,58 @@ function render(data) {
       </tr>
       <tr class="detail-row" id="${detailId}">
         <td colspan="8">
-          <div class="detail-inner">
-            ${renderDetalle(p)}
-          </div>
+          <div class="detail-inner">${renderDetalle(p)}</div>
         </td>
       </tr>`;
   });
 
   html += `</tbody></table></div>`;
-  app.innerHTML = html;
 
-  footer.innerHTML = `Haz clic en cualquier participante para ver sus pronósticos • Porra Mundial 2026`;
+  // ── TARJETAS MÓVIL ──
+  html += `<div class="cards-mobile">`;
+
+  data.participantes.forEach((p, i) => {
+    const detailId = `dm-${i}`;
+    html += `
+      <div class="card-mobile ${rowClass(p.posicion)}" onclick="toggleCardDetail('${detailId}', this)">
+        <div class="card-top">
+          <div class="card-pos">${medal(p.posicion)}</div>
+          <div class="card-nombre">${p.nombre}</div>
+          <div class="card-pts ${p.posicion === 1 ? 'leader' : ''}">${p.puntos}p</div>
+        </div>
+        <div class="card-stats">
+          <span class="card-stat" style="color:var(--dorado)">🎯 ${p.exactos} exactos</span>
+          <span class="card-stat" style="color:var(--verde)">✓ ${p.ganadores} signos</span>
+          <span class="card-stat" style="color:#1a6fc4">🏅 ${p.pts_clasificados || 0} clas.</span>
+          <span class="card-stat" style="color:#888">✗ ${p.fallos} fallos</span>
+        </div>
+        <div class="card-detail" id="${detailId}">
+          <div class="detail-inner">${renderDetalle(p)}</div>
+        </div>
+      </div>`;
+  });
+
+  html += `</div>`;
+
+  app.innerHTML = html;
+  footer.innerHTML = `Toca un participante para ver sus pronósticos • Porra Mundial 2026`;
 }
 
-function renderDetalle(p) {
-  const detalle = p.detalle || [];
-  const extras = p.detalle_extra || [];
-  const clasificados = extras.filter(e => e.concepto?.startsWith('Clasificado:'));
+// ── Toggles ───────────────────────────────────────────────────
+function toggleDetail(detailId) {
+  const detail = document.getElementById(detailId);
+  if (!detail) return;
+  const isOpen = detail.classList.contains('open');
+  document.querySelectorAll('.detail-row').forEach(r => r.classList.remove('open'));
+  if (!isOpen) detail.classList.add('open');
+}
 
-  let html = '';
-
-  // ── Sección 1: Partidos de fase de grupos ──
-  html += `
-    <div class="section-toggle" onclick="toggleSection(this)">
-      <span>⚽ Pronósticos fase de grupos</span>
-      <span class="section-pts">${p.puntos - p.pts_clasificados} pts de partidos</span>
-      <span class="chevron">▼</span>
-    </div>
-    <div class="section-body">`;
-
-  if (detalle.length === 0) {
-    html += `<em style="color:var(--gris)">Sin partidos evaluados aún.</em>`;
-  } else {
-    html += `<div class="match-grid">`;
-    detalle.forEach(d => {
-      const pronStr = parsePron(d.pronostico);
-      html += `
-        <div class="match-item">
-          <div class="match-name">${d.partido}</div>
-          <div class="match-scores">
-            <span class="score-label">Pron.</span>
-            <span>${pronStr}</span>
-            <span class="score-label">Real</span>
-            <span>${d.resultado}</span>
-          </div>
-          <span class="pts-badge ${ptsClass(d.puntos)}">${d.puntos}p</span>
-        </div>`;
-    });
-    html += `</div>`;
-  }
-  html += `</div>`;
-
-  // ── Sección 2: Clasificados de grupo ──
-  html += `
-    <div class="section-toggle" onclick="toggleSection(this)" style="margin-top:.75rem">
-      <span>🏅 Clasificados 1º/2º de grupo</span>
-      <span class="section-pts">${p.pts_clasificados} pts</span>
-      <span class="chevron">▼</span>
-    </div>
-    <div class="section-body">`;
-
-  if (clasificados.length === 0) {
-    html += `<em style="color:var(--gris)">Sin aciertos de clasificados aún.</em>`;
-  } else {
-    html += `<div class="match-grid">`;
-    clasificados.forEach(e => {
-      html += `
-        <div class="match-item">
-          <div class="match-name">${e.concepto.replace('Clasificado: ', '')}</div>
-          <div class="match-scores">
-            <span class="score-label">Equipo</span>
-            <span style="font-weight:600">${e.equipo}</span>
-          </div>
-          <span class="pts-badge pts-sign">+${e.puntos}p</span>
-        </div>`;
-    });
-    html += `</div>`;
-  }
-  html += `</div>`;
-
-  return html;
+function toggleCardDetail(detailId, card) {
+  const detail = document.getElementById(detailId);
+  if (!detail) return;
+  const isOpen = detail.classList.contains('open');
+  document.querySelectorAll('.card-detail').forEach(d => d.classList.remove('open'));
+  if (!isOpen) detail.classList.add('open');
 }
 
 function toggleSection(header) {
@@ -559,23 +666,12 @@ function toggleSection(header) {
   chevron.style.transform = isOpen ? 'rotate(-90deg)' : 'rotate(0deg)';
 }
 
-// ── Toggle detalle ────────────────────────────────────────────
-function toggleDetail(detailId, rowId) {
-  const detail = document.getElementById(detailId);
-  if (!detail) return;
-  const isOpen = detail.classList.contains('open');
-  // Cerrar todos
-  document.querySelectorAll('.detail-row').forEach(r => r.classList.remove('open'));
-  if (!isOpen) detail.classList.add('open');
-}
-
 // ── Carga datos ───────────────────────────────────────────────
 async function loadData() {
   const app = document.getElementById('app');
   app.innerHTML = `<div class="loading"><div class="spinner"></div><span>Cargando clasificación...</span></div>`;
 
   try {
-    // Cachebuster para que no quede la versión antigua
     const res = await fetch('data.json?t=' + Date.now());
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();

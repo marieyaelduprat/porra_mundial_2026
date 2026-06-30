@@ -121,7 +121,11 @@
     "Australia-Egipto": null,
     "Argentina-Cabo Verde": null,
     "Colombia-Ghana": null
-},
+  },
+  "ganadores_penaltis": {
+    "Países Bajos-Marruecos": "Marruecos",
+    "Alemania-Paraguay": "Paraguay"
+  },
   "eliminatorias": {
     "Dieciseisavos → Octavos": null,
     "Octavos → Cuartos": null,

@@ -4,12 +4,17 @@ Porra Mundial 2026 - Calculador de puntos
 Sistema de puntos completo según las reglas oficiales:
  
 FASE DE GRUPOS:
-  - Resultado exacto: 3 pts
+  - Resultado exacto: 4 pts
   - Signo correcto (G/E/P): 1 pt
   - Clasificados 1º y 2º de grupo: +2 pts por acierto
  
 ELIMINATORIAS:
-  - Acertar quién pasa de cada ronda: +3 pts
+  - Resultado exacto (90 min): 4 pts
+    · Si el partido acabó en penaltis, además hay que acertar
+      quién pasa de ronda para llevarse los 4 pts completos.
+      Si solo se acierta el empate pero no quién pasa: 1 pt.
+  - Signo correcto: 1 pt
+  - Acertar quién pasa de cada ronda (cuadro de clasificados): +3 pts
  
 POSICIÓN FINAL:
   - Campeón: +10 pts
@@ -47,6 +52,15 @@ PTS_SUBCAMPEON    = 5
 PTS_TERCERO       = 2
 PTS_CUARTO        = 2
 PTS_ESPECIAL      = 5   # botas y balones
+
+# Etiquetas de clasificados por ronda, en la hoja Pool
+ETIQUETAS_CLASIFICADOS = [
+    "Dieciseisavofinalista", "Octavofinalista", "Cuartofinalista",
+    "Semifinalista", "Finalista", "3º y 4º puesto",
+    "🥇Campeón", "🥈Subcampeón", "🥉3º puesto",
+    "Bota de Oro", "Bota de Plata", "Bota de Bronce",
+    "Balón de Oro", "Balón de Plata", "Balón de Bronce",
+]
  
  
 def sign(local, visitante):
@@ -77,9 +91,27 @@ def puntuar_partido(pronostico_str, resultado_str):
         return PTS_SIGNO
     else:
         return 0
-    
-def puntuar_partido_elim(pronostico_str, resultado_str):
-    """Puntúa un partido de eliminatorias. El pronóstico viene como 'Equipo1-Equipo2·signo|g1-g2'"""
+
+
+def puntuar_partido_elim(pronostico_str, resultado_str, ganador_real=None, equipo_predicho_pasa=None):
+    """
+    Puntúa un partido de eliminatorias.
+
+    pronostico_str: 'Equipo1-Equipo2·signo|g1-g2' (de la hoja Pool, ENFRENTAMIENTOS)
+    resultado_str:  'g1-g2' (resultado real en los 90 minutos)
+    ganador_real:   nombre del equipo que realmente pasó de ronda (solo relevante
+                    si el resultado real fue empate, es decir, se decidió en penaltis)
+    equipo_predicho_pasa: nombre del equipo que el participante puso como clasificado
+                          de esa ronda (ej. en 'Octavofinalista'). Solo se usa cuando
+                          el resultado real terminó en empate.
+
+    Reglas:
+      - Si el marcador NO es exacto: 1 pt si el signo coincide, si no 0 pts.
+      - Si el marcador SÍ es exacto y el resultado real NO fue empate: 4 pts.
+      - Si el marcador SÍ es exacto y el resultado real SÍ fue empate (penaltis):
+          · Si el participante acertó además quién pasa de ronda: 4 pts.
+          · Si no lo acertó (o no tenemos ese dato): 1 pt.
+    """
     if not resultado_str or not pronostico_str:
         return None
     p_str = str(pronostico_str).strip()
@@ -96,16 +128,31 @@ def puntuar_partido_elim(pronostico_str, resultado_str):
     r_local, r_visit = int(m2.group(1)), int(m2.group(2))
     r_signo = sign(r_local, r_visit)
 
-    if p_local == r_local and p_visit == r_visit:
+    marcador_exacto = (p_local == r_local and p_visit == r_visit)
+
+    if not marcador_exacto:
+        return PTS_SIGNO if p_signo == r_signo else 0
+
+    # Marcador exacto
+    if r_signo != "X":
+        # No hubo empate en el resultado real: no hay ambigüedad de quién pasa
         return PTS_EXACTO
-    elif p_signo == r_signo:
-        return PTS_SIGNO
+
+    # El resultado real fue empate (se decidió en penaltis)
+    if ganador_real and equipo_predicho_pasa and equipo_predicho_pasa.strip() == ganador_real.strip():
+        return PTS_EXACTO
     else:
-        return 0
+        return PTS_SIGNO
  
  
 def leer_excel(excel_path):
-    """Lee hoja Pool y devuelve (pronosticos_dict, nombre)."""
+    """Lee hoja Pool y devuelve (pronosticos_dict, nombre).
+
+    El dict 'datos' incluye, además de los pronósticos sueltos, listas
+    acumuladas de clasificados bajo la clave '<Etiqueta>_LISTA' (por ejemplo
+    'Octavofinalista_LISTA') porque cada etiqueta se repite muchas veces en
+    la hoja (una fila por equipo clasificado).
+    """
     try:
         wb = openpyxl.load_workbook(excel_path, data_only=True, read_only=True)
     except Exception as e:
@@ -142,13 +189,13 @@ def leer_excel(excel_path):
  
             # Clasificados eliminatorias / cuadro honor
             # col B = etiqueta, col C = equipo
-            for label in ["Dieciseisavofinalista", "Octavofinalista", "Cuartofinalista",
-                          "Semifinalista", "Finalista", "3º y 4º puesto",
-                          "🥇Campeón", "🥈Subcampeón", "🥉3º puesto",
-                          "Bota de Oro", "Bota de Plata", "Bota de Bronce",
-                          "Balón de Oro", "Balón de Plata", "Balón de Bronce"]:
+            # NOTA: cada etiqueta se repite muchas veces (una fila por equipo
+            # clasificado), por eso acumulamos en listas además de guardar
+            # el último valor (compatibilidad con el código anterior).
+            for label in ETIQUETAS_CLASIFICADOS:
                 if label in b and c:
                     datos[b] = c
+                    datos.setdefault(label + "_LISTA", []).append(c)
  
     wb.close()
  
@@ -164,6 +211,23 @@ def cargar_resultados():
         return {}
     with open(RESULTS_FILE, encoding="utf-8") as f:
         return json.load(f)
+
+
+def encontrar_equipo_predicho(nombre_partido, lista_clasificados):
+    """De los dos equipos que se enfrentan en 'nombre_partido' (formato
+    'Equipo1-Equipo2'), devuelve cuál de los dos aparece en la lista de
+    equipos que el participante marcó como clasificados de esa ronda.
+    """
+    if not lista_clasificados:
+        return None
+    equipos = nombre_partido.split("-")
+    if len(equipos) != 2:
+        return None
+    lista_normalizada = [e.strip() for e in lista_clasificados]
+    for eq in equipos:
+        if eq.strip() in lista_normalizada:
+            return eq.strip()
+    return None
  
  
 def calcular_clasificacion():
@@ -179,6 +243,7 @@ def calcular_clasificacion():
     eliminatorias      = reales.get("eliminatorias", {})
     posicion_final     = reales.get("posicion_final", {})
     premios_especiales = reales.get("premios_especiales", {})
+    ganadores_penaltis = reales.get("ganadores_penaltis", {})
  
     print(f"\n  Partidos grupos con resultado: {len(partidos_grupos)}")
  
@@ -235,7 +300,20 @@ def calcular_clasificacion():
             pronostico = datos.get(partido)
             if pronostico is None:
                 continue
-            pts = puntuar_partido_elim(pronostico, resultado_real)
+
+            ganador_real = ganadores_penaltis.get(partido)
+            equipo_predicho_pasa = None
+            if ganador_real:
+                # Solo nos hace falta buscar el equipo predicho si el partido
+                # se decidió por penaltis; buscamos en todas las listas de
+                # clasificados (Dieciseisavofinalista, Octavofinalista, etc.)
+                for label in ETIQUETAS_CLASIFICADOS:
+                    lista = datos.get(label + "_LISTA")
+                    equipo_predicho_pasa = encontrar_equipo_predicho(partido, lista)
+                    if equipo_predicho_pasa:
+                        break
+
+            pts = puntuar_partido_elim(pronostico, resultado_real, ganador_real, equipo_predicho_pasa)
             if pts is None:
                 continue
             n_partidos += 1
@@ -262,7 +340,7 @@ def calcular_clasificacion():
             if pronostico and pronostico.strip() == equipo_real.strip():
                 pts_clasificados += PTS_CLASIFICADO
                 detalle_extra.append({"concepto": f"Clasificado: {pos_key}", "equipo": equipo_real, "puntos": PTS_CLASIFICADO})
- 
+
         pts_total += pts_clasificados
  
         # ── 3. Eliminatorias (quién pasa de ronda) ──
@@ -357,6 +435,7 @@ def calcular_clasificacion():
     print(f"{'─'*50}\n")
  
     return output
+ 
  
 if __name__ == "__main__":
     calcular_clasificacion()

@@ -1,16 +1,16 @@
 {
-  "actualizado": "30/06/2026 11:14",
+  "actualizado": "30/06/2026 14:08",
   "partidos_jugados": 72,
   "participantes": [
     {
       "nombre": "Paulina",
-      "puntos": 119,
-      "exactos": 11,
-      "ganadores": 37,
+      "puntos": 116,
+      "exactos": 10,
+      "ganadores": 38,
       "fallos": 26,
       "partidos": 74,
       "pts_clasificados": 38,
-      "pts_elim_partidos": 8,
+      "pts_elim_partidos": 5,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -458,7 +458,7 @@
           "partido": "Países Bajos-Marruecos",
           "pronostico": "Países Bajos-Marruecos·X|1-1",
           "resultado": "1-1",
-          "puntos": 4,
+          "puntos": 1,
           "fase": "eliminatoria"
         }
       ],
@@ -1632,13 +1632,13 @@
     },
     {
       "nombre": "Mayli",
-      "puntos": 108,
-      "exactos": 9,
-      "ganadores": 42,
+      "puntos": 105,
+      "exactos": 8,
+      "ganadores": 43,
       "fallos": 24,
       "partidos": 75,
       "pts_clasificados": 30,
-      "pts_elim_partidos": 5,
+      "pts_elim_partidos": 2,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -2093,7 +2093,7 @@
           "partido": "Países Bajos-Marruecos",
           "pronostico": "Países Bajos-Marruecos·X|1-1",
           "resultado": "1-1",
-          "puntos": 4,
+          "puntos": 1,
           "fase": "eliminatoria"
         }
       ],
@@ -3288,13 +3288,13 @@
     },
     {
       "nombre": "Neyidt",
-      "puntos": 98,
-      "exactos": 7,
-      "ganadores": 40,
+      "puntos": 95,
+      "exactos": 6,
+      "ganadores": 41,
       "fallos": 27,
       "partidos": 74,
       "pts_clasificados": 30,
-      "pts_elim_partidos": 4,
+      "pts_elim_partidos": 1,
       "pts_elim": 0,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -3742,7 +3742,7 @@
           "partido": "Países Bajos-Marruecos",
           "pronostico": "Países Bajos-Marruecos·X|1-1",
           "resultado": "1-1",
-          "puntos": 4,
+          "puntos": 1,
           "fase": "eliminatoria"
         }
       ],

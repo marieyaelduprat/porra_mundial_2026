@@ -118,13 +118,14 @@
     "España-Austria": "3-0",
     "Portugal-Croacia": "2-1",
     "Suiza-Argelia": "2-0",
-    "Australia-Egipto": null,
-    "Argentina-Cabo Verde": null,
-    "Colombia-Ghana": null
+    "Australia-Egipto": "1-1",
+    "Argentina-Cabo Verde": "3-2",
+    "Colombia-Ghana": "1-0"
   },
   "ganadores_penaltis": {
     "Países Bajos-Marruecos": "Marruecos",
-    "Alemania-Paraguay": "Paraguay"
+    "Alemania-Paraguay": "Paraguay",
+    "Australia-Egipto": "Egipto"
   },
   "eliminatorias": {
     "Dieciseisavos → Octavos": null,

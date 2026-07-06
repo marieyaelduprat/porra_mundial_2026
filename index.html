@@ -118,10 +118,7 @@
       box-shadow: var(--shadow);
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+    table { width: 100%; border-collapse: collapse; }
 
     thead th {
       background: var(--azul3);
@@ -145,59 +142,35 @@
     }
 
     tbody tr:hover { background: var(--card); }
-
     tbody tr.gold   { background: rgba(245,197,24,.07); }
     tbody tr.silver { background: rgba(192,192,192,.05); }
     tbody tr.bronze { background: rgba(205,127,50,.05); }
 
-    td {
-      padding: .9rem 1rem;
-      font-size: .9rem;
-      vertical-align: middle;
-    }
+    td { padding: .9rem 1rem; font-size: .9rem; vertical-align: middle; }
 
-    td.pos {
-      text-align: center;
-      font-weight: 800;
-      font-size: 1.05rem;
-      width: 3.5rem;
-    }
+    td.pos { text-align: center; font-weight: 800; font-size: 1.05rem; width: 3.5rem; }
 
     .medal { font-size: 1.3rem; }
     .nombre { font-weight: 600; }
 
-    .pts-cell {
-      text-align: right;
-      font-weight: 800;
-      font-size: 1.15rem;
-    }
-
+    .pts-cell { text-align: right; font-weight: 800; font-size: 1.15rem; }
     .pts-cell.leader { color: var(--dorado); }
 
-    .stat {
-      text-align: right;
-      font-size: .82rem;
-    }
-
+    .stat { text-align: right; font-size: .82rem; }
     .stat.exactos { color: var(--dorado); }
     .stat.ganador { color: var(--verde); }
     .stat.fallos  { color: #666; }
     .stat.clas    { color: #1a6fc4; }
 
     .bar-wrap {
-      width: 60px;
-      height: 6px;
+      width: 60px; height: 6px;
       background: rgba(255,255,255,.08);
-      border-radius: 99px;
-      overflow: hidden;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: .4rem;
+      border-radius: 99px; overflow: hidden;
+      display: inline-block; vertical-align: middle; margin-right: .4rem;
     }
 
     .bar-fill {
-      height: 100%;
-      border-radius: 99px;
+      height: 100%; border-radius: 99px;
       background: linear-gradient(90deg, var(--verde), var(--dorado));
       transition: width .6s ease;
     }
@@ -231,96 +204,86 @@
     .match-name { color: var(--gris); flex: 1; }
 
     .match-scores {
-      display: flex;
-      gap: .4rem;
-      align-items: center;
+      display: flex; gap: .4rem; align-items: center;
       font-variant-numeric: tabular-nums;
     }
 
     .score-label {
-      font-size: .65rem;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      color: var(--gris);
+      font-size: .65rem; text-transform: uppercase;
+      letter-spacing: .05em; color: var(--gris);
     }
 
     .pts-badge {
-      font-weight: 800;
-      font-size: .8rem;
-      min-width: 1.4rem;
-      text-align: center;
-      border-radius: 4px;
-      padding: .1rem .35rem;
+      font-weight: 800; font-size: .8rem;
+      min-width: 1.4rem; text-align: center;
+      border-radius: 4px; padding: .1rem .35rem;
     }
 
     .pts-exact { color: #1a7f4b; background: rgba(0,168,89,.20); }
     .pts-sign  { color: #4caf7d; background: rgba(0,168,89,.10); }
     .pts-zero  { color: #c0392b; background: rgba(200,16,46,.15); }
+    .pts-bonus { color: var(--dorado); background: rgba(245,197,24,.15); }
 
     .section-toggle {
-      display: flex;
-      align-items: center;
-      gap: .6rem;
-      cursor: pointer;
-      padding: .5rem .75rem;
-      border-radius: 6px;
-      background: rgba(255,255,255,.05);
-      border: 1px solid var(--border);
-      font-size: .8rem;
-      font-weight: 600;
-      user-select: none;
+      display: flex; align-items: center; gap: .6rem;
+      cursor: pointer; padding: .5rem .75rem; border-radius: 6px;
+      background: rgba(255,255,255,.05); border: 1px solid var(--border);
+      font-size: .8rem; font-weight: 600; user-select: none;
     }
 
     .section-toggle:hover { background: rgba(255,255,255,.09); }
 
-    .section-pts {
-      margin-left: auto;
-      color: var(--dorado);
+    .section-pts { margin-left: auto; color: var(--dorado); font-size: .78rem; }
+
+    .chevron { font-size: .7rem; color: var(--gris); transition: transform .2s; }
+
+    .section-body { padding: .75rem .25rem .25rem; }
+
+    .honor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: .5rem;
+    }
+
+    .honor-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: .4rem .7rem;
       font-size: .78rem;
+      gap: .5rem;
     }
 
-    .chevron {
-      font-size: .7rem;
+    .honor-label { color: var(--gris); font-size: .7rem; }
+    .honor-value { font-weight: 600; font-size: .82rem; }
+
+    .pending-msg {
       color: var(--gris);
-      transition: transform .2s;
-    }
-
-    .section-body {
-      padding: .75rem .25rem .25rem;
+      font-size: .78rem;
+      font-style: italic;
+      padding: .4rem .2rem;
     }
 
     .empty {
-      text-align: center;
-      padding: 4rem 1rem;
-      color: var(--gris);
+      text-align: center; padding: 4rem 1rem; color: var(--gris);
     }
 
     .empty p { margin-top: .5rem; font-size: .85rem; }
 
-    .footer {
-      text-align: center;
-      margin-top: 2.5rem;
-      color: var(--gris);
-      font-size: .78rem;
-    }
+    .footer { text-align: center; margin-top: 2.5rem; color: var(--gris); font-size: .78rem; }
 
     .loading {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 60vh;
-      gap: 1rem;
-      color: var(--gris);
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; min-height: 60vh; gap: 1rem; color: var(--gris);
     }
 
     .spinner {
-      width: 36px;
-      height: 36px;
-      border: 3px solid var(--border);
-      border-top-color: var(--verde);
-      border-radius: 50%;
-      animation: spin .7s linear infinite;
+      width: 36px; height: 36px;
+      border: 3px solid var(--border); border-top-color: var(--verde);
+      border-radius: 50%; animation: spin .7s linear infinite;
     }
 
     @keyframes spin { to { transform: rotate(360deg); } }
@@ -331,81 +294,42 @@
       .table-wrap { display: none; }
 
       .cards-mobile {
-        display: flex;
-        flex-direction: column;
-        gap: .75rem;
-        margin-top: 1.5rem;
+        display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem;
       }
 
       .card-mobile {
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        padding: .9rem 1rem;
-        cursor: pointer;
+        background: var(--card); border: 1px solid var(--border);
+        border-radius: 10px; padding: .9rem 1rem; cursor: pointer;
       }
 
       .card-mobile.gold   { background: rgba(245,197,24,.07); }
       .card-mobile.silver { background: rgba(192,192,192,.05); }
       .card-mobile.bronze { background: rgba(205,127,50,.05); }
 
-      .card-top {
-        display: flex;
-        align-items: center;
-        gap: .75rem;
-      }
+      .card-top { display: flex; align-items: center; gap: .75rem; }
 
-      .card-pos {
-        font-size: 1.2rem;
-        font-weight: 800;
-        min-width: 2rem;
-        text-align: center;
-      }
+      .card-pos { font-size: 1.2rem; font-weight: 800; min-width: 2rem; text-align: center; }
 
-      .card-nombre {
-        font-weight: 600;
-        font-size: .95rem;
-        flex: 1;
-      }
+      .card-nombre { font-weight: 600; font-size: .95rem; flex: 1; }
 
-      .card-pts {
-        font-size: 1.3rem;
-        font-weight: 800;
-      }
-
+      .card-pts { font-size: 1.3rem; font-weight: 800; }
       .card-pts.leader { color: var(--dorado); }
 
-      .card-stats {
-        display: flex;
-        gap: .5rem;
-        margin-top: .65rem;
-        flex-wrap: wrap;
-      }
+      .card-stats { display: flex; gap: .5rem; margin-top: .65rem; flex-wrap: wrap; }
 
-      .card-stat {
-        font-size: .75rem;
-        padding: .2rem .5rem;
-        border-radius: 4px;
-        background: rgba(255,255,255,.06);
-      }
+      .card-stat { font-size: .75rem; padding: .2rem .5rem; border-radius: 4px; background: rgba(255,255,255,.06); }
 
       .card-detail {
-        display: none;
-        margin-top: .75rem;
-        border-top: 1px solid var(--border);
-        padding-top: .75rem;
+        display: none; margin-top: .75rem;
+        border-top: 1px solid var(--border); padding-top: .75rem;
       }
 
       .card-detail.open { display: block; }
 
-      .detail-inner {
-        padding: 0;
-        background: transparent;
-      }
+      .detail-inner { padding: 0; background: transparent; }
 
-      .match-grid {
-        grid-template-columns: 1fr;
-      }
+      .match-grid { grid-template-columns: 1fr; }
+      .honor-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -465,13 +389,26 @@ function renderDetalle(p) {
   const detalleGrupos = (p.detalle || []).filter(d => d.fase !== 'eliminatoria');
   const detalleElim   = (p.detalle || []).filter(d => d.fase === 'eliminatoria');
   const extras = p.detalle_extra || [];
-  const clasificados = extras.filter(e => e.concepto && e.concepto.startsWith('Clasificado:'));
 
-  const ptsGrupos = p.puntos - (p.pts_clasificados || 0) - (p.pts_elim_partidos || 0);
+  const clasificados     = extras.filter(e => e.concepto && e.concepto.startsWith('Clasificado:'));
+  const clasificadosRonda = extras.filter(e => e.concepto && (
+    e.concepto.includes('finalista') || e.concepto.includes('3º y 4º')
+  ));
+  const posicionFinal    = extras.filter(e => ['🥇Campeón','🥈Subcampeón','🥉3º puesto'].includes(e.concepto));
+  const premios          = extras.filter(e => e.concepto && (
+    e.concepto.includes('Bota') || e.concepto.includes('Balón')
+  ));
+
+  const ptsGrupos = (p.puntos || 0)
+    - (p.pts_clasificados || 0)
+    - (p.pts_elim_partidos || 0)
+    - (p.pts_elim || 0)
+    - (p.pts_posicion || 0)
+    - (p.pts_premios || 0);
 
   let html = '';
 
-  // Sección 1: Partidos fase de grupos
+  // ── Sección 1: Partidos fase de grupos ──
   html += `
     <div class="section-toggle" onclick="toggleSection(this, event)">
       <span>⚽ Pronósticos fase de grupos</span>
@@ -479,9 +416,8 @@ function renderDetalle(p) {
       <span class="chevron">▼</span>
     </div>
     <div class="section-body">`;
-
   if (detalleGrupos.length === 0) {
-    html += `<em style="color:var(--gris);font-size:.8rem">Sin partidos evaluados aún.</em>`;
+    html += `<p class="pending-msg">Sin partidos evaluados aún.</p>`;
   } else {
     html += `<div class="match-grid">`;
     detalleGrupos.forEach(d => {
@@ -501,7 +437,7 @@ function renderDetalle(p) {
   }
   html += `</div>`;
 
-  // Sección 2: Clasificados 1º/2º de grupo
+  // ── Sección 2: Clasificados 1º/2º de grupo ──
   html += `
     <div class="section-toggle" onclick="toggleSection(this, event)" style="margin-top:.75rem">
       <span>🏅 Clasificados 1º/2º de grupo</span>
@@ -509,9 +445,8 @@ function renderDetalle(p) {
       <span class="chevron">▼</span>
     </div>
     <div class="section-body">`;
-
   if (clasificados.length === 0) {
-    html += `<em style="color:var(--gris);font-size:.8rem">Sin aciertos de clasificados aún.</em>`;
+    html += `<p class="pending-msg">Sin aciertos de clasificados aún.</p>`;
   } else {
     html += `<div class="match-grid">`;
     clasificados.forEach(e => {
@@ -529,7 +464,7 @@ function renderDetalle(p) {
   }
   html += `</div>`;
 
-  // Sección 3: Partidos eliminatorias
+  // ── Sección 3: Partidos eliminatorias ──
   html += `
     <div class="section-toggle" onclick="toggleSection(this, event)" style="margin-top:.75rem">
       <span>⚔️ Partidos eliminatorias</span>
@@ -537,9 +472,8 @@ function renderDetalle(p) {
       <span class="chevron">▼</span>
     </div>
     <div class="section-body">`;
-
   if (detalleElim.length === 0) {
-    html += `<em style="color:var(--gris);font-size:.8rem">Sin partidos de eliminatorias evaluados aún.</em>`;
+    html += `<p class="pending-msg">Sin partidos de eliminatorias evaluados aún.</p>`;
   } else {
     html += `<div class="match-grid">`;
     detalleElim.forEach(d => {
@@ -553,6 +487,80 @@ function renderDetalle(p) {
             <span>${d.resultado}</span>
           </div>
           <span class="pts-badge ${ptsClass(d.puntos)}">${d.puntos}p</span>
+        </div>`;
+    });
+    html += `</div>`;
+  }
+  html += `</div>`;
+
+  // ── Sección 4: Clasificados por ronda (3 pts cada uno) ──
+  html += `
+    <div class="section-toggle" onclick="toggleSection(this, event)" style="margin-top:.75rem">
+      <span>🔮 Aciertos de clasificados por ronda</span>
+      <span class="section-pts">${p.pts_elim || 0} pts</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">`;
+  if (clasificadosRonda.length === 0) {
+    html += `<p class="pending-msg">Pendiente — se actualizará conforme avance el torneo.</p>`;
+  } else {
+    html += `<div class="match-grid">`;
+    clasificadosRonda.forEach(e => {
+      html += `
+        <div class="match-item">
+          <div class="match-name">${e.concepto}</div>
+          <div class="match-scores">
+            <span style="font-weight:600">${e.equipo}</span>
+          </div>
+          <span class="pts-badge pts-bonus">+${e.puntos}p</span>
+        </div>`;
+    });
+    html += `</div>`;
+  }
+  html += `</div>`;
+
+  // ── Sección 5: Posición final ──
+  html += `
+    <div class="section-toggle" onclick="toggleSection(this, event)" style="margin-top:.75rem">
+      <span>🏆 Posición final</span>
+      <span class="section-pts">${p.pts_posicion || 0} pts</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">`;
+  if (posicionFinal.length === 0) {
+    html += `<p class="pending-msg">Pendiente — se actualizará al terminar el torneo.</p>`;
+  } else {
+    html += `<div class="honor-grid">`;
+    posicionFinal.forEach(e => {
+      html += `
+        <div class="honor-item">
+          <span class="honor-label">${e.concepto}</span>
+          <span class="honor-value">${e.equipo}</span>
+          <span class="pts-badge pts-bonus">+${e.puntos}p</span>
+        </div>`;
+    });
+    html += `</div>`;
+  }
+  html += `</div>`;
+
+  // ── Sección 6: Premios especiales ──
+  html += `
+    <div class="section-toggle" onclick="toggleSection(this, event)" style="margin-top:.75rem">
+      <span>🌟 Premios especiales</span>
+      <span class="section-pts">${p.pts_premios || 0} pts</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="section-body">`;
+  if (premios.length === 0) {
+    html += `<p class="pending-msg">Pendiente — se actualizará al terminar el torneo.</p>`;
+  } else {
+    html += `<div class="honor-grid">`;
+    premios.forEach(e => {
+      html += `
+        <div class="honor-item">
+          <span class="honor-label">${e.concepto}</span>
+          <span class="honor-value">${e.jugador || e.equipo}</span>
+          <span class="pts-badge pts-bonus">+${e.puntos}p</span>
         </div>`;
     });
     html += `</div>`;
@@ -629,7 +637,6 @@ function render(data) {
 
   // TARJETAS MÓVIL
   html += `<div class="cards-mobile">`;
-
   data.participantes.forEach((p, i) => {
     const detailId = `dm-${i}`;
     html += `
@@ -650,7 +657,6 @@ function render(data) {
         </div>
       </div>`;
   });
-
   html += `</div>`;
 
   app.innerHTML = html;

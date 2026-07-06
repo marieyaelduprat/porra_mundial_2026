@@ -120,7 +120,15 @@
     "Suiza-Argelia": "2-0",
     "Australia-Egipto": "1-1",
     "Argentina-Cabo Verde": "3-2",
-    "Colombia-Ghana": "1-0"
+    "Colombia-Ghana": "1-0",
+    "Canadá-Marruecos": "0-3",
+    "Paraguay-Francia": "0-1",
+    "Brasil-Noruega": "1-2",
+    "México-Inglaterra": "2-3",
+    "Portugal-España": null,
+    "Estados Unidos-Bélgica": null,
+    "Argentina-Egipto": null,
+    "Suiza-Colombia": null
   },
   "ganadores_penaltis": {
     "Países Bajos-Marruecos": "Marruecos",
@@ -128,17 +136,25 @@
     "Australia-Egipto": "Egipto"
   },
   "eliminatorias": {
-    "Dieciseisavos → Octavos": null,
-    "Octavos → Cuartos": null,
-    "Cuartos → Semis": null,
-    "Semis → Final": null
+    "Octavofinalista": [
+      "Canadá", "Brasil", "Paraguay", "Marruecos",
+      "Noruega", "Francia", "México", "Inglaterra",
+      "Bélgica", "Estados Unidos", "España", "Portugal",
+      "Suiza", "Egipto", "Argentina", "Colombia"
+    ],
+    "Cuartofinalista": null,
+    "Semifinalista": null,
+    "Finalista": null,
+    "3º y 4º puesto": null
   },
+
   "posicion_final": {
     "campeon": null,
     "subcampeon": null,
     "tercero": null,
     "cuarto": null
   },
+
   "premios_especiales": {
     "bota_oro": null,
     "bota_plata": null,

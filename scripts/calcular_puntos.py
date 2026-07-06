@@ -348,11 +348,14 @@ def calcular_clasificacion():
         for ronda, equipos_reales in eliminatorias.items():
             if not equipos_reales:
                 continue
-            # equipos_reales es lista de equipos que pasaron
-            pronostico_ronda = datos.get(ronda, "")
-            if pronostico_ronda and pronostico_ronda.strip() in [e.strip() for e in equipos_reales]:
-                pts_elim += PTS_ELIMINATORIA
-                detalle_extra.append({"concepto": ronda, "equipo": pronostico_ronda, "puntos": PTS_ELIMINATORIA})
+            equipos_reales_norm = [e.strip() for e in equipos_reales]
+            # Usar la lista acumulada de esa etiqueta (puede haber muchos equipos
+            # bajo la misma clave, ej. 16 x "Dieciseisavofinalista")
+            lista_predicha = datos.get(ronda + "_LISTA", [])
+            for equipo_predicho in lista_predicha:
+                if equipo_predicho.strip() in equipos_reales_norm:
+                    pts_elim += PTS_ELIMINATORIA
+                    detalle_extra.append({"concepto": ronda, "equipo": equipo_predicho, "puntos": PTS_ELIMINATORIA})
  
         pts_total += pts_elim
  

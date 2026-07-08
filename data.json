@@ -1,5 +1,5 @@
 {
-  "actualizado": "07/07/2026 09:58",
+  "actualizado": "08/07/2026 11:50",
   "partidos_jugados": 72,
   "participantes": [
     {
@@ -8728,13 +8728,13 @@
     },
     {
       "nombre": "Alicia",
-      "puntos": 89,
+      "puntos": 90,
       "exactos": 2,
-      "ganadores": 34,
+      "ganadores": 35,
       "fallos": 39,
-      "partidos": 75,
+      "partidos": 76,
       "pts_clasificados": 26,
-      "pts_elim_partidos": 2,
+      "pts_elim_partidos": 3,
       "pts_elim": 21,
       "pts_posicion": 0,
       "pts_premios": 0,
@@ -9190,6 +9190,13 @@
           "pronostico": "Argentina-Cabo Verde·X|3-3",
           "resultado": "3-2",
           "puntos": 0,
+          "fase": "eliminatoria"
+        },
+        {
+          "partido": "Argentina-Egipto",
+          "pronostico": "Argentina-Egipto·1|2-1",
+          "resultado": "3-2",
+          "puntos": 1,
           "fase": "eliminatoria"
         }
       ],

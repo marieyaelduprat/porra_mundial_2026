@@ -127,13 +127,14 @@
     "México-Inglaterra": "2-3",
     "Portugal-España": "0-1",
     "Estados Unidos-Bélgica": "1-4",
-    "Argentina-Egipto": null,
-    "Suiza-Colombia": null
+    "Argentina-Egipto": "3-2",
+    "Suiza-Colombia": "0-0"
   },
   "ganadores_penaltis": {
     "Países Bajos-Marruecos": "Marruecos",
     "Alemania-Paraguay": "Paraguay",
-    "Australia-Egipto": "Egipto"
+    "Australia-Egipto": "Egipto",
+    "Suiza-Colombia": "Suiza"
   },
   "eliminatorias": {
     "Octavofinalista": [

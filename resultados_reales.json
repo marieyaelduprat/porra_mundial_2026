@@ -129,7 +129,12 @@
     "Estados Unidos-Bélgica": "1-4",
     "Argentina-Egipto": "3-2",
     "Suiza-Colombia": "0-0",
-    "Francia-Marruecos": "2-0"
+    "Francia-Marruecos": "2-0",
+    "España-Bélgica": "2-1",
+    "Noruega-Inglaterra": "1-2",
+    "Argentina-Suiza": "3-1",
+    "Francia-España": null,
+    "Inglaterra-Argentina": null
   },
   "ganadores_penaltis": {
     "Países Bajos-Marruecos": "Marruecos",
@@ -145,7 +150,7 @@
       "Suiza", "Egipto", "Argentina", "Colombia"
     ],
     "Cuartofinalista": ["España", "Francia", "Bélgica", "Marruecos", "Argentina", "Suiza", "Inglaterra", "Noruega"],
-    "Semifinalista": ["Francia"],
+    "Semifinalista": ["Francia", "España", "Inglaterra", "Argentina"],
     "Finalista": null,
     "3º y 4º puesto": null
   },

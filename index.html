@@ -392,7 +392,7 @@ function renderDetalle(p) {
 
   const clasificados     = extras.filter(e => e.concepto && e.concepto.startsWith('Clasificado:'));
   const clasificadosRonda = extras.filter(e => e.concepto && (
-    e.concepto.includes('finalista') || e.concepto.includes('3º y 4º')
+  e.concepto.toLowerCase().includes('finalista') || e.concepto.includes('3º y 4º')
   ));
   const posicionFinal    = extras.filter(e => ['🥇Campeón','🥈Subcampeón','🥉3º puesto'].includes(e.concepto));
   const premios          = extras.filter(e => e.concepto && (

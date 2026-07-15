@@ -143,6 +143,10 @@
     "Suiza-Colombia": "Suiza"
   },
   "eliminatorias": {
+    "Dieciseisavofinalista": ["México","Sudáfrica", "Suiza","Canadá","Brasil","Marruecos", "Estados Unidos","Australia","Alemania",
+    "Costa de Marfil","Países Bajos","Japón","Bélgica","Egipto","España","Cabo Verde","Francia","Noruega","Argentina",
+    "Austria","Colombia","Portugal","Inglaterra","Croacia"
+    ],
     "Octavofinalista": [
       "Canadá", "Brasil", "Paraguay", "Marruecos",
       "Noruega", "Francia", "México", "Inglaterra",

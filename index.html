@@ -109,6 +109,7 @@
     .dot-green  { background: var(--verde); }
     .dot-gray   { background: #444; }
     .dot-blue   { background: #1a6fc4; }
+    .dot-purple { background: #9b59b6; }
 
     .table-wrap {
       margin-top: 2rem;
@@ -147,7 +148,6 @@
     tbody tr.bronze { background: rgba(205,127,50,.05); }
 
     td { padding: .9rem 1rem; font-size: .9rem; vertical-align: middle; }
-
     td.pos { text-align: center; font-weight: 800; font-size: 1.05rem; width: 3.5rem; }
 
     .medal { font-size: 1.3rem; }
@@ -217,12 +217,13 @@
       font-weight: 800; font-size: .8rem;
       min-width: 1.4rem; text-align: center;
       border-radius: 4px; padding: .1rem .35rem;
+      white-space: nowrap;
     }
 
-    .pts-exact { color: #1a7f4b; background: rgba(0,168,89,.20); }
-    .pts-sign  { color: #4caf7d; background: rgba(0,168,89,.10); }
-    .pts-zero  { color: #c0392b; background: rgba(200,16,46,.15); }
-    .pts-bonus { color: var(--dorado); background: rgba(245,197,24,.15); }
+    .pts-exact  { color: #1a7f4b; background: rgba(0,168,89,.20); }
+    .pts-sign   { color: #4caf7d; background: rgba(0,168,89,.10); }
+    .pts-zero   { color: #c0392b; background: rgba(200,16,46,.15); }
+    .pts-bonus  { color: var(--dorado); background: rgba(245,197,24,.15); }
 
     .section-toggle {
       display: flex; align-items: center; gap: .6rem;
@@ -241,13 +242,12 @@
 
     .honor-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: .5rem;
     }
 
     .honor-item {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       background: var(--card);
       border: 1px solid var(--border);
@@ -257,8 +257,9 @@
       gap: .5rem;
     }
 
-    .honor-label { color: var(--gris); font-size: .7rem; }
-    .honor-value { font-weight: 600; font-size: .82rem; }
+    .honor-label { color: var(--gris); font-size: .7rem; min-width: 70px; }
+    .honor-value { font-weight: 600; font-size: .82rem; flex: 1; }
+    .honor-real  { font-size: .65rem; color: var(--gris); }
 
     .pending-msg {
       color: var(--gris);
@@ -267,10 +268,7 @@
       padding: .4rem .2rem;
     }
 
-    .empty {
-      text-align: center; padding: 4rem 1rem; color: var(--gris);
-    }
-
+    .empty { text-align: center; padding: 4rem 1rem; color: var(--gris); }
     .empty p { margin-top: .5rem; font-size: .85rem; }
 
     .footer { text-align: center; margin-top: 2.5rem; color: var(--gris); font-size: .78rem; }
@@ -307,16 +305,12 @@
       .card-mobile.bronze { background: rgba(205,127,50,.05); }
 
       .card-top { display: flex; align-items: center; gap: .75rem; }
-
       .card-pos { font-size: 1.2rem; font-weight: 800; min-width: 2rem; text-align: center; }
-
       .card-nombre { font-weight: 600; font-size: .95rem; flex: 1; }
-
       .card-pts { font-size: 1.3rem; font-weight: 800; }
       .card-pts.leader { color: var(--dorado); }
 
       .card-stats { display: flex; gap: .5rem; margin-top: .65rem; flex-wrap: wrap; }
-
       .card-stat { font-size: .75rem; padding: .2rem .5rem; border-radius: 4px; background: rgba(255,255,255,.06); }
 
       .card-detail {
@@ -325,9 +319,7 @@
       }
 
       .card-detail.open { display: block; }
-
       .detail-inner { padding: 0; background: transparent; }
-
       .match-grid { grid-template-columns: 1fr; }
       .honor-grid { grid-template-columns: 1fr; }
     }
@@ -347,6 +339,9 @@
       <div class="legend-item"><div class="dot dot-green"></div> Signo correcto (1 pt)</div>
       <div class="legend-item"><div class="dot dot-gray"></div> Fallo (0 pts)</div>
       <div class="legend-item"><div class="dot dot-blue"></div> Clasificado 1º/2º grupo (2 pts)</div>
+      <div class="legend-item"><div class="dot dot-purple"></div> Clasificado por ronda (3 pts)</div>
+      <div class="legend-item"><div class="dot dot-gold"></div> Campeón (20) · Subcampeón (10) · 3º (5) pts</div>
+      <div class="legend-item"><div class="dot dot-gold"></div> Bota/Balón de Oro (10 pts)</div>
     </div>
   </div>
 </div>
@@ -386,18 +381,16 @@ function parsePron(str) {
 }
 
 function renderDetalle(p) {
-  const detalleGrupos = (p.detalle || []).filter(d => d.fase !== 'eliminatoria');
-  const detalleElim   = (p.detalle || []).filter(d => d.fase === 'eliminatoria');
-  const extras = p.detalle_extra || [];
+  const detalleGrupos  = (p.detalle || []).filter(d => d.fase !== 'eliminatoria');
+  const detalleElim    = (p.detalle || []).filter(d => d.fase === 'eliminatoria');
+  const extras         = p.detalle_extra || [];
 
-  const clasificados     = extras.filter(e => e.concepto && e.concepto.startsWith('Clasificado:'));
-  const clasificadosRonda = extras.filter(e => e.concepto && (
-  e.concepto.toLowerCase().includes('finalista') || e.concepto.includes('3º y 4º')
+  const clasificados      = extras.filter(e => e.concepto && e.concepto.startsWith('Clasificado:'));
+  const clasificadosRonda = extras.filter(e => e.concepto && !e.tipo && (
+    e.concepto.toLowerCase().includes('finalista') || e.concepto.includes('3º y 4º')
   ));
-  const posicionFinal    = extras.filter(e => ['🥇Campeón','🥈Subcampeón','🥉3º puesto'].includes(e.concepto));
-  const premios          = extras.filter(e => e.concepto && (
-    e.concepto.includes('Bota') || e.concepto.includes('Balón')
-  ));
+  const posicionFinal     = extras.filter(e => ['🥇Campeón','🥈Subcampeón','🥉3º puesto'].includes(e.concepto));
+  const premios           = extras.filter(e => e.tipo === 'premio');
 
   const ptsGrupos = (p.puntos || 0)
     - (p.pts_clasificados || 0)
@@ -493,7 +486,7 @@ function renderDetalle(p) {
   }
   html += `</div>`;
 
-  // ── Sección 4: Clasificados por ronda (3 pts cada uno) ──
+  // ── Sección 4: Clasificados por ronda ──
   html += `
     <div class="section-toggle" onclick="toggleSection(this, event)" style="margin-top:.75rem">
       <span>🔮 Aciertos de clasificados por ronda</span>
@@ -556,11 +549,15 @@ function renderDetalle(p) {
   } else {
     html += `<div class="honor-grid">`;
     premios.forEach(e => {
+      const acertado = e.puntos > 0;
       html += `
         <div class="honor-item">
           <span class="honor-label">${e.concepto}</span>
-          <span class="honor-value">${e.jugador || e.equipo}</span>
-          <span class="pts-badge pts-bonus">+${e.puntos}p</span>
+          <div style="flex:1;display:flex;flex-direction:column;gap:.1rem">
+            <span class="honor-value">${e.jugador}</span>
+            ${e.real && e.real !== '?' ? `<span class="honor-real">Real: ${e.real}</span>` : ''}
+          </div>
+          <span class="pts-badge ${acertado ? 'pts-bonus' : 'pts-zero'}">${acertado ? '+' : ''}${e.puntos}p</span>
         </div>`;
     });
     html += `</div>`;
@@ -571,8 +568,8 @@ function renderDetalle(p) {
 }
 
 function render(data) {
-  const app = document.getElementById('app');
-  const meta = document.getElementById('hero-meta');
+  const app    = document.getElementById('app');
+  const meta   = document.getElementById('hero-meta');
   const footer = document.getElementById('footer');
 
   const maxPts = data.participantes.length > 0 ? data.participantes[0].puntos : 1;
@@ -609,7 +606,7 @@ function render(data) {
     <tbody>`;
 
   data.participantes.forEach((p, i) => {
-    const pct = maxPts > 0 ? Math.round((p.puntos / maxPts) * 100) : 0;
+    const pct      = maxPts > 0 ? Math.round((p.puntos / maxPts) * 100) : 0;
     const detailId = `d-${i}`;
 
     html += `
@@ -681,9 +678,9 @@ function toggleCardDetail(detailId, card) {
 
 function toggleSection(header, event) {
   if (event) event.stopPropagation();
-  const body = header.nextElementSibling;
+  const body   = header.nextElementSibling;
   const chevron = header.querySelector('.chevron');
-  const isOpen = body.style.display !== 'none';
+  const isOpen  = body.style.display !== 'none';
   body.style.display = isOpen ? 'none' : 'block';
   chevron.style.transform = isOpen ? 'rotate(-90deg)' : 'rotate(0deg)';
 }
@@ -691,7 +688,6 @@ function toggleSection(header, event) {
 async function loadData() {
   const app = document.getElementById('app');
   app.innerHTML = `<div class="loading"><div class="spinner"></div><span>Cargando clasificación...</span></div>`;
-
   try {
     const res = await fetch('data.json?t=' + Date.now());
     if (!res.ok) throw new Error(`HTTP ${res.status}`);

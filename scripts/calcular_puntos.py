@@ -2,12 +2,12 @@
 Porra Mundial 2026 - Calculador de puntos
 ==========================================
 Sistema de puntos completo según las reglas oficiales:
- 
+
 FASE DE GRUPOS:
   - Resultado exacto: 4 pts
   - Signo correcto (G/E/P): 1 pt
   - Clasificados 1º y 2º de grupo: +2 pts por acierto
- 
+
 ELIMINATORIAS:
   - Resultado exacto (90 min): 4 pts
     · Si el partido acabó en penaltis, además hay que acertar
@@ -15,15 +15,13 @@ ELIMINATORIAS:
       Si solo se acierta el empate pero no quién pasa: 1 pt.
   - Signo correcto: 1 pt
   - Acertar quién pasa de cada ronda (cuadro de clasificados): +3 pts
- 
+
 POSICIÓN FINAL:
-  - Campeón: +10 pts
-  - Subcampeón: +5 pts
-  - 3er puesto: +2 pts
-  - 4º puesto: +2 pts
- 
-PREMIOS ESPECIALES (5 pts cada uno):
-  - Campeón, Subcampeón, 3er puesto
+  - Campeón: +20 pts
+  - Subcampeón: +10 pts
+  - 3er puesto: +5 pts
+
+PREMIOS ESPECIALES (10 pts cada uno):
   - Bota de Oro/Plata/Bronce
   - Balón de Oro/Plata/Bronce
 """
@@ -33,25 +31,26 @@ import re
 import glob
 from pathlib import Path
 from datetime import datetime
+from difflib import SequenceMatcher
 import openpyxl
 
 # ─── RUTAS ───────────────────────────────────────────────────────────────────
-BASE_DIR   = Path(__file__).parent.parent
-EXCELS_DIR = BASE_DIR / "excels"
+BASE_DIR     = Path(__file__).parent.parent
+EXCELS_DIR   = BASE_DIR / "excels"
 print(EXCELS_DIR)
 RESULTS_FILE = BASE_DIR / "resultados_reales.json"
 OUTPUT_FILE  = BASE_DIR / "data.json"
 
 # ─── PUNTUACIÓN ──────────────────────────────────────────────────────────────
-PTS_EXACTO        = 4   # marcador exacto
-PTS_SIGNO         = 1   # solo signo correcto
-PTS_CLASIFICADO   = 2   # acertar 1º o 2º de grupo
-PTS_ELIMINATORIA  = 3   # acertar quién pasa de ronda
+PTS_EXACTO        = 4
+PTS_SIGNO         = 1
+PTS_CLASIFICADO   = 2
+PTS_ELIMINATORIA  = 3
 PTS_CAMPEON       = 20
 PTS_SUBCAMPEON    = 10
 PTS_TERCERO       = 5
 PTS_CUARTO        = 0
-PTS_ESPECIAL      = 10   # botas y balones
+PTS_ESPECIAL      = 10
 
 # Etiquetas de clasificados por ronda, en la hoja Pool
 ETIQUETAS_CLASIFICADOS = [
@@ -61,6 +60,19 @@ ETIQUETAS_CLASIFICADOS = [
     "Bota de Oro", "Bota de Plata", "Bota de Bronce",
     "Balón de Oro", "Balón de Plata", "Balón de Bronce",
 ]
+
+MAPEO_PREMIOS = {
+    "bota_oro":     "Bota de Oro",
+    "bota_plata":   "Bota de Plata",
+    "bota_bronce":  "Bota de Bronce",
+    "balon_oro":    "Balón de Oro",
+    "balon_plata":  "Balón de Plata",
+    "balon_bronce": "Balón de Bronce",
+}
+
+
+def similitud(a, b):
+    return SequenceMatcher(None, a.lower().strip(), b.lower().strip()).ratio()
 
 
 def sign(local, visitante):
@@ -96,12 +108,10 @@ def puntuar_partido(pronostico_str, resultado_str):
 def puntuar_partido_elim(pronostico_str, resultado_str, ganador_real=None, equipo_predicho_pasa=None):
     """
     Puntúa un partido de eliminatorias.
-
     pronostico_str:       'Equipo1-Equipo2·signo|g1-g2'
     resultado_str:        'g1-g2' (resultado real en 90 min)
     ganador_real:         equipo que realmente pasó (solo si hubo penaltis)
     equipo_predicho_pasa: equipo que el participante puso como clasificado
-                          de esa ronda (solo se usa si hubo penaltis)
 
     Reglas:
       - Marcador no exacto: 1 pt si signo correcto, 0 si no.
@@ -143,9 +153,7 @@ def puntuar_partido_elim(pronostico_str, resultado_str, ganador_real=None, equip
 
 def leer_excel(excel_path):
     """Lee hoja Pool y devuelve (pronosticos_dict, nombre).
-
-    Acumula listas bajo '<Etiqueta>_LISTA' usando igualdad exacta de etiqueta
-    para evitar que 'Finalista' se cuele en 'Semifinalista_LISTA', etc.
+    Acumula listas bajo '<Etiqueta>_LISTA' usando igualdad exacta de etiqueta.
     """
     try:
         wb = openpyxl.load_workbook(excel_path, data_only=True, read_only=True)
@@ -181,8 +189,7 @@ def leer_excel(excel_path):
                 datos[b] = c
 
             # Clasificados eliminatorias / cuadro honor
-            # Usamos b == label (igualdad exacta) para evitar que
-            # "Finalista" matchee dentro de "Semifinalista", etc.
+            # Igualdad exacta para evitar que "Finalista" matchee en "Semifinalista"
             for label in ETIQUETAS_CLASIFICADOS:
                 if b == label and c:
                     datos[b] = c
@@ -344,7 +351,6 @@ def calcular_clasificacion():
             equipos_reales_norm = [e.strip() for e in equipos_reales]
             lista_predicha = datos.get(ronda + "_LISTA", [])
 
-
             for equipo_predicho in lista_predicha:
                 if equipo_predicho.strip() in equipos_reales_norm:
                     pts_elim += PTS_ELIMINATORIA
@@ -375,23 +381,28 @@ def calcular_clasificacion():
         pts_total += pts_posicion
 
         # ── 5. Premios especiales ──
+        # Guarda todos (acertados y fallados) para mostrarlos en el front.
+        # Usa similitud de cadenas para tolerar errores de escritura (mbappe/mbappé).
         pts_premios = 0
-        mapeo_premios = {
-            "bota_oro":     "Bota de Oro",
-            "bota_plata":   "Bota de Plata",
-            "bota_bronce":  "Bota de Bronce",
-            "balon_oro":    "Balón de Oro",
-            "balon_plata":  "Balón de Plata",
-            "balon_bronce": "Balón de Bronce",
-        }
-        for clave, label in mapeo_premios.items():
+        for clave, label in MAPEO_PREMIOS.items():
             real = premios_especiales.get(clave)
-            if not real:
-                continue
             pron = datos.get(label, "")
-            if pron and pron.strip().lower() == real.strip().lower():
-                pts_premios += PTS_ESPECIAL
-                detalle_extra.append({"concepto": label, "jugador": real, "puntos": PTS_ESPECIAL})
+            if not pron:
+                continue
+            acertado = real and (
+                pron.strip().lower() == real.strip().lower() or
+                similitud(pron, real) >= 0.8
+            )
+            pts = PTS_ESPECIAL if acertado else 0
+            if acertado:
+                pts_premios += pts
+            detalle_extra.append({
+                "concepto": label,
+                "jugador":  pron,
+                "real":     real or "?",
+                "puntos":   pts,
+                "tipo":     "premio"
+            })
 
         pts_total += pts_premios
 

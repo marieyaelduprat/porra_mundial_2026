@@ -387,9 +387,6 @@ def calcular_clasificacion():
         for clave, label in MAPEO_PREMIOS.items():
             real = premios_especiales.get(clave)
             pron = datos.get(label, "")
-            # TEMPORAL
-            if nombre == "Mayli":
-                print(f"    [{nombre}] {label}: pron={repr(pron)} real={repr(real)}")
             if not pron:
                 continue
 

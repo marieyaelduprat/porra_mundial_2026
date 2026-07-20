@@ -191,8 +191,8 @@ def leer_excel(excel_path):
             # Clasificados eliminatorias / cuadro honor
             # Igualdad exacta para evitar que "Finalista" matchee en "Semifinalista"
             for label in ETIQUETAS_CLASIFICADOS:
-                if b == label and c:
-                    datos[b] = c
+                if b.startswith(label) and c:
+                    datos[label] = c  # guardar con la clave limpia, no con b
                     datos.setdefault(label + "_LISTA", []).append(c)
 
     wb.close()
@@ -387,8 +387,12 @@ def calcular_clasificacion():
         for clave, label in MAPEO_PREMIOS.items():
             real = premios_especiales.get(clave)
             pron = datos.get(label, "")
+            # TEMPORAL
+            if nombre == "Mayli":
+                print(f"    [{nombre}] {label}: pron={repr(pron)} real={repr(real)}")
             if not pron:
                 continue
+
             acertado = real and (
                 pron.strip().lower() == real.strip().lower() or
                 similitud(pron, real) >= 0.8

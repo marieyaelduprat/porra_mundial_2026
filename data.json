@@ -1,5 +1,5 @@
 {
-  "actualizado": "20/07/2026 09:31",
+  "actualizado": "20/07/2026 09:39",
   "partidos_jugados": 72,
   "participantes": [
     {
@@ -722,6 +722,48 @@
           "concepto": "🥇Campeón",
           "equipo": "España",
           "puntos": 20
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "Mikel oyarzabal",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "Kane",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "Mbappe",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "cristiano ronaldo",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "lamine yamal",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "pedri",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Ina.xlsx",
@@ -1416,6 +1458,48 @@
           "concepto": "🥈Subcampeón",
           "equipo": "Argentina",
           "puntos": 10
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "Escribe un jugador",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "Escribe un jugador",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "Escribe un jugador",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "Escribe un jugador",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "Escribe un jugador",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "Escribe un jugador",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Daniela.xlsx",
@@ -2161,6 +2245,48 @@
           "concepto": "🥈Subcampeón",
           "equipo": "Argentina",
           "puntos": 10
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "messi",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "mbape",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "cristiano ronaldo",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "mbape",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "vinicius",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "lamin jamal",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Paulina.xlsx",
@@ -2808,6 +2934,48 @@
           "concepto": "🥉3º puesto",
           "equipo": "Inglaterra",
           "puntos": 5
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "Lamine yamal",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "Bruno Fernandes",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "Mbappe",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "Lamine yamal",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "#REF!",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "#REF!",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Mike.xlsx",
@@ -3511,6 +3679,48 @@
           "concepto": "🥈Subcampeón",
           "equipo": "Argentina",
           "puntos": 10
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "Kylian Mbappé",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "Erling Haaland",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "Harry Kane",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "Kylian Mbappé",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "Lamine Yamal",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "Rodri",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Gabri.xlsx",
@@ -4244,10 +4454,728 @@
           "concepto": "3º y 4º puesto",
           "equipo": "Inglaterra",
           "puntos": 3
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "Erling Haland",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "Lamine Yamal",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "Mbapee",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "Lamine Yamal",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "Mbapee",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "Haland",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Mayli.xlsx",
       "posicion": 6
+    },
+    {
+      "nombre": "Jastin",
+      "puntos": 184,
+      "exactos": 9,
+      "ganadores": 39,
+      "fallos": 28,
+      "partidos": 76,
+      "pts_clasificados": 22,
+      "pts_elim_partidos": 6,
+      "pts_elim": 57,
+      "pts_posicion": 20,
+      "pts_premios": 10,
+      "detalle": [
+        {
+          "partido": "México-Sudáfrica",
+          "pronostico": "2|1-2",
+          "resultado": "2-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Corea del Sur-República Checa",
+          "pronostico": "1|2-0",
+          "resultado": "2-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Canadá-Bosnia y Herzegovina",
+          "pronostico": "2|0-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Catar-Suiza",
+          "pronostico": "X|0-0",
+          "resultado": "1-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Brasil-Marruecos",
+          "pronostico": "X|1-1",
+          "resultado": "1-1",
+          "puntos": 4
+        },
+        {
+          "partido": "Haití-Escocia",
+          "pronostico": "2|1-2",
+          "resultado": "0-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Estados Unidos-Paraguay",
+          "pronostico": "1|2-0",
+          "resultado": "4-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Australia-Turquía",
+          "pronostico": "X|0-0",
+          "resultado": "0-2",
+          "puntos": 0
+        },
+        {
+          "partido": "Alemania-Curazao",
+          "pronostico": "1|3-0",
+          "resultado": "7-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Costa de Marfil-Ecuador",
+          "pronostico": "X|0-0",
+          "resultado": "1-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Países Bajos-Japón",
+          "pronostico": "1|2-1",
+          "resultado": "2-2",
+          "puntos": 0
+        },
+        {
+          "partido": "Suecia-Túnez",
+          "pronostico": "1|2-0",
+          "resultado": "5-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Bélgica-Egipto",
+          "pronostico": "1|2-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Irán-Nueva Zelanda",
+          "pronostico": "1|2-1",
+          "resultado": "2-2",
+          "puntos": 0
+        },
+        {
+          "partido": "España-Cabo Verde",
+          "pronostico": "1|4-1",
+          "resultado": "0-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Arabia Saudita-Uruguay",
+          "pronostico": "2|1-3",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Francia-Senegal",
+          "pronostico": "1|3-1",
+          "resultado": "3-1",
+          "puntos": 4
+        },
+        {
+          "partido": "Irak-Noruega",
+          "pronostico": "2|0-2",
+          "resultado": "1-4",
+          "puntos": 1
+        },
+        {
+          "partido": "Argentina-Argelia",
+          "pronostico": "1|3-2",
+          "resultado": "3-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Austria-Jordania",
+          "pronostico": "1|3-0",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Portugal-RD Congo",
+          "pronostico": "1|4-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Uzbekistán-Colombia",
+          "pronostico": "2|0-3",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Croacia",
+          "pronostico": "2|1-2",
+          "resultado": "4-2",
+          "puntos": 0
+        },
+        {
+          "partido": "Ghana-Panamá",
+          "pronostico": "1|2-0",
+          "resultado": "1-0",
+          "puntos": 1
+        },
+        {
+          "partido": "República Checa-Sudáfrica",
+          "pronostico": "1|2-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "México-Corea del Sur",
+          "pronostico": "X|2-2",
+          "resultado": "1-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Suiza-Bosnia y Herzegovina",
+          "pronostico": "1|1-0",
+          "resultado": "4-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Canadá-Catar",
+          "pronostico": "X|2-2",
+          "resultado": "6-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Escocia-Marruecos",
+          "pronostico": "2|0-3",
+          "resultado": "0-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Brasil-Haití",
+          "pronostico": "1|3-1",
+          "resultado": "3-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Estados Unidos-Australia",
+          "pronostico": "1|2-0",
+          "resultado": "2-0",
+          "puntos": 4
+        },
+        {
+          "partido": "Turquía-Paraguay",
+          "pronostico": "X|1-1",
+          "resultado": "0-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Alemania-Costa de Marfil",
+          "pronostico": "1|2-1",
+          "resultado": "2-1",
+          "puntos": 4
+        },
+        {
+          "partido": "Ecuador-Curazao",
+          "pronostico": "1|2-1",
+          "resultado": "0-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Países Bajos-Suecia",
+          "pronostico": "1|2-0",
+          "resultado": "5-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Túnez-Japón",
+          "pronostico": "2|0-3",
+          "resultado": "0-4",
+          "puntos": 1
+        },
+        {
+          "partido": "Bélgica-Irán",
+          "pronostico": "X|1-1",
+          "resultado": "0-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Nueva Zelanda-Egipto",
+          "pronostico": "2|0-1",
+          "resultado": "1-3",
+          "puntos": 1
+        },
+        {
+          "partido": "España-Arabia Saudita",
+          "pronostico": "1|3-1",
+          "resultado": "4-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Uruguay-Cabo Verde",
+          "pronostico": "1|3-0",
+          "resultado": "2-2",
+          "puntos": 0
+        },
+        {
+          "partido": "Francia-Irak",
+          "pronostico": "1|4-1",
+          "resultado": "3-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Noruega-Senegal",
+          "pronostico": "X|1-1",
+          "resultado": "3-2",
+          "puntos": 0
+        },
+        {
+          "partido": "Argentina-Austria",
+          "pronostico": "1|2-1",
+          "resultado": "2-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Jordania-Argelia",
+          "pronostico": "2|0-1",
+          "resultado": "1-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Portugal-Uzbekistán",
+          "pronostico": "1|4-1",
+          "resultado": "5-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Colombia-RD Congo",
+          "pronostico": "1|3-1",
+          "resultado": "1-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Inglaterra-Ghana",
+          "pronostico": "1|2-1",
+          "resultado": "0-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Panamá-Croacia",
+          "pronostico": "2|1-2",
+          "resultado": "0-1",
+          "puntos": 1
+        },
+        {
+          "partido": "República Checa-México",
+          "pronostico": "2|0-1",
+          "resultado": "0-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Sudáfrica-Corea del Sur",
+          "pronostico": "2|0-2",
+          "resultado": "1-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Suiza-Canadá",
+          "pronostico": "1|2-1",
+          "resultado": "2-1",
+          "puntos": 4
+        },
+        {
+          "partido": "Bosnia y Herzegovina-Catar",
+          "pronostico": "1|1-0",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Escocia-Brasil",
+          "pronostico": "2|1-2",
+          "resultado": "0-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Marruecos-Haití",
+          "pronostico": "1|3-0",
+          "resultado": "4-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Turquía-Estados Unidos",
+          "pronostico": "2|1-3",
+          "resultado": "3-2",
+          "puntos": 0
+        },
+        {
+          "partido": "Paraguay-Australia",
+          "pronostico": "X|1-1",
+          "resultado": "0-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Curazao-Costa de Marfil",
+          "pronostico": "2|1-2",
+          "resultado": "0-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Ecuador-Alemania",
+          "pronostico": "2|1-2",
+          "resultado": "2-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Japón-Suecia",
+          "pronostico": "1|2-1",
+          "resultado": "1-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Túnez-Países Bajos",
+          "pronostico": "2|1-3",
+          "resultado": "1-3",
+          "puntos": 4
+        },
+        {
+          "partido": "Egipto-Irán",
+          "pronostico": "X|1-1",
+          "resultado": "1-1",
+          "puntos": 4
+        },
+        {
+          "partido": "Nueva Zelanda-Bélgica",
+          "pronostico": "2|1-2",
+          "resultado": "1-5",
+          "puntos": 1
+        },
+        {
+          "partido": "Cabo Verde-Arabia Saudita",
+          "pronostico": "2|1-2",
+          "resultado": "0-0",
+          "puntos": 0
+        },
+        {
+          "partido": "Uruguay-España",
+          "pronostico": "X|1-1",
+          "resultado": "0-1",
+          "puntos": 0
+        },
+        {
+          "partido": "Noruega-Francia",
+          "pronostico": "2|1-2",
+          "resultado": "1-4",
+          "puntos": 1
+        },
+        {
+          "partido": "Senegal-Irak",
+          "pronostico": "1|2-1",
+          "resultado": "5-0",
+          "puntos": 1
+        },
+        {
+          "partido": "Argelia-Austria",
+          "pronostico": "X|1-1",
+          "resultado": "3-3",
+          "puntos": 1
+        },
+        {
+          "partido": "Jordania-Argentina",
+          "pronostico": "2|1-3",
+          "resultado": "1-3",
+          "puntos": 4
+        },
+        {
+          "partido": "Colombia-Portugal",
+          "pronostico": "2|1-2",
+          "resultado": "0-0",
+          "puntos": 0
+        },
+        {
+          "partido": "RD Congo-Uzbekistán",
+          "pronostico": "1|2-1",
+          "resultado": "3-1",
+          "puntos": 1
+        },
+        {
+          "partido": "Panamá-Inglaterra",
+          "pronostico": "2|1-3",
+          "resultado": "0-2",
+          "puntos": 1
+        },
+        {
+          "partido": "Croacia-Ghana",
+          "pronostico": "X|1-1",
+          "resultado": "2-1",
+          "puntos": 0
+        },
+        {
+          "partido": "España-Austria",
+          "pronostico": "España-Austria·1|3-1",
+          "resultado": "3-0",
+          "puntos": 1,
+          "fase": "eliminatoria"
+        },
+        {
+          "partido": "Estados Unidos-Bélgica",
+          "pronostico": "Estados Unidos-Bélgica·1|2-1",
+          "resultado": "1-4",
+          "puntos": 0,
+          "fase": "eliminatoria"
+        },
+        {
+          "partido": "Francia-Marruecos",
+          "pronostico": "Francia-Marruecos·1|2-0",
+          "resultado": "2-0",
+          "puntos": 4,
+          "fase": "eliminatoria"
+        },
+        {
+          "partido": "Francia-España",
+          "pronostico": "Francia-España·2|1-2",
+          "resultado": "0-2",
+          "puntos": 1,
+          "fase": "eliminatoria"
+        }
+      ],
+      "detalle_extra": [
+        {
+          "concepto": "Clasificado: 1º GRUPO B",
+          "equipo": "Suiza",
+          "puntos": 2
+        },
+        {
+          "concepto": "Clasificado: 1º GRUPO D",
+          "equipo": "Estados Unidos",
+          "puntos": 2
+        },
+        {
+          "concepto": "Clasificado: 1º GRUPO E",
+          "equipo": "Alemania",
+          "puntos": 2
+        },
+        {
+          "concepto": "Clasificado: 1º GRUPO F",
+          "equipo": "Países Bajos",
+          "puntos": 2
+        },
+        {
+          "concepto": "Clasificado: 2º GRUPO F",
+          "equipo": "Japón",
+          "puntos": 2
+        },
+        {
+          "concepto": "Clasificado: 1º GRUPO G",
+          "equipo": "Bélgica",
+          "puntos": 2
+        },
+        {
+          "concepto": "Clasificado: 1º GRUPO H",
+          "equipo": "España",
+          "puntos": 2
+        },
+        {
+          "concepto": "Clasificado: 1º GRUPO I",
+          "equipo": "Francia",
+          "puntos": 2
+        },
+        {
+          "concepto": "Clasificado: 2º GRUPO I",
+          "equipo": "Noruega",
+          "puntos": 2
+        },
+        {
+          "concepto": "Clasificado: 1º GRUPO J",
+          "equipo": "Argentina",
+          "puntos": 2
+        },
+        {
+          "concepto": "Clasificado: 2º GRUPO J",
+          "equipo": "Austria",
+          "puntos": 2
+        },
+        {
+          "concepto": "Octavofinalista",
+          "equipo": "México",
+          "puntos": 3
+        },
+        {
+          "concepto": "Octavofinalista",
+          "equipo": "Marruecos",
+          "puntos": 3
+        },
+        {
+          "concepto": "Octavofinalista",
+          "equipo": "Colombia",
+          "puntos": 3
+        },
+        {
+          "concepto": "Octavofinalista",
+          "equipo": "Estados Unidos",
+          "puntos": 3
+        },
+        {
+          "concepto": "Octavofinalista",
+          "equipo": "Argentina",
+          "puntos": 3
+        },
+        {
+          "concepto": "Octavofinalista",
+          "equipo": "Suiza",
+          "puntos": 3
+        },
+        {
+          "concepto": "Octavofinalista",
+          "equipo": "Francia",
+          "puntos": 3
+        },
+        {
+          "concepto": "Octavofinalista",
+          "equipo": "Noruega",
+          "puntos": 3
+        },
+        {
+          "concepto": "Octavofinalista",
+          "equipo": "España",
+          "puntos": 3
+        },
+        {
+          "concepto": "Octavofinalista",
+          "equipo": "Bélgica",
+          "puntos": 3
+        },
+        {
+          "concepto": "Octavofinalista",
+          "equipo": "Portugal",
+          "puntos": 3
+        },
+        {
+          "concepto": "Cuartofinalista",
+          "equipo": "Francia",
+          "puntos": 3
+        },
+        {
+          "concepto": "Cuartofinalista",
+          "equipo": "España",
+          "puntos": 3
+        },
+        {
+          "concepto": "Cuartofinalista",
+          "equipo": "Marruecos",
+          "puntos": 3
+        },
+        {
+          "concepto": "Cuartofinalista",
+          "equipo": "Argentina",
+          "puntos": 3
+        },
+        {
+          "concepto": "Semifinalista",
+          "equipo": "Francia",
+          "puntos": 3
+        },
+        {
+          "concepto": "Semifinalista",
+          "equipo": "España",
+          "puntos": 3
+        },
+        {
+          "concepto": "Finalista",
+          "equipo": "España",
+          "puntos": 3
+        },
+        {
+          "concepto": "3º y 4º puesto",
+          "equipo": "Francia",
+          "puntos": 3
+        },
+        {
+          "concepto": "🥇Campeón",
+          "equipo": "España",
+          "puntos": 20
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "Mbappe",
+          "real": "Mbappé",
+          "puntos": 10,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "Cristiano Ronaldo",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "Oyarzabal",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "Lamine Yamal",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "Vitinha",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "Mbappe",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        }
+      ],
+      "archivo": "Jastin.xlsx",
+      "posicion": 7
     },
     {
       "nombre": "Joanna",
@@ -4952,10 +5880,52 @@
           "concepto": "🥈Subcampeón",
           "equipo": "Argentina",
           "puntos": 10
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "Haaland",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "Lamine Jamal",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "Mbape",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "Mbappe",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "Lamine Jamal",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "Vinicius",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Joanna.xlsx",
-      "posicion": 7
+      "posicion": 8
     },
     {
       "nombre": "Miguel",
@@ -5620,10 +6590,52 @@
           "concepto": "🥇Campeón",
           "equipo": "España",
           "puntos": 20
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "Julián Álvarez",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "Oyarzabal",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "Kane",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "Lamine Yamal",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "Vinicius",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "Dembele",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Miguel.xlsx",
-      "posicion": 8
+      "posicion": 9
     },
     {
       "nombre": "Analia",
@@ -6326,643 +7338,51 @@
           "concepto": "🥇Campeón",
           "equipo": "España",
           "puntos": 20
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "Mikel Oyarzabal",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "Vinicius",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "Mbappe",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "Lamine Yamal",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "Vitinha",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "Pedri",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Analia.xlsx",
-      "posicion": 9
-    },
-    {
-      "nombre": "Jastin",
-      "puntos": 174,
-      "exactos": 9,
-      "ganadores": 39,
-      "fallos": 28,
-      "partidos": 76,
-      "pts_clasificados": 22,
-      "pts_elim_partidos": 6,
-      "pts_elim": 57,
-      "pts_posicion": 20,
-      "pts_premios": 0,
-      "detalle": [
-        {
-          "partido": "México-Sudáfrica",
-          "pronostico": "2|1-2",
-          "resultado": "2-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Corea del Sur-República Checa",
-          "pronostico": "1|2-0",
-          "resultado": "2-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Canadá-Bosnia y Herzegovina",
-          "pronostico": "2|0-1",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Catar-Suiza",
-          "pronostico": "X|0-0",
-          "resultado": "1-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Brasil-Marruecos",
-          "pronostico": "X|1-1",
-          "resultado": "1-1",
-          "puntos": 4
-        },
-        {
-          "partido": "Haití-Escocia",
-          "pronostico": "2|1-2",
-          "resultado": "0-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Estados Unidos-Paraguay",
-          "pronostico": "1|2-0",
-          "resultado": "4-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Australia-Turquía",
-          "pronostico": "X|0-0",
-          "resultado": "0-2",
-          "puntos": 0
-        },
-        {
-          "partido": "Alemania-Curazao",
-          "pronostico": "1|3-0",
-          "resultado": "7-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Costa de Marfil-Ecuador",
-          "pronostico": "X|0-0",
-          "resultado": "1-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Países Bajos-Japón",
-          "pronostico": "1|2-1",
-          "resultado": "2-2",
-          "puntos": 0
-        },
-        {
-          "partido": "Suecia-Túnez",
-          "pronostico": "1|2-0",
-          "resultado": "5-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Bélgica-Egipto",
-          "pronostico": "1|2-1",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Irán-Nueva Zelanda",
-          "pronostico": "1|2-1",
-          "resultado": "2-2",
-          "puntos": 0
-        },
-        {
-          "partido": "España-Cabo Verde",
-          "pronostico": "1|4-1",
-          "resultado": "0-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Arabia Saudita-Uruguay",
-          "pronostico": "2|1-3",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Francia-Senegal",
-          "pronostico": "1|3-1",
-          "resultado": "3-1",
-          "puntos": 4
-        },
-        {
-          "partido": "Irak-Noruega",
-          "pronostico": "2|0-2",
-          "resultado": "1-4",
-          "puntos": 1
-        },
-        {
-          "partido": "Argentina-Argelia",
-          "pronostico": "1|3-2",
-          "resultado": "3-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Austria-Jordania",
-          "pronostico": "1|3-0",
-          "resultado": "3-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Portugal-RD Congo",
-          "pronostico": "1|4-1",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Uzbekistán-Colombia",
-          "pronostico": "2|0-3",
-          "resultado": "1-3",
-          "puntos": 1
-        },
-        {
-          "partido": "Inglaterra-Croacia",
-          "pronostico": "2|1-2",
-          "resultado": "4-2",
-          "puntos": 0
-        },
-        {
-          "partido": "Ghana-Panamá",
-          "pronostico": "1|2-0",
-          "resultado": "1-0",
-          "puntos": 1
-        },
-        {
-          "partido": "República Checa-Sudáfrica",
-          "pronostico": "1|2-1",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "México-Corea del Sur",
-          "pronostico": "X|2-2",
-          "resultado": "1-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Suiza-Bosnia y Herzegovina",
-          "pronostico": "1|1-0",
-          "resultado": "4-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Canadá-Catar",
-          "pronostico": "X|2-2",
-          "resultado": "6-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Escocia-Marruecos",
-          "pronostico": "2|0-3",
-          "resultado": "0-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Brasil-Haití",
-          "pronostico": "1|3-1",
-          "resultado": "3-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Estados Unidos-Australia",
-          "pronostico": "1|2-0",
-          "resultado": "2-0",
-          "puntos": 4
-        },
-        {
-          "partido": "Turquía-Paraguay",
-          "pronostico": "X|1-1",
-          "resultado": "0-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Alemania-Costa de Marfil",
-          "pronostico": "1|2-1",
-          "resultado": "2-1",
-          "puntos": 4
-        },
-        {
-          "partido": "Ecuador-Curazao",
-          "pronostico": "1|2-1",
-          "resultado": "0-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Países Bajos-Suecia",
-          "pronostico": "1|2-0",
-          "resultado": "5-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Túnez-Japón",
-          "pronostico": "2|0-3",
-          "resultado": "0-4",
-          "puntos": 1
-        },
-        {
-          "partido": "Bélgica-Irán",
-          "pronostico": "X|1-1",
-          "resultado": "0-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Nueva Zelanda-Egipto",
-          "pronostico": "2|0-1",
-          "resultado": "1-3",
-          "puntos": 1
-        },
-        {
-          "partido": "España-Arabia Saudita",
-          "pronostico": "1|3-1",
-          "resultado": "4-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Uruguay-Cabo Verde",
-          "pronostico": "1|3-0",
-          "resultado": "2-2",
-          "puntos": 0
-        },
-        {
-          "partido": "Francia-Irak",
-          "pronostico": "1|4-1",
-          "resultado": "3-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Noruega-Senegal",
-          "pronostico": "X|1-1",
-          "resultado": "3-2",
-          "puntos": 0
-        },
-        {
-          "partido": "Argentina-Austria",
-          "pronostico": "1|2-1",
-          "resultado": "2-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Jordania-Argelia",
-          "pronostico": "2|0-1",
-          "resultado": "1-2",
-          "puntos": 1
-        },
-        {
-          "partido": "Portugal-Uzbekistán",
-          "pronostico": "1|4-1",
-          "resultado": "5-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Colombia-RD Congo",
-          "pronostico": "1|3-1",
-          "resultado": "1-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Inglaterra-Ghana",
-          "pronostico": "1|2-1",
-          "resultado": "0-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Panamá-Croacia",
-          "pronostico": "2|1-2",
-          "resultado": "0-1",
-          "puntos": 1
-        },
-        {
-          "partido": "República Checa-México",
-          "pronostico": "2|0-1",
-          "resultado": "0-3",
-          "puntos": 1
-        },
-        {
-          "partido": "Sudáfrica-Corea del Sur",
-          "pronostico": "2|0-2",
-          "resultado": "1-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Suiza-Canadá",
-          "pronostico": "1|2-1",
-          "resultado": "2-1",
-          "puntos": 4
-        },
-        {
-          "partido": "Bosnia y Herzegovina-Catar",
-          "pronostico": "1|1-0",
-          "resultado": "3-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Escocia-Brasil",
-          "pronostico": "2|1-2",
-          "resultado": "0-3",
-          "puntos": 1
-        },
-        {
-          "partido": "Marruecos-Haití",
-          "pronostico": "1|3-0",
-          "resultado": "4-2",
-          "puntos": 1
-        },
-        {
-          "partido": "Turquía-Estados Unidos",
-          "pronostico": "2|1-3",
-          "resultado": "3-2",
-          "puntos": 0
-        },
-        {
-          "partido": "Paraguay-Australia",
-          "pronostico": "X|1-1",
-          "resultado": "0-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Curazao-Costa de Marfil",
-          "pronostico": "2|1-2",
-          "resultado": "0-2",
-          "puntos": 1
-        },
-        {
-          "partido": "Ecuador-Alemania",
-          "pronostico": "2|1-2",
-          "resultado": "2-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Japón-Suecia",
-          "pronostico": "1|2-1",
-          "resultado": "1-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Túnez-Países Bajos",
-          "pronostico": "2|1-3",
-          "resultado": "1-3",
-          "puntos": 4
-        },
-        {
-          "partido": "Egipto-Irán",
-          "pronostico": "X|1-1",
-          "resultado": "1-1",
-          "puntos": 4
-        },
-        {
-          "partido": "Nueva Zelanda-Bélgica",
-          "pronostico": "2|1-2",
-          "resultado": "1-5",
-          "puntos": 1
-        },
-        {
-          "partido": "Cabo Verde-Arabia Saudita",
-          "pronostico": "2|1-2",
-          "resultado": "0-0",
-          "puntos": 0
-        },
-        {
-          "partido": "Uruguay-España",
-          "pronostico": "X|1-1",
-          "resultado": "0-1",
-          "puntos": 0
-        },
-        {
-          "partido": "Noruega-Francia",
-          "pronostico": "2|1-2",
-          "resultado": "1-4",
-          "puntos": 1
-        },
-        {
-          "partido": "Senegal-Irak",
-          "pronostico": "1|2-1",
-          "resultado": "5-0",
-          "puntos": 1
-        },
-        {
-          "partido": "Argelia-Austria",
-          "pronostico": "X|1-1",
-          "resultado": "3-3",
-          "puntos": 1
-        },
-        {
-          "partido": "Jordania-Argentina",
-          "pronostico": "2|1-3",
-          "resultado": "1-3",
-          "puntos": 4
-        },
-        {
-          "partido": "Colombia-Portugal",
-          "pronostico": "2|1-2",
-          "resultado": "0-0",
-          "puntos": 0
-        },
-        {
-          "partido": "RD Congo-Uzbekistán",
-          "pronostico": "1|2-1",
-          "resultado": "3-1",
-          "puntos": 1
-        },
-        {
-          "partido": "Panamá-Inglaterra",
-          "pronostico": "2|1-3",
-          "resultado": "0-2",
-          "puntos": 1
-        },
-        {
-          "partido": "Croacia-Ghana",
-          "pronostico": "X|1-1",
-          "resultado": "2-1",
-          "puntos": 0
-        },
-        {
-          "partido": "España-Austria",
-          "pronostico": "España-Austria·1|3-1",
-          "resultado": "3-0",
-          "puntos": 1,
-          "fase": "eliminatoria"
-        },
-        {
-          "partido": "Estados Unidos-Bélgica",
-          "pronostico": "Estados Unidos-Bélgica·1|2-1",
-          "resultado": "1-4",
-          "puntos": 0,
-          "fase": "eliminatoria"
-        },
-        {
-          "partido": "Francia-Marruecos",
-          "pronostico": "Francia-Marruecos·1|2-0",
-          "resultado": "2-0",
-          "puntos": 4,
-          "fase": "eliminatoria"
-        },
-        {
-          "partido": "Francia-España",
-          "pronostico": "Francia-España·2|1-2",
-          "resultado": "0-2",
-          "puntos": 1,
-          "fase": "eliminatoria"
-        }
-      ],
-      "detalle_extra": [
-        {
-          "concepto": "Clasificado: 1º GRUPO B",
-          "equipo": "Suiza",
-          "puntos": 2
-        },
-        {
-          "concepto": "Clasificado: 1º GRUPO D",
-          "equipo": "Estados Unidos",
-          "puntos": 2
-        },
-        {
-          "concepto": "Clasificado: 1º GRUPO E",
-          "equipo": "Alemania",
-          "puntos": 2
-        },
-        {
-          "concepto": "Clasificado: 1º GRUPO F",
-          "equipo": "Países Bajos",
-          "puntos": 2
-        },
-        {
-          "concepto": "Clasificado: 2º GRUPO F",
-          "equipo": "Japón",
-          "puntos": 2
-        },
-        {
-          "concepto": "Clasificado: 1º GRUPO G",
-          "equipo": "Bélgica",
-          "puntos": 2
-        },
-        {
-          "concepto": "Clasificado: 1º GRUPO H",
-          "equipo": "España",
-          "puntos": 2
-        },
-        {
-          "concepto": "Clasificado: 1º GRUPO I",
-          "equipo": "Francia",
-          "puntos": 2
-        },
-        {
-          "concepto": "Clasificado: 2º GRUPO I",
-          "equipo": "Noruega",
-          "puntos": 2
-        },
-        {
-          "concepto": "Clasificado: 1º GRUPO J",
-          "equipo": "Argentina",
-          "puntos": 2
-        },
-        {
-          "concepto": "Clasificado: 2º GRUPO J",
-          "equipo": "Austria",
-          "puntos": 2
-        },
-        {
-          "concepto": "Octavofinalista",
-          "equipo": "México",
-          "puntos": 3
-        },
-        {
-          "concepto": "Octavofinalista",
-          "equipo": "Marruecos",
-          "puntos": 3
-        },
-        {
-          "concepto": "Octavofinalista",
-          "equipo": "Colombia",
-          "puntos": 3
-        },
-        {
-          "concepto": "Octavofinalista",
-          "equipo": "Estados Unidos",
-          "puntos": 3
-        },
-        {
-          "concepto": "Octavofinalista",
-          "equipo": "Argentina",
-          "puntos": 3
-        },
-        {
-          "concepto": "Octavofinalista",
-          "equipo": "Suiza",
-          "puntos": 3
-        },
-        {
-          "concepto": "Octavofinalista",
-          "equipo": "Francia",
-          "puntos": 3
-        },
-        {
-          "concepto": "Octavofinalista",
-          "equipo": "Noruega",
-          "puntos": 3
-        },
-        {
-          "concepto": "Octavofinalista",
-          "equipo": "España",
-          "puntos": 3
-        },
-        {
-          "concepto": "Octavofinalista",
-          "equipo": "Bélgica",
-          "puntos": 3
-        },
-        {
-          "concepto": "Octavofinalista",
-          "equipo": "Portugal",
-          "puntos": 3
-        },
-        {
-          "concepto": "Cuartofinalista",
-          "equipo": "Francia",
-          "puntos": 3
-        },
-        {
-          "concepto": "Cuartofinalista",
-          "equipo": "España",
-          "puntos": 3
-        },
-        {
-          "concepto": "Cuartofinalista",
-          "equipo": "Marruecos",
-          "puntos": 3
-        },
-        {
-          "concepto": "Cuartofinalista",
-          "equipo": "Argentina",
-          "puntos": 3
-        },
-        {
-          "concepto": "Semifinalista",
-          "equipo": "Francia",
-          "puntos": 3
-        },
-        {
-          "concepto": "Semifinalista",
-          "equipo": "España",
-          "puntos": 3
-        },
-        {
-          "concepto": "Finalista",
-          "equipo": "España",
-          "puntos": 3
-        },
-        {
-          "concepto": "3º y 4º puesto",
-          "equipo": "Francia",
-          "puntos": 3
-        },
-        {
-          "concepto": "🥇Campeón",
-          "equipo": "España",
-          "puntos": 20
-        }
-      ],
-      "archivo": "Jastin.xlsx",
       "posicion": 10
     },
     {
@@ -7659,6 +8079,48 @@
           "concepto": "Semifinalista",
           "equipo": "Argentina",
           "puntos": 3
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "KYLIAN MBAPPE",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "LIONEL MESSI",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "ERLING HAALANG",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "VINICIUS JUNIOR",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "LUIS DIAZ",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "LIONEL MESSI",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Neyidt.xlsx",
@@ -8327,6 +8789,48 @@
           "concepto": "🥇Campeón",
           "equipo": "España",
           "puntos": 20
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "lamine yamal",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "messi",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "mikel oyarzabal",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "cristiano",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "lamine yamal",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "mbappe",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Tamara.xlsx",
@@ -9018,6 +9522,48 @@
           "concepto": "Finalista",
           "equipo": "Argentina",
           "puntos": 3
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "Julián Álvarez",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "Luis Díaz",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "Harry Kane",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "Messi",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "Rapinha",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "Saka",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Tincho.xlsx",
@@ -9652,6 +10198,48 @@
           "concepto": "Semifinalista",
           "equipo": "España",
           "puntos": 3
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "Harry Kane",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "Mbappe",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "Cristiano Ronaldo",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "Vitinha",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "Vinicius",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "Dembelé",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Jose.xlsx",
@@ -10278,6 +10866,48 @@
           "concepto": "🥇Campeón",
           "equipo": "España",
           "puntos": 20
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "jamin jamal",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "Cristiano Ronaldo Cristiano Ronaldo.",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "Kylian Mbappe Kylian Mbappe.",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "Harry Kane",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "Dembélé",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "Kylian Mbappé",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Alicia.xlsx",
@@ -10860,6 +11490,48 @@
           "concepto": "Semifinalista",
           "equipo": "Argentina",
           "puntos": 3
+        },
+        {
+          "concepto": "Bota de Oro",
+          "jugador": "VINICIUS",
+          "real": "Mbappé",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Plata",
+          "jugador": "MESSI",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Bota de Bronce",
+          "jugador": "MBAPPE",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Oro",
+          "jugador": "HAALAND",
+          "real": "Rodri",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Plata",
+          "jugador": "MESSI",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
+        },
+        {
+          "concepto": "Balón de Bronce",
+          "jugador": "CRISTIANO RONALDO",
+          "real": "?",
+          "puntos": 0,
+          "tipo": "premio"
         }
       ],
       "archivo": "Ale.xlsx",

@@ -134,7 +134,9 @@
     "Noruega-Inglaterra": "1-2",
     "Argentina-Suiza": "3-1",
     "Francia-España": "0-2",
-    "Inglaterra-Argentina": "1-2"
+    "Inglaterra-Argentina": "1-2",
+    "Francia-Inglaterra": "4-6",
+    "España-Argentina": "1-0"
   },
   "ganadores_penaltis": {
     "Países Bajos-Marruecos": "Marruecos",
@@ -160,17 +162,17 @@
   },
 
   "posicion_final": {
-    "campeon": null,
-    "subcampeon": null,
-    "tercero": null,
-    "cuarto": null
+    "campeon": "España",
+    "subcampeon": "Argentina",
+    "tercero": "Inglaterra",
+    "cuarto": "Francia"
   },
 
   "premios_especiales": {
-    "bota_oro": null,
+    "bota_oro": "Mbappé",
     "bota_plata": null,
     "bota_bronce": null,
-    "balon_oro": null,
+    "balon_oro": "Rodri",
     "balon_plata": null,
     "balon_bronce": null
   }

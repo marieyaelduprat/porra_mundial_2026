@@ -47,11 +47,11 @@ PTS_EXACTO        = 4   # marcador exacto
 PTS_SIGNO         = 1   # solo signo correcto
 PTS_CLASIFICADO   = 2   # acertar 1º o 2º de grupo
 PTS_ELIMINATORIA  = 3   # acertar quién pasa de ronda
-PTS_CAMPEON       = 10
-PTS_SUBCAMPEON    = 5
-PTS_TERCERO       = 2
-PTS_CUARTO        = 2
-PTS_ESPECIAL      = 5   # botas y balones
+PTS_CAMPEON       = 20
+PTS_SUBCAMPEON    = 10
+PTS_TERCERO       = 5
+PTS_CUARTO        = 0
+PTS_ESPECIAL      = 10   # botas y balones
 
 # Etiquetas de clasificados por ronda, en la hoja Pool
 ETIQUETAS_CLASIFICADOS = [
